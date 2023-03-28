@@ -22,7 +22,6 @@
 
     .image {
       margin-bottom: 1rem;
-      margin-top: 10rem;
       object-fit: cover;
       justify-self: center;
       transform: scale(0.8);
@@ -48,7 +47,7 @@
         .title {
           font-size: 16px;
           font-weight: 600;
-          color: #01cda9;
+          color: rgb(100, 138, 255);
           margin-bottom: 20px;
           display: flex;
           gap: 10px;
@@ -64,7 +63,7 @@
           .subtitle1 {
             font-size: 12px;
             font-weight: 400;
-            color: #01cda9;
+            color: rgb(100, 138, 255);
             text-decoration: none;
           }
           .password {

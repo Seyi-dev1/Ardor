@@ -29,17 +29,17 @@
   .header{
     display: flex;
     width: 100vw;
-    height: 52px;
-    background: #2F2F2F;
+    height: auto;
+    background: #ffffff;
     justify-content: space-between;
-    padding: 0rem 3rem 0rem 1rem;
+    padding: 0.5rem 1rem 0rem 1rem;
     align-items: center;
 
     .nav_icon{
       width: 50px;
       height: 30px;
       outline: none;
-      color: #01CDA9;
+      color: rgb(100, 138, 255);
     }
 
     .logo{

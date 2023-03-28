@@ -15,6 +15,7 @@ import React from "react";
 import SpinnerIcon from "@rsuite/icons/legacy/Spinner";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { RiLock2Fill } from "react-icons/ri";
+import LOGO from '../../Images/Nav_logo.png'
 const LoginForm = () => {
   const [info, setInfo] = useState({
     email: "",
@@ -63,10 +64,10 @@ const LoginForm = () => {
   return (
     <div className="container">
       <div className="login-page">
-        <span className="image">LOGO</span>
+        <img src={LOGO} className="image" alt="logo" />
         <div className="loaderdiv">
           {isLoading && (
-            <SpinnerIcon pulse style={{ fontSize: "3rem", color: "#01cda9" }} />
+            <SpinnerIcon pulse style={{ fontSize: "3rem", color: "rgb(100, 138, 255)" }} />
           )}
         </div>
 

@@ -5,6 +5,7 @@ import "./dashboard.scss";
 import { FaBars } from "react-icons/fa";
 import { selectModalState } from "../../redux/modal/modalSelector";
 import { useSelector } from "react-redux";
+import LOGO from '../../Images/Nav_logo.png'
 import Modal from "./modal/Modal";
 const Dashboard = () => {
   const navRef = useRef();
@@ -22,7 +23,7 @@ const Dashboard = () => {
         <div className="dashboard">
           <div className="header">
             <FaBars className="nav_icon" onClick={toggleNav} />
-            <span className="logo">LOGO</span>
+            <img src={LOGO} alt="logo" className="logo" />
           </div>
           <div className="dashboard_content">
             <Navigation
