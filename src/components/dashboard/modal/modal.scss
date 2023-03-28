@@ -1,0 +1,103 @@
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background: #e7f0f3;
+
+  .modal_content {
+    background: #fff;
+    width: 500px;
+    height: 300px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    box-shadow: 5px 4px 20px rgba(0, 0, 0, 0.1);
+
+    .logo {
+      width: 200px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      .text {
+        font-size: 15px;
+        align-items: center;
+      }
+
+      .buttons {
+        display: flex;
+        width: 400px;
+        gap: 2rem;
+        margin-top: 2rem;
+
+        .button {
+          &.black {
+            button {
+              background-color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .modal {
+    .modal_content {
+      background: #fff;
+      width: 250px;
+      height: 170px;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      align-items: center;
+
+      .logo {
+        width: 120px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        .text {
+          font-size: 13px;
+          align-items: center;
+          text-align: center;
+        }
+
+        .buttons {
+          display: flex;
+          width: 180px;
+          gap: 2rem;
+          margin-top: 0.7rem;
+
+          .button {
+            &.black {
+              button {
+                background-color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

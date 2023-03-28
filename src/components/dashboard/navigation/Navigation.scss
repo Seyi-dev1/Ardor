@@ -1,0 +1,206 @@
+.navigation {
+  height: 100vh;
+  width: 100%;
+  background: #2f2f2f;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 99;
+  .profile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: center;
+    padding-top: 3rem;
+    color: #ffffff;
+
+    img {
+      width: 100px;
+      height: 100px;
+      align-self: center;
+    }
+    .name {
+      font-family: "Syne";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .email {
+      font-family: "Syne";
+      font-style: normal;
+      font-weight: 200;
+      font-size: 13px;
+      line-height: 19px;
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-family: "Syne";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+    color: #ffffff;
+    justify-content: center;
+
+    a {
+      font-family: "Syne";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      text-decoration: none;
+      color: #ffffff;
+      padding: 1.5rem 0rem 1rem 0rem;
+      padding-left: 4rem;
+      width: 100%;
+      align-items: center;
+      align-self: center;
+    }
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .icon {
+      width: 25px;
+      height: 25px;
+    }
+    .Link-active {
+      background: rgba(1, 205, 169, 0.25);
+      border: 20px 40px;
+    }
+  }
+
+  .logout {
+    width: fit-content;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: 1px solid #fff;
+    }
+    .logout_logo {
+      color: #01cda9;
+      font-size: 20px;
+    }
+
+    .logout_text {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+  .logo {
+    width: 170px;
+    align-self: center;
+    position: absolute;
+    bottom: 1rem;
+    object-fit: cover;
+  }
+
+  .close_btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navigation {
+    height: 100vh;
+    background: #2f2f2f;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 99;
+    transition: 2s;
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      text-align: center;
+      padding-top: 3rem;
+      color: #ffffff;
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+      .name {
+        font-size: 16px;
+      }
+
+      .email {
+        font-size: 9px;
+        padding-bottom: 1rem;
+      }
+    }
+
+    .links {
+      font-size: 14px;
+
+      a {
+        font-size: 14px;
+      }
+
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+      .Link-active {
+        border: 10px 20px;
+      }
+    }
+    .logout {
+      width: 100%;
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      margin-top: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        border-bottom: none;
+      }
+      .logout_logo {
+        color: #01cda9;
+        font-size: 16px;
+      }
+
+      .logout_text {
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 500;
+        &:hover {
+          border-bottom: 1px solid #01cda9;
+        }
+      }
+    }
+    .logo {
+      display: none;
+    }
+
+    .close_btn {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      width: 50px;
+      height: 30px;
+      outline: none;
+      color: #01cda9;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.rights_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+
+    .text{
+        font-family: 'Syne';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 0.9rem;
+
+        color: #3A3A3A;
+    }
+}

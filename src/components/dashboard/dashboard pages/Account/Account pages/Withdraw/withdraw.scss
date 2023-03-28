@@ -1,0 +1,48 @@
+.withdraw{
+    width: 500px;
+    height: fit-content;
+    background-color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    .title{
+        font-family: 'Syne';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        /* identical to box height */
+        color: #3A3A3A;
+        padding-bottom: 2rem;
+    }
+
+    .form{
+        padding-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .withdraw{
+        width: 343px;
+    
+        .title{
+            font-size: 14px;
+        }
+    
+        .form{
+            padding-bottom: 2rem;
+
+            input{
+                width: 250px;
+                height: 35px;
+            }
+
+            button{
+                width: 250px;
+                height: 40px;
+            }
+        }
+    }
+}
