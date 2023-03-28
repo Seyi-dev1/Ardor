@@ -3,32 +3,12 @@ import './settings.scss'
 import Switch from '../../../switch/Switch'
 import {MdNotificationsActive, MdVpnKey} from 'react-icons/md'
 import {BsFillShieldLockFill, BsPaletteFill} from  'react-icons/bs'
-
-
-import CInput from '../../../CInput/CInput'
-import CButton from '../../../CButton/CButton'
 import Copyright from '../../../copyright/Copyright'
 
 
 
 
 const Settings = () => {
-
-  const [details, setDetails] = React.useState({
-    currentPassword: '',
-    newPassword: '',
-    confirmPassword: ''
-  })
-
-  const handleChange = (event)=>{
-    const {name, value} = event.target
-
-    setDetails(prevDetails=>({
-      ...prevDetails,
-      [name]: value
-    })
-    )
-  }
 
   return (
     <div className="settings_page">
@@ -50,39 +30,6 @@ const Settings = () => {
       <MdVpnKey className='icon'/>
       <h3 className="text">Change Password</h3>
       </div>
-      <form className="password_change">
-        <CInput
-        type='password'
-        name='currentPassword'
-        value={details.currentPassword}
-        required={true}
-        id='currentPassword'
-        label="Current Password"
-        handleChange={handleChange}
-        className='input'
-        />
-        <CInput
-        type='password'
-        name='newPassword'
-        value={details.newPassword}
-        required={true}
-        id='newPassword'
-        label="New Password"
-        handleChange={handleChange}
-        className='input'
-        />
-        <CInput
-        type='password'
-        name='confirmPassword'
-        value={details.confirmPassword}
-        required={true}
-        id='confirmPassword'
-        label="Confirm Password"
-        handleChange={handleChange}
-        className='input'
-        />
-        <CButton text='Update password'/>
-      </form>
 
       </div>
        <h3 className="subtitle">Display</h3>

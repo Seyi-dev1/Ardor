@@ -1,5 +1,5 @@
 .button {
-  background: #01cda9;
+  background: rgb(100, 138, 255);
   border-radius: 6.66667px;
   width: 400px;
   height: 39px;
@@ -14,13 +14,13 @@
   cursor: pointer;
 
   &.black {
-    background-color: black;
+    background-color: rgb(131, 214, 252);
 
     &:hover {
-      background-color: rgb(68, 67, 67);
+      background-color: rgb(24, 24, 24);
     }
   }
   &:hover {
-    background-color: #1effd6;
+    background-color: rgb(131, 214, 252);
   }
 }

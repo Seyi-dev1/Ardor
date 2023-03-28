@@ -20,7 +20,7 @@
     .total_balance {
       width: 300px;
       height: 100px;
-      background: #01cda9;
+      background: #ffffff;
       border-radius: 8px;
       display: grid;
       grid-template-columns: 20% 80%;
@@ -28,7 +28,7 @@
       .icon {
         width: 25px;
         height: 25px;
-        color: #3a3a3a;
+        color: rgb(100, 138, 255);
       }
 
       .balance {
@@ -41,7 +41,7 @@
           font-weight: 600;
           font-size: 16px;
           line-height: 19px;
-          color: #3a3a3a;
+          color: rgb(0, 0, 0);
         }
 
         .cash {
@@ -50,7 +50,7 @@
           font-weight: 700;
           font-size: 24px;
           line-height: 29px;
-          color: #ffffff;
+          color: rgb(0, 0, 0);
         }
         .show {
           font-size: 12px;
@@ -60,7 +60,7 @@
           justify-content: flex-start;
           width: 100%;
           cursor: pointer;
-          color: #ffffff;
+          color: #181717;
         }
       }
     }
@@ -146,7 +146,7 @@
         .icon {
           width: 29px;
           height: 29px;
-          color: #3a3a3a;
+          color: rgb(100, 138, 255);
         }
 
         .balance {

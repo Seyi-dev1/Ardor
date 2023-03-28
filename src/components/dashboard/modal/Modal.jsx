@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { changeVisibility } from "../../../redux/modal/modalReducer";
 import { motion } from "framer-motion";
+import LOGO from '../../../Images/Nav_logo.png'
 const Modal = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ const Modal = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <span className="logo">LOGO</span>
+        <img src={LOGO} alt="logo" className="logo" />
         <div className="content">
           <span className="text">Are you sure you want to logout?</span>
           <div className="buttons">

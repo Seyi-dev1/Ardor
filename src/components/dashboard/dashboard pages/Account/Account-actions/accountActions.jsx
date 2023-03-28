@@ -22,7 +22,7 @@ const AccountActions = () => {
           <div className="total_balance">
             <IoIosCash className="icon" />
             <div className="balance">
-              <h3 className="title">Your Total balance</h3>
+              <h3 className="title">Available balance</h3>
               <h3 className="cash">
                 ${balanceShown ? balance : "********.***"}
               </h3>

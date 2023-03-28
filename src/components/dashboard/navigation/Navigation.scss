@@ -1,7 +1,7 @@
 .navigation {
   height: 100vh;
   width: 100%;
-  background: #2f2f2f;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -12,7 +12,7 @@
     gap: 0.2rem;
     text-align: center;
     padding-top: 3rem;
-    color: #ffffff;
+    color: #2f2f2f;
 
     img {
       width: 100px;
@@ -37,16 +37,16 @@
   }
 
   .links {
+    font-weight: 500;
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
     font-family: "Syne";
     font-style: normal;
-    font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     text-decoration: none;
-    color: #ffffff;
+    color: #2f2f2f;
     justify-content: center;
 
     a {
@@ -56,7 +56,7 @@
       font-size: 16px;
       line-height: 19px;
       text-decoration: none;
-      color: #ffffff;
+      color: #2f2f2f;
       padding: 1.5rem 0rem 1rem 0rem;
       padding-left: 4rem;
       width: 100%;
@@ -73,8 +73,9 @@
       height: 25px;
     }
     .Link-active {
-      background: rgba(1, 205, 169, 0.25);
+      background: rgb(100, 138, 255);
       border: 20px 40px;
+      color: #fff;
     }
   }
 
@@ -88,15 +89,16 @@
     cursor: pointer;
 
     &:hover {
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid #383838;
     }
     .logout_logo {
-      color: #01cda9;
+      color: black;
       font-size: 20px;
+      font-weight: 500;
     }
 
     .logout_text {
-      color: #ffffff;
+      color: #2f2f2f;
       font-size: 16px;
       font-weight: 500;
     }
@@ -117,7 +119,7 @@
 @media screen and (max-width: 1024px) {
   .navigation {
     height: 100vh;
-    background: #2f2f2f;
+    background: #fff;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -130,7 +132,7 @@
       gap: 0.2rem;
       text-align: center;
       padding-top: 3rem;
-      color: #ffffff;
+      color: #2f2f2f;
 
       img {
         width: 80px;
@@ -180,7 +182,7 @@
       }
 
       .logout_text {
-        color: #ffffff;
+        color: #323131;
         font-size: 13px;
         font-weight: 500;
         &:hover {
@@ -200,7 +202,7 @@
       width: 50px;
       height: 30px;
       outline: none;
-      color: #01cda9;
+      color: #1b1c1c;
     }
   }
 }
