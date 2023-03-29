@@ -18,7 +18,7 @@ const Account = () => {
         </div>
       </div>
       <div className="carousel">
-        <Carousel />
+        <Carousel/>
       </div>
     </div>
   );
