@@ -167,20 +167,23 @@
     }
     .logout {
       width: 100%;
-      align-self: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 5px;
-      margin-top: 2rem;
+    // align-self: center;
+    display: flex;
+    margin-left: 4rem;
+    // justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
       cursor: pointer;
 
       &:hover {
-        border-bottom: none;
+        .logout_logo,.logout_text{
+          color: rgb(16, 56, 150);
+        }
       }
       .logout_logo {
-        color: #01cda9;
-        font-size: 16px;
+        // color: #01cda9;
+        font-size: 20px;
       }
 
       .logout_text {
