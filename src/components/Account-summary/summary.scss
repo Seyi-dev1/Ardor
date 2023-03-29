@@ -27,7 +27,7 @@
       padding: 7px 0px;
       gap: 10px;
       flex-direction: column;
-      height: 70%;
+      height: 90%;
       justify-content: space-between;
 
       .title {
@@ -46,7 +46,7 @@
   .value {
     display: flex;
     flex-direction: column;
-    height: 70%;
+    height: 90%;
     justify-content: space-between;
     padding: 7px 7px;
     text-align: right;
@@ -54,7 +54,7 @@
     .amount {
       font-size: 0.8rem;
       font-weight: 700;
-      color: rgb(148, 147, 147);
+      color: rgb(7, 199, 0);
     }
     .info {
       font-size: 0.6rem;
@@ -111,7 +111,7 @@
     .value {
       display: flex;
       flex-direction: column;
-      height: 70%;
+      height: 90%;
       justify-content: space-between;
       padding: 7px 7px;
       text-align: right;
