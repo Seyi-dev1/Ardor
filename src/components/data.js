@@ -3,7 +3,7 @@ import { MdSavings, MdEnergySavingsLeaf } from "react-icons/md";
 export const summaryData = [
   {
     id: 1,
-    name: "CHECKING",
+    name: "BHB CHECKING",
     number: "9047",
     amount: 2457.56,
     info: "Available Balance",
