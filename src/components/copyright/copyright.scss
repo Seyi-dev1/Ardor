@@ -1,16 +1,35 @@
-.rights_container{
+.rights_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+
+  .text {
+    font-family: "Syne";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.9rem;
+
+    color: #3a3a3a;
+  }
+}
+@media screen and (max-width: 768px) {
+  .rights_container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 1.5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
 
-    .text{
-        font-family: 'Syne';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 0.9rem;
-
-        color: #3A3A3A;
+    .text {
+      font-family: "Syne";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.9rem;
+      width: 270px;
+      text-align: center;
+      color: #3a3a3a;
     }
+  }
 }
