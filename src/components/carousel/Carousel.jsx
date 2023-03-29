@@ -29,7 +29,6 @@ const Carousel = ()=>{
       >
       <SwiperSlide>
       <div>
-      {/* <img src={PNG1} alt="png1" /> */}
       <h1>Experts in Assets Management</h1>
       <span>With years of experience and the talents on our team, 
       we make those returns from trading with technical 
@@ -38,7 +37,6 @@ const Carousel = ()=>{
       </SwiperSlide>
       <SwiperSlide>
       <div>
-      {/* <img src={PNG2} alt="png2" /> */}
       <h1>Best Investment plans</h1>
       <span>At Blue Horizon, 
       we provide the best investment plans to grow wealth for our clients.
@@ -47,7 +45,6 @@ const Carousel = ()=>{
       </SwiperSlide>
       <SwiperSlide>
       <div>
-      {/* <img src={PNG3} alt="png3" /> */}
       <h1>Registered and Insured</h1>
       <span>Blue Horizon is a fully registered company in Delaware USA.
        We are more than qualified to provide our clients with 50% return per annum.</span>
