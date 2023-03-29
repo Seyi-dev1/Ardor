@@ -1,0 +1,64 @@
+.summary {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #fff;
+  height: 70px;
+  margin: 5px 0px;
+  border-top: 0.6px solid rgb(148, 147, 147);
+  border-right: 0.6px solid rgb(148, 147, 147);
+  border-bottom: 0.6px solid rgb(148, 147, 147);
+  .name {
+    display: flex;
+    gap: 10px;
+
+    .line {
+      background-color: rgb(100, 138, 255);
+      width: 5px;
+      height: 100%;
+    }
+    .summary_icon {
+      color: rgb(148, 147, 147);
+      font-size: 2rem;
+      padding-top: 10px;
+    }
+    .summary_title {
+      display: flex;
+      padding: 7px 0px;
+      gap: 10px;
+      flex-direction: column;
+      height: 70%;
+      justify-content: space-between;
+
+      .title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: rgb(100, 138, 255);
+      }
+
+      .number {
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: rgb(148, 147, 147);
+      }
+    }
+  }
+  .value {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: space-between;
+    padding: 7px 7px;
+    text-align: right;
+
+    .amount {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: rgb(148, 147, 147);
+    }
+    .info {
+      font-size: 0.6rem;
+      color: rgb(148, 147, 147);
+    }
+  }
+}
