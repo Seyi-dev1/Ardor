@@ -1,0 +1,5 @@
+.MuiTablePagination-toolbar{
+    @media screen and (max-width: 750px){
+        overflow-x: scroll;
+    }
+}
