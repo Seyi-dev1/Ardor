@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { TfiWallet } from "react-icons/tfi";
 import { RiExchangeDollarFill } from "react-icons/ri";
 import { FiSettings } from "react-icons/fi";
-import Pic from "../../../pngs/profile3.png";
+import Pic from '../../../Images/icons8-person-100.png'
 import { FaTimes } from "react-icons/fa";
 import { createSelector } from "@reduxjs/toolkit";
 import { selectCurrentUser } from "../../../redux/user/userSelector";
