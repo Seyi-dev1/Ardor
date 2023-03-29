@@ -10,6 +10,20 @@
     min-height: 100vh;
     // padding: 1.3rem;
     background: #e7f0f3;
+
+    .summary_container {
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+
+      .section_info {
+        font-size: 1.2rem;
+        color: #727374;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+    }
   }
 
   .carousel {
