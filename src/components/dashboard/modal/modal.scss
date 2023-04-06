@@ -9,8 +9,8 @@
 
   .modal_content {
     background: #fff;
-    width: 500px;
-    height: 300px;
+    width: 450px;
+    height: fit-content;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -18,9 +18,9 @@
     gap: 2rem;
     align-items: center;
     box-shadow: 5px 4px 20px rgba(0, 0, 0, 0.1);
-
+    padding: 20px 0px;
     .logo {
-      width: 200px;
+      width: 120px;
     }
 
     .content {
@@ -33,13 +33,14 @@
       .text {
         font-size: 15px;
         align-items: center;
+        font-weight: 700;
       }
 
       .buttons {
         display: flex;
-        width: 400px;
-        gap: 2rem;
-        margin-top: 2rem;
+        width: 300px;
+        gap: 1rem;
+        margin-top: 1rem;
 
         .button {
           &.black {
@@ -67,7 +68,7 @@
       align-items: center;
 
       .logo {
-        width: 120px;
+        width: 100px;
       }
 
       .content {
@@ -85,8 +86,8 @@
 
         .buttons {
           display: flex;
-          width: 180px;
-          gap: 2rem;
+          width: 200px;
+          gap: 1rem;
           margin-top: 0.7rem;
 
           .button {

@@ -15,7 +15,11 @@ import React from "react";
 import SpinnerIcon from "@rsuite/icons/legacy/Spinner";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { RiLock2Fill } from "react-icons/ri";
-import LOGO from '../../Images/Nav_logo.png'
+import LOGO from "../../Images/Nav_logo.png";
+import ZELLE from "../../Images/Zelle.png";
+import GOLDMAN from "../../Images/Goldman.png";
+import FDIC from "../../Images/Member-FDIC.png";
+import GEICO from "../../Images/geico.png";
 const LoginForm = () => {
   const [info, setInfo] = useState({
     email: "",
@@ -67,7 +71,10 @@ const LoginForm = () => {
         <img src={LOGO} className="image" alt="logo" />
         <div className="loaderdiv">
           {isLoading && (
-            <SpinnerIcon pulse style={{ fontSize: "3rem", color: "rgb(100, 138, 255)" }} />
+            <SpinnerIcon
+              pulse
+              style={{ fontSize: "3rem", color: "rgb(100, 138, 255)" }}
+            />
           )}
         </div>
 
@@ -121,6 +128,12 @@ const LoginForm = () => {
               <CButton text="Sign In" className="button" />
               {error && <h1 className="error">{error.message}</h1>}
             </form>
+            <div className="partners">
+              <img src={FDIC} alt="partner" className="partner_logos" />
+              <img src={ZELLE} alt="partner" className="partner_logos" />
+              <img src={GOLDMAN} alt="partner" className="partner_logos" />
+              <img src={GEICO} alt="partner" className="partner_logos" />
+            </div>
           </div>
         </div>
       </div>

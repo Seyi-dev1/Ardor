@@ -24,15 +24,37 @@
         text-align: left;
       }
     }
-  }
+    .partners {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
 
- 
+      .partner_logos {
+        width: 90px;
+      }
+    }
+  }
 }
 @media screen and (max-width: 1024px) {
   .Account_page {
     display: flex;
     flex-direction: column;
-    width: 100%;
+
+    .Account_page {
+      .partners {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .partner_logos {
+          width: 60px;
+        }
+      }
+    }
     .carousel {
       .logo {
         display: none;

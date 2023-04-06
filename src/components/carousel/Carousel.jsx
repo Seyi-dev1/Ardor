@@ -3,6 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper";
+import SECURE from "../../Images/secure.png";
+import BANK from "../../Images/bank.png";
+import BANK2 from "../../Images/bank2.png";
 
 const Carousel = () => {
   return (
@@ -25,29 +28,33 @@ const Carousel = () => {
     >
       <SwiperSlide>
         <div>
-          <h1>Experts in Assets Management</h1>
+          <img src={SECURE} alt="secure" />
+          <h1>Security, Fidelity & Insurance</h1>
           <span>
-            With years of experience and the talents on our team, we make those
-            returns from trading with technical analysis in the stock market.
+            Providing peace of mind through secure transactions and
+            comprehensive insurance options. Your trusted financial partner for
+            all your needs.
           </span>
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div>
-          <h1>Best Investment plans</h1>
+          <img src={BANK} alt="secure" />
+          <h1>Super-fast Transactions</h1>
           <span>
-            At Blue Horizon, we provide the best investment plans to grow wealth
-            for our clients. We have the best services world wide.
+            Experience lightning-fast banking with us! Our secure and reliable
+            platform ensures quick transactions that fit your fast-paced
+            lifestyle.
           </span>
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div>
-          <h1>Registered and Insured</h1>
+          <img src={BANK2} alt="secure" />
+          <h1>Automated Payments</h1>
           <span>
-            Blue Horizon is a fully registered company in Delaware USA. We are
-            more than qualified to provide our clients with 50% return per
-            annum.
+            Revolutionizing payments with cutting-edge automation technology.
+            Your trusted partner for seamless, secure transactions.
           </span>
         </div>
       </SwiperSlide>

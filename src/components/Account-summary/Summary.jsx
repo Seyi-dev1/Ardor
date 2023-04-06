@@ -9,7 +9,7 @@ const Summary = ({ ...data }) => {
         {data.icon}
         <div className="summary_title">
           <div className="title">{data.name}</div>
-          <div className="number">...{data.number}</div>
+          <div className="number">***{data.number}</div>
         </div>
       </div>
       <div className="value">

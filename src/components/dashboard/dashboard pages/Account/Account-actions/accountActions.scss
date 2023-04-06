@@ -14,7 +14,8 @@
   .cash_container {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: left;
+    margin-left: 1.5rem;
 
     .total_balance {
       width: 300px;

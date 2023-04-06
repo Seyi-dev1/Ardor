@@ -36,7 +36,7 @@ export const summaryData = [
   {
     id: 5,
     name: "BLUE CREDIT CARD",
-    number: "65265",
+    number: "6525",
     amount: 447.12,
     info: "Outstanding Balance",
     icon: <AiFillCreditCard className="summary_icon" />,
