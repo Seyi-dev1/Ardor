@@ -1,5 +1,16 @@
-.MuiTablePagination-toolbar{
-    @media screen and (max-width: 750px){
-        overflow-x: scroll;
+.dataTable{
+    width: 95%;
+
+    .MuiTablePagination-toolbar{
+        @media screen and (max-width: 950px){
+            overflow-x: scroll;
+        }
     }
+
+    .statusCell{
+        color: red;
+        font-size: 30px;
+        background-color: red;
+    }
+    
 }

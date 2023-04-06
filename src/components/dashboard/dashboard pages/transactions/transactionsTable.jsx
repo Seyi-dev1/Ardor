@@ -8,56 +8,59 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import './transactionsTable.scss'
-const columns = [
-  { id: 'name', label: 'Name', minWidth: 170 },
-  { id: 'code', label: 'ISO\u00a0Code', minWidth: 100 },
-  {
-    id: 'population',
-    label: 'Population',
-    minWidth: 170,
-    align: 'right',
-    format: (value) => value.toLocaleString('en-US'),
-  },
-  {
-    id: 'size',
-    label: 'Size\u00a0(km\u00b2)',
-    minWidth: 170,
-    align: 'right',
-    format: (value) => value.toLocaleString('en-US'),
-  },
-  {
-    id: 'density',
-    label: 'Density',
-    minWidth: 170,
-    align: 'right',
-    format: (value) => value.toFixed(2),
-  },
-];
 
-function createData(name, code, population, size) {
-  const density = population / size;
-  return { name, code, population, size, density };
-}
 
-const rows = [
-  createData('India', 'IN', 1324171354, 3287263),
-  createData('China', 'CN', 1403500365, 9596961),
-  createData('Italy', 'IT', 60483973, 301340),
-  createData('United States', 'US', 327167434, 9833520),
-  createData('Canada', 'CA', 37602103, 9984670),
-  createData('Australia', 'AU', 25475400, 7692024),
-  createData('Germany', 'DE', 83019200, 357578),
-  createData('Ireland', 'IE', 4857000, 70273),
-  createData('Mexico', 'MX', 126577691, 1972550),
-  createData('Japan', 'JP', 126317000, 377973),
-  createData('France', 'FR', 67022000, 640679),
-  createData('United Kingdom', 'GB', 67545757, 242495),
-  createData('Russia', 'RU', 146793744, 17098246),
-  createData('Nigeria', 'NG', 200962417, 923768),
-  createData('Brazil', 'BR', 210147125, 8515767),
-];
 
 export default function TransactionsTable() {
+
+  const columns = [
+    { id: 'number', label: 'Transaction Number', minWidth: 170 },
+    { id: 'date', label: 'Date', minWidth: 170 },
+    { id: 'category', label: 'Category', minWidth: 100 },
+    {
+      id: 'amount',
+      label: 'Amount',
+      minWidth: 170,
+      align: 'right',
+      format: (value) => value.toLocaleString('en-US'),
+    },
+    {
+      id: 'status',
+      label: 'Status',
+      minWidth: 170,
+      align: 'right',
+      renderCell:(params)=><div className="statusCell" style={{color:'red'}}><h1 style={{color:'red'}}>{params.row.status}</h1></div>
+    },
+  ];
+
+
+  function createData(number, date, category, amount, status) {
+    return { number, date, category, amount, status };
+  }
+
+
+
+  const rows = [
+    createData('#28456100', '18:24 020223', 'withdrawal', '$2000', 'approved' ),
+    createData('#75632102', '18:24 020223', 'transfer', '$300', 'declined'),
+    createData('#09837651', 'withdrawal', '$200', 301340),
+    createData('#99072653', 'withdrawal', '$400', 9833520),
+    createData('#30648710', 'deposit', '$300', 9984670),
+    createData('#82029941', 'deposit', '$1000', 7692024),
+    createData('#30734099', 'withdrawal', '$380', 357578),
+    createData('#31205572', 'deposit', '$550', 70273),
+    createData('#37748711', 'transfer','$50', 1972550),
+    createData('#00659463', 'withdrawal', '$250', 377973),
+    createData('#30762517', 'deposit', '$2000', 640679),
+    createData('#87730062', 'withdrawal', '$420', 242495),
+    createData('27105425', 'tramsfer', '$150', 17098246),
+    createData('#24141415', 'deposit', '$500', 923768),
+    createData('#16173245', 'deposit', '$500', 8515767),
+  ];
+
+
+
+
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -71,8 +74,9 @@ export default function TransactionsTable() {
   };
 
   return (
-    <Paper sx={{ width: '95%', overflow: 'hidden' }}>
-      <TableContainer sx={{ maxHeight: 440, width:'100%' }}>
+    <div className="dataTable">
+      <Paper sx={{ width: '100%', overflow: 'hidden' }}>
+      <TableContainer sx={{ maxHeight: 540, width:'100%' }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
@@ -80,7 +84,7 @@ export default function TransactionsTable() {
                 <TableCell
                   key={column.id}
                   align={column.align}
-                  style={{ minWidth: column.minWidth }}
+                  style={{ minWidth: column.minWidth, color:column.color }}
                 >
                   {column.label}
                 </TableCell>
@@ -110,7 +114,7 @@ export default function TransactionsTable() {
         </Table>
       </TableContainer>
       <TablePagination
-        rowsPerPageOptions={[10, 25, 100]}
+        rowsPerPageOptions={[5, 8, 10]}
         component="div"
         count={rows.length}
         rowsPerPage={rowsPerPage}
@@ -124,5 +128,7 @@ export default function TransactionsTable() {
  }}
       />
     </Paper>
+    </div>
+    
   );
 }
