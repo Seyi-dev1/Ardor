@@ -1,16 +1,14 @@
-.dataTable{
-    width: 95%;
 
-    .MuiTablePagination-toolbar{
-        @media screen and (max-width: 950px){
-            overflow-x: scroll;
-        }
-    }
 
-    .statusCell{
-        color: red;
-        font-size: 30px;
-        background-color: red;
+    .table{
+        background-color: #fff;
+        // width: fit-content;
+
+       .headerclass{
+        background-color: rgb(0, 153, 255);
+        color: white;
+        font-size: 20px;
+    
+       }
     }
     
-}
