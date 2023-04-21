@@ -14,7 +14,7 @@ import { BiLogOut } from "react-icons/bi";
 
 import { useDispatch } from "react-redux";
 
-const Navigation = ({ navRef, toggleNav }) => {
+const Navigation = () => {
   const userSelector = createSelector(
     [selectCurrentUser],
     (currentUser) => currentUser
@@ -32,7 +32,7 @@ const Navigation = ({ navRef, toggleNav }) => {
   const { email, firstName, lastName } = user;
 
   return (
-    <div className="navigation" ref={navRef}>
+    <div className="navigation" >
       <div className="profile">
         <img src={Pic} alt="pic" className="pic" />
         <h2 className="name">
@@ -40,7 +40,7 @@ const Navigation = ({ navRef, toggleNav }) => {
         </h2>
         <h3 className="email">{email}</h3>
       </div>
-      <div className="links" onClick={toggleNav}>
+      <div className="links" >
         <NavLink
           className={({ isActive }) =>
             isActive ? "Link-active link" : "Link-inactive link"
@@ -73,7 +73,7 @@ const Navigation = ({ navRef, toggleNav }) => {
         <BiLogOut className="logout_logo" />
         <span className="logout_text">Logout</span>
       </div>
-      <FaTimes className="close_btn" onClick={toggleNav} />
+      <FaTimes className="close_btn"  />
     </div>
   );
 };

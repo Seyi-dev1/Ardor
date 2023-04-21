@@ -3,13 +3,13 @@
   background: #e7f0f3;
   display: grid;
   justify-content: center;
-
+  min-height: 100vh;
   .settings_container {
     width: 831px;
-    height: 725px;
+    height: fit-content;
     background: #fff;
     padding: 60px;
-    height: 65rem;
+   
     margin: 2rem;
     border-radius: 10px;
     box-shadow: 5px 4px 20px rgba(0, 0, 0, 0.1);
@@ -92,7 +92,6 @@
 @media screen and (max-width: 768px) {
   .settings_page {
     width: 100%;
-    min-height: 100vh;
     background: #e7f0f3;
     display: grid;
     justify-content: center;

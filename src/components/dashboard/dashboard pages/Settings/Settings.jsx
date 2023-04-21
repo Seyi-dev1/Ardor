@@ -3,7 +3,6 @@ import './settings.scss'
 import Switch from '../../../switch/Switch'
 import {MdNotificationsActive, MdVpnKey} from 'react-icons/md'
 import {BsFillShieldLockFill, BsPaletteFill} from  'react-icons/bs'
-import Copyright from '../../../copyright/Copyright'
 
 
 
@@ -42,7 +41,6 @@ const Settings = () => {
       </div>
       
       </div>
-    <Copyright/>
     </div>
   )
 }

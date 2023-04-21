@@ -24,7 +24,7 @@ const AccountActions = () => {
             <div className="balance">
               <h3 className="title">Available balance</h3>
               <h3 className="cash">
-                ${balanceShown ? balance : "********.***"}
+                ${balanceShown ? balance : "***********"}
               </h3>
               {balanceShown ? (
                 <div
