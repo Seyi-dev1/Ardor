@@ -87,7 +87,6 @@ const Profile = () => {
               />
               <div className="buttons">
                 <button>Save</button>
-                <button className="black">Back</button>
               </div>
             </div>
           </form>

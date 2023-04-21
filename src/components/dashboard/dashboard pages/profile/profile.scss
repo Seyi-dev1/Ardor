@@ -3,6 +3,7 @@
   background: #e7f0f3;
   display: grid;
   justify-content: center;
+  min-height: 100vh;
 
   .profile-content {
     width: 600px;
@@ -112,7 +113,7 @@
           font-family: inherit;
           font-size: 18px;
           color: #fff;
-          background: #01cda9;
+          background: rgb(100, 138, 255);
           outline: none;
           border: none;
           border-radius: 11px;
@@ -128,6 +129,12 @@
 
 @media screen and (max-width: 1024px) {
   .profile-container {
+    width: 100%;
+    background: #e7f0f3;
+    display: grid;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
     .profile-content {
       width: 343px;
       background: #fff;
