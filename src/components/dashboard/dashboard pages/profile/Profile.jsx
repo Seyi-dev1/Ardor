@@ -3,19 +3,11 @@ import CInput from "../../../CInput/CInput";
 import "./profile.scss";
 import Copyright from "../../../copyright/Copyright";
 import { FaCloudUploadAlt } from "react-icons/fa";
-import { createSelector } from "@reduxjs/toolkit";
-import { selectCurrentUser } from "../../../../redux/user/userSelector";
-import { useSelector } from "react-redux";
 
 const Profile = () => {
-  const userSelector = createSelector(
-    [selectCurrentUser],
-    (currentUser) => currentUser
-  );
+  const user = window.localStorage.getItem("user");
 
-  const user = useSelector((state) => userSelector(state));
-
-  const { email, firstName, lastName, address } = user;
+  const { email, firstName, lastName, address } = JSON.parse(user);
 
   const [file, setFile] = React.useState("");
   const [inputs, setInputs] = React.useState({

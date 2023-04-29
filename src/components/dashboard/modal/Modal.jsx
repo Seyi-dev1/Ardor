@@ -6,14 +6,17 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { changeVisibility } from "../../../redux/modal/modalReducer";
 import { motion } from "framer-motion";
-import LOGO from '../../../Images/Nav_logo.png'
+import LOGO from "../../../Images/Nav_logo.png";
 const Modal = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const signOut = () => {
     dispatch(startSignOut());
-    setTimeout(() => navigate("/"), 4000);
+    setTimeout(() => {
+      window.localStorage.clear();
+      navigate("/");
+    }, 3000);
     setTimeout(() => dispatch(changeVisibility()), 5000);
   };
 

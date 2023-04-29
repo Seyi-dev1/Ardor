@@ -1,21 +1,22 @@
 // import { useRef } from "react";
 import Navigation from "./navigation/Navigation";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import "./dashboard.scss";
 // import { FaBars } from "react-icons/fa";
 import { selectModalState } from "../../redux/modal/modalSelector";
-import { useSelector } from "react-redux";
-import LOGO from '../../Images/Nav_logo.png'
+import { useSelector, useDispatch } from "react-redux";
+import LOGO from "../../Images/Nav_logo.png";
 import Modal from "./modal/Modal";
 import MobileNav from "../mobile-nav/MobileNav";
+import { startSignOut } from "../../redux/user/userReducer";
 const Dashboard = () => {
   // const navRef = useRef();
   // const toggleNav = () => {
   //   navRef.current.classList.toggle("responsive_nav");
   // };
-
+  const navigate = useNavigate();
   const modal = useSelector((state) => selectModalState(state));
-
+  const dispatch = useDispatch();
   return (
     <div className="con">
       {modal ? (
@@ -25,17 +26,26 @@ const Dashboard = () => {
           <div className="header">
             {/* <FaBars className="nav_icon" onClick={toggleNav} /> */}
             <img src={LOGO} alt="logo" className="logo" />
+            <span
+              className="out"
+              onClick={() => {
+                dispatch(startSignOut());
+                setTimeout(() => {
+                  window.localStorage.clear();
+                  navigate("/");
+                }, 3000);
+              }}
+            >
+              Sign out
+            </span>
           </div>
           <div className="dashboard_content">
-            <Navigation
-              className="navigation"
-            />
+            <Navigation className="navigation" />
             <Outlet className="flow" />
             <div className="mobile_nav">
-            <MobileNav/>
+              <MobileNav />
+            </div>
           </div>
-          </div>
-         
         </div>
       )}
     </div>

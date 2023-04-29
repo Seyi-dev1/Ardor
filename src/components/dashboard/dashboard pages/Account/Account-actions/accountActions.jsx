@@ -2,19 +2,12 @@ import React from "react";
 import "./accountActions.scss";
 import { IoIosCash } from "react-icons/io";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import { createSelector } from "@reduxjs/toolkit";
-import { selectCurrentUser } from "../../../../../redux/user/userSelector";
-import { useSelector } from "react-redux";
 
 const AccountActions = () => {
-  const userSelector = createSelector(
-    [selectCurrentUser],
-    (currentUser) => currentUser
-  );
-  const user = useSelector((state) => userSelector(state));
   const [balanceShown, setBalanceShown] = React.useState(false);
+  const user = window.localStorage.getItem("user");
 
-  const { firstName, balance } = user;
+  const { firstName, balance } = JSON.parse(user);
   return (
     <div>
       <div className="account_controls">
