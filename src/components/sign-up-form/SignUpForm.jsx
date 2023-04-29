@@ -55,7 +55,7 @@ const SignUp = () => {
   }, [user, navigate]);
 
   return (
-    <div className="signup_container">
+    <div className="signup_con">
       <motion.div
         className="signup-page"
         initial={{ x: 0, opacity: 0 }}
