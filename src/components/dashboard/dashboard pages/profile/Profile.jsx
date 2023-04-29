@@ -3,14 +3,26 @@ import CInput from "../../../CInput/CInput";
 import "./profile.scss";
 import Copyright from "../../../copyright/Copyright";
 import { FaCloudUploadAlt } from "react-icons/fa";
+import { createSelector } from "@reduxjs/toolkit";
+import { selectCurrentUser } from "../../../../redux/user/userSelector";
+import { useSelector } from "react-redux";
 
 const Profile = () => {
+  const userSelector = createSelector(
+    [selectCurrentUser],
+    (currentUser) => currentUser
+  );
+
+  const user = useSelector((state) => userSelector(state));
+
+  const { email, firstName, lastName, address } = user;
+
   const [file, setFile] = React.useState("");
   const [inputs, setInputs] = React.useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    country: "",
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    address: address,
   });
 
   const handleChange = (event) => {
@@ -19,7 +31,9 @@ const Profile = () => {
       return { ...prev, [name]: value };
     });
   };
-
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+  };
   return (
     <div className="profile-container">
       <div className="profile-content">
@@ -52,7 +66,7 @@ const Profile = () => {
           />
         </div>
         <div className="input-field">
-          <form action="">
+          <form onSubmit={handleSubmit}>
             <div className="grid-inputs">
               <CInput
                 type="text"
@@ -63,6 +77,7 @@ const Profile = () => {
                 label="First Name"
                 handleChange={handleChange}
                 className="input"
+                disabled={true}
               />
               <CInput
                 type="text"
@@ -71,6 +86,17 @@ const Profile = () => {
                 required={true}
                 id="fullName"
                 label="Last Name"
+                handleChange={handleChange}
+                className="input"
+                disabled={true}
+              />
+              <CInput
+                type="text"
+                name="address"
+                value={inputs.address}
+                required={true}
+                id="address"
+                label="Location/Address"
                 handleChange={handleChange}
                 className="input"
               />
@@ -84,6 +110,7 @@ const Profile = () => {
                 id="email"
                 label="Email"
                 handleChange={handleChange}
+                disabled={true}
               />
               <div className="buttons">
                 <button>Save</button>

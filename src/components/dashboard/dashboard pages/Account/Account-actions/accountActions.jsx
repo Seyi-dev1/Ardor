@@ -14,18 +14,17 @@ const AccountActions = () => {
   const user = useSelector((state) => userSelector(state));
   const [balanceShown, setBalanceShown] = React.useState(false);
 
-  const { balance } = user;
+  const { firstName, balance } = user;
   return (
     <div>
       <div className="account_controls">
+        <span className="greeting">Welcome back {firstName}!</span>
         <div className="cash_container">
           <div className="total_balance">
             <IoIosCash className="icon" />
             <div className="balance">
               <h3 className="title">Available balance</h3>
-              <h3 className="cash">
-                ${balanceShown ? balance : "***********"}
-              </h3>
+              <h3 className="cash">{balanceShown ? balance : "***********"}</h3>
               {balanceShown ? (
                 <div
                   className="show"

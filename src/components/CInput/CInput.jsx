@@ -16,6 +16,7 @@ const CInput = (props) => {
         required={props.required}
         placeholder={props.placeholder}
         id={props.id}
+        disabled={props.disabled}
       />
     </div>
   );

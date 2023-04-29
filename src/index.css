@@ -4,4 +4,8 @@
   box-sizing: border-box;
   font-family: "montserrat", sans-serif;
   user-select: none;
+  overscroll-behavior-y: contain;
+  -webkit-overscroll-behavior-y: contain;
+  -ms-scroll-chaining: none;
+  -webkit-overflow-scrolling: touch;
 }

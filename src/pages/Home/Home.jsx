@@ -6,11 +6,13 @@ import Profile from "../../components/dashboard/dashboard pages/profile/Profile"
 import Settings from "../../components/dashboard/dashboard pages/Settings/Settings";
 import Transactions from "../../components/dashboard/dashboard pages/transactions/Transactions";
 import LoginForm from "../../components/LoginForm/LoginForm";
+import SignUp from "../../components/sign-up-form/SignUpForm";
 const Home = () => {
   return (
     <div>
       <Routes>
         <Route path="/" element={<LoginForm />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="Account" element={<Account />}></Route>
           <Route path="Transactions" element={<Transactions />} />
