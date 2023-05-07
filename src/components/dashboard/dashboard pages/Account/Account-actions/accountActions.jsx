@@ -2,6 +2,9 @@ import React from "react";
 import "./accountActions.scss";
 import { IoIosCash } from "react-icons/io";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { RiMoneyDollarBoxFill } from "react-icons/ri";
+import { SiMoneygram } from "react-icons/si";
+import { Link } from "react-router-dom";
 
 const AccountActions = () => {
   const [balanceShown, setBalanceShown] = React.useState(false);
@@ -24,7 +27,7 @@ const AccountActions = () => {
                   onClick={() => setBalanceShown(!balanceShown)}
                 >
                   <span>hide</span>
-                  <AiOutlineEyeInvisible />
+                  <AiOutlineEyeInvisible class />
                 </div>
               ) : (
                 <div
@@ -37,6 +40,14 @@ const AccountActions = () => {
               )}
             </div>
           </div>
+        </div>
+        <div className="action">
+          <Link to="/dashboard/deposit" className="action_option">
+            Add cash <RiMoneyDollarBoxFill className="option_icon" />
+          </Link>
+          <Link to="/dashboard/withdraw" className="action_option">
+            Send funds <SiMoneygram className="option_icon" />
+          </Link>
         </div>
       </div>
     </div>

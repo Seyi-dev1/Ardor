@@ -66,57 +66,36 @@
       }
     }
   }
-  .activities {
-    display: grid;
-    grid-template-columns: repeat(2, 10rem);
-    gap: 5rem;
-    justify-content: center;
-    margin-top: 3rem;
-    padding-left: 2rem;
-    a {
+  .action {
+    display: flex;
+    gap: 1rem;
+    margin-left: 1.5rem;
+    height: 2rem;
+
+    .action_option {
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      transition: 100ms ease-in-out;
       text-decoration: none;
-      color: #3a3a3a;
-    }
-    .content {
-      display: grid;
-      width: auto;
-      height: 50px;
-      grid-template-columns: 3rem auto;
-      align-content: center;
-      background: #ffffff;
-      border-radius: 10px;
-      cursor: pointer;
+      color: #373737;
 
-      .text {
-        align-self: center;
-        font-weight: 700;
-        text-decoration: none;
-        color: #3a3a3a;
-        font-size: 14px;
+      .option_icon {
+        color: #0153cd;
       }
-      .icon {
-        width: 60px;
-        height: 60px;
-        background: #01cda9;
-        padding: 10px;
-        border-radius: 50%;
-        z-index: 1;
-        color: #ffffff;
-        margin-left: -22px;
 
-        &.two {
-          background: #ff8947;
-        }
+      &:hover {
+        background-color: #3475d6;
+        padding: 5px 10px;
+        border-radius: 5px;
 
-        &.three {
-          background: #204a89;
+        .option_icon {
+          color: #181717;
         }
       }
-    }
-
-    .Link-active {
-      background: rgba(1, 205, 169, 0.25);
-      border: 20px 40px;
     }
   }
 }
@@ -188,23 +167,43 @@
         }
       }
     }
-    .activities {
-      gap: 1.5rem;
+    .action {
+      display: flex;
+      gap: 1rem;
+      width: 100%;
       justify-content: center;
-      margin-top: 1rem;
+      align-items: center;
+      height: 2rem;
 
-      .content {
-        display: grid;
-        width: 120px;
-        height: 35px;
-        grid-template-columns: 2rem auto;
-
-        .text {
-          font-size: 12px;
+      .action_option {
+        font-weight: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        transition: 100ms ease-in-out;
+        background-color: #0153cd;
+        padding: 10px;
+        text-decoration: none;
+        color: #fffbfb;
+        border-radius: 5px;
+        a {
+          text-decoration: none;
         }
-        .icon {
-          width: 40px;
-          height: 40px;
+
+        .option_icon {
+          color: #ffffff;
+        }
+
+        &:hover {
+          background-color: #3475d6;
+          padding: 5px 10px;
+          border-radius: 5px;
+
+          .option_icon {
+            color: #181717;
+          }
         }
       }
     }
