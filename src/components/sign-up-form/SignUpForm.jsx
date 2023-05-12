@@ -3,12 +3,14 @@ import CButton from "../CButton/CButton";
 import CInput from "../CInput/CInput";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { createSelector } from "reselect";
 import { signUpStart } from "../../redux/user/userReducer";
 import { selectCurrentUser, selectError } from "../../redux/user/userSelector";
 import { motion } from "framer-motion";
+import { SyncLoader } from "react-spinners";
+import { selectIsLoading } from "../../redux/user/userSelector";
 const SignUp = () => {
   const [inputs, setInputs] = React.useState({
     firstName: "",
@@ -17,7 +19,7 @@ const SignUp = () => {
     password: "",
     address: "",
     occupation: "",
-    balance: "",
+    confirmPassword: "",
   });
   const [passwordShown, setPasswordShown] = React.useState(false);
 
@@ -30,7 +32,7 @@ const SignUp = () => {
   const error = useSelector((state) => errorSelector(state));
   const user = useSelector((state) => userSelector(state));
   const navigate = useNavigate();
-
+  const isLoading = useSelector((state) => selectIsLoading(state));
   const dispatch = useDispatch();
 
   const handleSubmit = async (event) => {
@@ -65,8 +67,8 @@ const SignUp = () => {
       >
         <div className="signup_container">
           <div className="signup_content">
-            <h1 className="title">Create User</h1>
-            <p className="subtitle"> Input the user details here...</p>
+            <h1 className="title">Getting Started</h1>
+            <p className="subtitle">Tell us about you...</p>
             <form onSubmit={handleSubmit} className="form">
               <CInput
                 type="text"
@@ -118,16 +120,7 @@ const SignUp = () => {
                 label="occupation"
                 placeholder="your occupation"
               />
-              <CInput
-                type="text"
-                handleChange={handleChange}
-                name="balance"
-                value={inputs.balance}
-                required={true}
-                id="balance"
-                label="Account balance"
-                placeholder="e.g $20,000"
-              />
+
               <div className="password">
                 <CInput
                   type={passwordShown ? "text" : "password"}
@@ -137,8 +130,9 @@ const SignUp = () => {
                   required={true}
                   id="password"
                   label="Password"
-                  placeholder="password"
+                  placeholder="should include numerals and alphabets"
                 />
+
                 {passwordShown ? (
                   <AiOutlineEyeInvisible
                     onClick={togglePassword}
@@ -151,9 +145,44 @@ const SignUp = () => {
                   />
                 )}
               </div>
+              <div className="password">
+                <CInput
+                  type={passwordShown ? "text" : "password"}
+                  handleChange={handleChange}
+                  name="confirmPassword"
+                  value={inputs.confirmPassword}
+                  required={true}
+                  id="confirmPassword"
+                  label="Confirm password"
+                  placeholder="*******"
+                />
+              </div>
+              {isLoading ? (
+                <div className="loader_con">
+                  <SyncLoader color="#000" margin={3} size={12} />
+                </div>
+              ) : (
+                <CButton
+                  type="submit"
+                  text="Create account"
+                  className="button"
+                />
+              )}
 
-              <CButton type="submit" text="Create account" className="button" />
-              {error && <h1 className="error">{error.message}</h1>}
+              {error === "Firebase: Error (auth/email-already-in-use)." && (
+                <h1 className="error">Email already in use!</h1>
+              )}
+              {error === "Firebase: Error (auth/network-request-failed)." && (
+                <h1 className="error">
+                  Check your internet connection and try agin!
+                </h1>
+              )}
+              <Link to="/login" className="login_here">
+                ← Go back to login
+              </Link>
+              <Link to="/" className="login_here">
+                ← Back to Home
+              </Link>
             </form>
           </div>
         </div>

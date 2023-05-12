@@ -1,7 +1,6 @@
 .button {
   background: rgb(100, 138, 255);
-  border-radius: 6.66667px;
-  width: 400px;
+  width: fit-content;
   height: 39px;
   outline: none;
   border: none;
@@ -12,12 +11,16 @@
   font-size: 13.3333px;
   line-height: 16px;
   cursor: pointer;
+  padding: 10px 20px;
 
   &.black {
     background-color: rgb(0, 0, 0);
+    width: fit-content;
 
     &:hover {
-      background-color: rgb(131, 214, 252);
+      background-color: rgb(255, 255, 255);
+      color: black;
+      border: 1px solid black;
     }
   }
   &:hover {

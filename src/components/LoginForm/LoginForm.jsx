@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./LoginForm.scss";
 import CInput from "../CInput/CInput";
 import CButton from "../CButton/CButton";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { emailSignInStart } from "../../redux/user/userReducer";
 import {
@@ -12,14 +12,13 @@ import {
 } from "../../redux/user/userSelector";
 import { createSelector } from "reselect";
 import React from "react";
-import SpinnerIcon from "@rsuite/icons/legacy/Spinner";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { RiLock2Fill } from "react-icons/ri";
-import LOGO from "../../Images/Nav_logo.png";
 import ZELLE from "../../Images/Zelle.png";
 import GOLDMAN from "../../Images/Goldman.png";
 import FDIC from "../../Images/Member-FDIC.png";
 import GEICO from "../../Images/geico.png";
+import SyncLoader from "react-spinners/SyncLoader";
 const LoginForm = () => {
   const [info, setInfo] = useState({
     email: "",
@@ -43,11 +42,11 @@ const LoginForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    navigate("/");
+    navigate("/login");
     try {
       dispatch(emailSignInStart(info));
     } catch (err) {
-      navigate("/");
+      navigate("/login");
     }
   };
   const handleChange = (event) => {
@@ -69,16 +68,6 @@ const LoginForm = () => {
   return (
     <div className="container">
       <div className="login-page">
-        <img src={LOGO} className="image" alt="logo" />
-        <div className="loaderdiv">
-          {isLoading && (
-            <SpinnerIcon
-              pulse
-              style={{ fontSize: "3rem", color: "rgb(100, 138, 255)" }}
-            />
-          )}
-        </div>
-
         <div className="login_container">
           <div className="login_content">
             <h1 className="title">
@@ -126,8 +115,25 @@ const LoginForm = () => {
                 {" "}
                 forgot password?
               </a>
-              <CButton text="Sign In" className="button" />
-              {error && <h1 className="error">{error.message}</h1>}
+              {isLoading ? (
+                <div className="loader_con">
+                  <SyncLoader color="#000" margin={3} size={12} />
+                </div>
+              ) : (
+                <CButton type="submit" text="Sign In" />
+              )}
+              {error === "Firebase: Error (auth/wrong-password)." && (
+                <h1 className="error">wrong password!</h1>
+              )}
+              {error === "Firebase: Error (auth/user-not-found)." && (
+                <h1 className="error">Wrong email or password</h1>
+              )}
+              <Link to="/signup" className="signup_here">
+                create an account here →
+              </Link>
+              <Link to="/" className="signup_here">
+                ← Back to Home
+              </Link>
             </form>
             <div className="partners">
               <img src={FDIC} alt="partner" className="partner_logos" />
