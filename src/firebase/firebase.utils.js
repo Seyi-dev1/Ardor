@@ -3,12 +3,12 @@ import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore/lite";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBUUzoe-5pnkprddtKnIOQgUolBYiWJUDk",
-  authDomain: "tooth-fairy-7b6af.firebaseapp.com",
-  projectId: "tooth-fairy-7b6af",
-  storageBucket: "tooth-fairy-7b6af.appspot.com",
-  messagingSenderId: "249359822897",
-  appId: "1:249359822897:web:734431a0f4e0bd2e08a510",
+  apiKey: "AIzaSyApqD1v_AjQX8ghd023NskXTcWH2zaKuwQ",
+  authDomain: "cryptosyd-81819.firebaseapp.com",
+  projectId: "cryptosyd-81819",
+  storageBucket: "cryptosyd-81819.appspot.com",
+  messagingSenderId: "648719539087",
+  appId: "1:648719539087:web:bf967180ad500001d809fa",
 };
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {

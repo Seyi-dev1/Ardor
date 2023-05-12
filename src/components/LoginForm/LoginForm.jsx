@@ -63,6 +63,7 @@ const LoginForm = () => {
   React.useEffect(() => {
     user && setTimeout(() => navigate("/dashboard/Account"), 2000);
     window.localStorage.setItem("user", JSON.stringify(user));
+    window.scrollTo(0, 0);
   }, [user, navigate]);
 
   return (

@@ -8,7 +8,7 @@ const CInput = (props) => {
         {props.label}
       </label>
       <input
-        className="input"
+        className={`input ${props.small}`}
         value={props.value}
         onChange={props.handleChange}
         type={props.type}

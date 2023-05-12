@@ -20,6 +20,7 @@ const SignUp = () => {
     address: "",
     occupation: "",
     confirmPassword: "",
+    balance: "0",
   });
   const [passwordShown, setPasswordShown] = React.useState(false);
 
@@ -53,7 +54,8 @@ const SignUp = () => {
   }
 
   React.useEffect(() => {
-    user && navigate("/");
+    user && navigate("/dashboard/account");
+    window.scrollTo(0, 0);
   }, [user, navigate]);
 
   return (
