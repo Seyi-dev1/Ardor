@@ -112,10 +112,9 @@ const LoginForm = () => {
                   />
                 )}
               </div>
-              <a href="*" className="subtitle1">
-                {" "}
-                forgot password?
-              </a>
+              <Link to="/account-recovery" className="subtitle1">
+                forgot password? Reset Password here.
+              </Link>
               {isLoading ? (
                 <div className="loader_con">
                   <SyncLoader color="#000" margin={3} size={12} />

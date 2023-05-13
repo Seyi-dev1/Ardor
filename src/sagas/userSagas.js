@@ -51,8 +51,16 @@ export function* signInwithEmail({ payload }) {
 }
 
 export function* signUp({ payload }) {
-  const { email, password, firstName, lastName, address, occupation, balance } =
-    payload;
+  const {
+    email,
+    password,
+    firstName,
+    middleName,
+    lastName,
+    address,
+    occupation,
+    balance,
+  } = payload;
   try {
     const { user } = yield createUserWithEmailAndPassword(
       auth,
@@ -62,7 +70,14 @@ export function* signUp({ payload }) {
     yield put(
       signUpSuccess({
         user,
-        additionalData: { firstName, lastName, address, occupation, balance },
+        additionalData: {
+          firstName,
+          middleName,
+          lastName,
+          address,
+          occupation,
+          balance,
+        },
       })
     );
   } catch (error) {
