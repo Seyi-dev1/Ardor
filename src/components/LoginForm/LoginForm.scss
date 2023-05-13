@@ -98,6 +98,9 @@
             display: flex;
             justify-content: center;
             align-content: center;
+            font-weight: bold;
+            text-decoration: none;
+            margin-bottom: 10px;
             &:hover {
               text-decoration: underline;
             }

@@ -14,6 +14,7 @@ import { selectIsLoading } from "../../redux/user/userSelector";
 const SignUp = () => {
   const [inputs, setInputs] = React.useState({
     firstName: "",
+    middleName: "",
     lastName: "",
     email: "",
     password: "",
@@ -79,8 +80,18 @@ const SignUp = () => {
                 value={inputs.firstName}
                 required={true}
                 id="firstName"
-                label="firstname"
+                label="First Name"
                 placeholder="first name"
+              />
+              <CInput
+                type="text"
+                handleChange={handleChange}
+                name="middleName"
+                value={inputs.middleName}
+                required={true}
+                id="middleName"
+                label="Middle Name"
+                placeholder="middle name"
               />
               <CInput
                 type="text"
@@ -89,7 +100,7 @@ const SignUp = () => {
                 value={inputs.lastName}
                 required={true}
                 id="lastName"
-                label="Lastname"
+                label="Last Name"
                 placeholder="last name"
               />
               <CInput
@@ -99,7 +110,7 @@ const SignUp = () => {
                 value={inputs.email}
                 required={true}
                 id="email"
-                label="Email"
+                label="Email Address"
                 placeholder="your email"
               />
               <CInput
@@ -109,7 +120,7 @@ const SignUp = () => {
                 value={inputs.address}
                 required={true}
                 id="address"
-                label="Address"
+                label="Home Address"
                 placeholder="your address"
               />
               <CInput
@@ -119,7 +130,7 @@ const SignUp = () => {
                 value={inputs.occupation}
                 required={true}
                 id="occupation"
-                label="occupation"
+                label="Occupation"
                 placeholder="your occupation"
               />
 
@@ -155,7 +166,7 @@ const SignUp = () => {
                   value={inputs.confirmPassword}
                   required={true}
                   id="confirmPassword"
-                  label="Confirm password"
+                  label="Confirm Password"
                   placeholder="*******"
                 />
               </div>
@@ -180,7 +191,7 @@ const SignUp = () => {
                 </h1>
               )}
               <Link to="/login" className="login_here">
-                ← Go back to login
+                ← Already have an account?
               </Link>
               <Link to="/" className="login_here">
                 ← Back to Home

@@ -87,7 +87,7 @@ const LoginForm = () => {
                 required={true}
                 id="email"
                 label="Email"
-                placeholder="your email"
+                placeholder="Email Address"
               />
               <div className="password">
                 <CInput
@@ -98,7 +98,7 @@ const LoginForm = () => {
                   required={true}
                   id="password"
                   label="Password"
-                  placeholder="password"
+                  placeholder="Password"
                 />
                 {passwordShown ? (
                   <AiOutlineEyeInvisible
