@@ -1,0 +1,71 @@
+.deposit_con {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+
+  .note {
+    font-size: 1rem;
+    color: crimson;
+    font-weight: bold;
+    width: 300px;
+  }
+
+  .deposit_options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    justify-items: center;
+    padding: 10px;
+
+    @media screen and (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .deposit_option {
+      display: grid;
+
+      .deposit_img_con {
+        width: 400px;
+
+        .deposit_img {
+          height: 250px;
+          width: 400px;
+          border-radius: 10px;
+          border: 2px solid black;
+        }
+      }
+      .deposit_control {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0px 10px;
+
+        .deposit_title {
+          font-size: 1rem;
+          font-weight: bold;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .deposit_img_con {
+          width: 200px;
+
+          .deposit_img {
+            height: 200px;
+            width: 350px;
+            background-position: center;
+            background-size: cover;
+          }
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

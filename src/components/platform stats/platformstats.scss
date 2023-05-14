@@ -1,0 +1,38 @@
+.platformstats {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  width: 100vw;
+  padding: 1rem 0rem;
+
+  .stat_title {
+    font-size: 2rem;
+    font-weight: bold;
+
+    @media screen and (max-width: 800px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .stat_subtitle {
+    font-size: 1rem;
+    font-weight: normal;
+
+    @media screen and (max-width: 800px) {
+      font-size: 1rem;
+    }
+  }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+
+    @media screen and (max-width: 800px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 1rem;
+      column-gap: 1rem;
+    }
+  }
+}

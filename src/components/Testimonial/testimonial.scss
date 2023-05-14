@@ -1,0 +1,108 @@
+// Function to convert px units to rem
+// https://css-tricks.com/snippets/sass/px-to-em-functions/
+@function rem($pixels, $context: 16) {
+  @return ($pixels / $context) * 1rem;
+}
+
+// Colors and fonts variables
+:root {
+  --white: hsl(0, 0%, 100%);
+  --card-blue: hsl(0, 0%, 0%);
+  --bg-blue: hsl(0, 0%, 100%);
+}
+
+.testimonial_main_container {
+  display: grid;
+  width: 100vw;
+  gap: 1rem;
+  justify-items: center;
+  padding: 20px 0px;
+
+  .testimonial_title {
+    font-size: 2rem;
+    font-weight: bold;
+    width: 300px;
+    text-align: center;
+
+    @media screen and (max-width: 800px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+.testimonial {
+  background-color: var(--card-blue);
+  border-radius: 5px;
+  padding: 40px 25px 25px;
+  flex-grow: 1;
+  flex-basis: 280px;
+  max-width: 360px;
+  position: relative;
+  color: var(--white);
+
+  // Fonts
+  &__text {
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: 21px;
+    margin-bottom: rem(25);
+    color: var(--white);
+  }
+
+  &__job {
+    font-weight: normal;
+    font-size: rem(8);
+    line-height: 10px;
+    letter-spacing: 0.5px;
+    color: var(--white);
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: rem(10);
+    line-height: 12px;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    color: var(--white);
+  }
+
+  // Bottom layout
+  &__img {
+    display: inline-block;
+    width: 30px;
+    margin-right: 10px;
+
+    img {
+      vertical-align: bottom;
+      border-radius: 50%;
+    }
+
+    .testimonial_image {
+      max-width: 100%;
+      vertical-align: bottom;
+    }
+  }
+
+  &__info {
+    display: inline-block;
+  }
+}
+
+// General Styles
+.testimonial_container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+// Specific Styles
+.container_testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 40px;
+  justify-content: center;
+  padding: 45px 45px 90px;
+
+  @media (min-width: 78.125em) {
+    padding: 0;
+    max-width: 1160px;
+  }
+}

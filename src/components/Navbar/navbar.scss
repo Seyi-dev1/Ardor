@@ -1,0 +1,60 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 10px 20px;
+  align-items: center;
+
+  .logo_con {
+    width: 25%;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+
+    @media screen and (max-width: 800px) {
+      font-size: 1.2rem;
+      width: 50%;
+    }
+  }
+
+  .links {
+    width: 50%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 800px) {
+      display: none;
+      width: 0%;
+    }
+    .link {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 1rem;
+
+      &:hover {
+        border-bottom: 2px solid rgb(100, 138, 255);
+      }
+    }
+  }
+
+  .auth {
+    width: 25%;
+    justify-content: flex-end;
+    display: flex;
+
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  .mobile_menu {
+    display: none;
+    @media screen and (max-width: 800px) {
+      display: block;
+    }
+  }
+}
