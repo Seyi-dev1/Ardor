@@ -50,16 +50,16 @@ const Navigation = () => {
           to="/dashboard/Transactions"
         >
           <RiExchangeDollarFill className="icon" />
-          Transactions
+          Analysis
         </NavLink>
         <NavLink
           className={({ isActive }) =>
             isActive ? "Link-active link" : "Link-inactive link"
           }
-          to="/dashboard/settings"
+          to="/dashboard/profile"
         >
           <FiSettings className="icon" />
-          Settings
+          Profile
         </NavLink>
       </div>
       <div className="logout" onClick={() => dispatch(changeVisibility())}>

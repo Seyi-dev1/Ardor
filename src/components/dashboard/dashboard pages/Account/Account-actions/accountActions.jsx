@@ -12,7 +12,7 @@ const AccountActions = () => {
   return (
     <div>
       <div className="account_controls">
-        <span className="greeting">Welcome back {firstName}!</span>
+        <span className="greeting">Welcome {firstName}!</span>
         <div className="cash_container">
           <div className="total_balance">
             <FaBitcoin className="icon" />

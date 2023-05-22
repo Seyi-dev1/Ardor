@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { changeVisibility } from "../../../redux/modal/modalReducer";
 import { motion } from "framer-motion";
-import LOGO from "../../../Images/Nav_logo.png";
+import LOGO from "../../../Images/logobig.png";
 const Modal = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();

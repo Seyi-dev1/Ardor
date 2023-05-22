@@ -250,8 +250,9 @@ b {
     align-items: center;
     justify-content: flex-start;
     text-align: left;
-    color: rgb(var(--color), 0.5);
+    color: rgb(var(--color));
     font-size: 0.8rem;
+    font-weight: 500;
   }
 
   .item header h3 {
