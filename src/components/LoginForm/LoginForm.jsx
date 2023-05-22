@@ -72,11 +72,11 @@ const LoginForm = () => {
         <div className="login_container">
           <div className="login_content">
             <h1 className="title">
-              <RiLock2Fill /> Secure Online Banking Login
+              <RiLock2Fill /> Secure Login
             </h1>
             <p className="subtitle">
-              {" "}
-              Please enter your Online User EmailID and Password.
+
+              Please enter your email and password
             </p>
             <form onSubmit={handleSubmit} className="form">
               <CInput

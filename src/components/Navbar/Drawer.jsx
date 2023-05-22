@@ -50,10 +50,10 @@ export default function TemporaryDrawer({ anchor }) {
             <span
               style={{
                 fontSize: "20px",
-                fontWeight: "bolder",
+                fontWeight: "bold",
               }}
             >
-              CRYPTOWEBSITE
+              Menu
             </span>
           }
           sx={{
@@ -182,7 +182,7 @@ export default function TemporaryDrawer({ anchor }) {
     <div>
       <React.Fragment key="right">
         <Button onClick={toggleDrawer("right", true)}>
-          <FaBars style={{ color: "black", fontSize: "20px" }} />
+          <FaBars style={{ color: "#ffd700", fontSize: "30px" }} />
         </Button>
         <Drawer
           anchor="right"

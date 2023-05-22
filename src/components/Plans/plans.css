@@ -65,20 +65,24 @@ b {
   justify-content: center;
   height: fit-content;
   padding: 3rem 0rem;
+  gap: 20px;
 }
 .item {
-  width: 360px;
-  background: #fff;
+  width: 300px;
+  background: #ddeeed;
   box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.05);
   border-radius: 40px;
   margin: 0px;
-  padding: 30px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   transition: all 0.25s ease;
   position: relative;
+}
+.item4{
+  background: #d4af37;
 }
 .item:not(.color):hover {
   transform: scale(1.05);
@@ -90,17 +94,6 @@ b {
   transform: scale(1.15);
 }
 
-.item1 {
-  padding-right: 45px;
-  background-color: #ffd700;
-}
-.item2 {
-  z-index: 100;
-}
-.item3 {
-  padding-left: 45px;
-  background-color: #b7f1fd;
-}
 .item.color {
   background: #3dcbab;
   color: #fff;
@@ -152,7 +145,8 @@ b {
   align-items: center;
   justify-content: flex-start;
   text-align: left;
-  color: rgb(var(--color), 0.5);
+  font-weight: 500;
+  color: rgb(var(--color));
 
   @media screen and (max-width: 800px) {
     font-size: 0.8rem;
@@ -165,6 +159,7 @@ b {
   font-size: 1rem;
   margin-right: 15px;
   color: rgb(var(--color), 1);
+  font-weight: 500;
 }
 .item button {
   padding: 14px 20px;
@@ -233,7 +228,7 @@ b {
 
   .item {
     width: 300px;
-    background: #fff;
+    background: #ddeeed;
     box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.05);
     border-radius: 40px;
     margin: 0px;
@@ -245,7 +240,9 @@ b {
     transition: all 0.25s ease;
     position: relative;
   }
-
+  .item4{
+    background: #d4af37;
+  }
   .item ul li {
     width: 100%;
     padding: 10px;
@@ -263,15 +260,5 @@ b {
   .item header p {
     font-size: 1rem;
   }
-  .item1 {
-    padding-right: 45px;
-    background-color: #ffd700;
-  }
-  .item2 {
-    z-index: 100;
-  }
-  .item3 {
-    padding-left: 45px;
-    background-color: #b7f1fd;
-  }
+  
 }

@@ -4,9 +4,13 @@ import { BiSupport } from "react-icons/bi";
 import { BsShieldLockFill } from "react-icons/bs";
 import { RiSecurePaymentFill } from "react-icons/ri";
 import { GrCloudSoftware } from "react-icons/gr";
+import { motion } from "framer-motion";
 const WhyUs = () => {
   return (
-    <div className="whyus">
+    <motion.div className="whyus" 
+   initial={{ opacity: 0 }}
+    viewport={{ once: true }}
+    whileInView={{ y: [-70, 0], opacity: 1 }}>
       <span className="whyus_title">
         Benefits of Joining and Investing with Us
       </span>
@@ -55,7 +59,7 @@ const WhyUs = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

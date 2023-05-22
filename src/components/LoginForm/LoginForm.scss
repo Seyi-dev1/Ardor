@@ -4,23 +4,23 @@
   justify-content: center;
   overflow: hidden;
   height: fit-content;
-  background-color: black;
+  background-image: linear-gradient(to bottom, rgba(17, 30, 102, 0.52), rgba(24, 5, 19, 0.73)),url('../../Images/pexels-suzy-hazelwood-1629236.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   .login-page {
     height: fit-content;
     padding: 100px 0px;
     width: 100%;
-    background-color: rgb(3, 3, 3);
-    border-bottom: 3px solid #fff;
+    background-color:transparent;
     background-repeat: no-repeat;
     background-size: cover;
     display: grid;
     justify-content: center;
     align-content: center;
-    overflow: scroll;
+    overflow-x: hidden;
     -ms-overflow-style: none;
     position: relative;
-    scrollbar-color: rgb(255, 253, 253);
-    scrollbar-width: 10px;
     .loaderdiv {
       position: absolute;
       align-self: center;

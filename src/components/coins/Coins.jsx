@@ -8,10 +8,10 @@ const Coins = () => {
     <div className="coins">
       <span className="coins_title">WE ACCEPT</span>
       <div className="coins_con">
-        <FaBitcoin className="coin" />
-        <FaEthereum className="coin" />
-        <SiLitecoin className="coin" />
-        <SiTether className="coin" />
+        <FaBitcoin className="coin coin1" />
+        <FaEthereum className="coin coin2" />
+        <SiLitecoin className="coin coin3" />
+        <SiTether className="coin coin4" />
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./count.scss";
+import { motion } from "framer-motion";
+
 
 const Count = ({ label, number, duration, prefix, surfixe }) => {
   const [count, setCount] = useState("0");
@@ -27,14 +29,19 @@ const Count = ({ label, number, duration, prefix, surfixe }) => {
     // dependency array
   }, [number, duration]);
   return (
-    <div className="count">
+    <motion.div
+    initial={{ x: 0, opacity: 0 }}
+          viewport={{ once: true }}
+          whileInView={{ x: [-150, 0], opacity: 1 }}
+          transition={{ duration: 1 }}
+    className="count">
       <span className="number">
         {prefix}
         {count}
         {surfixe}+
       </span>
       <span className="label">{label}</span>
-    </div>
+    </motion.div>
   );
 };
 

@@ -6,6 +6,7 @@ import EARN from "./earning.png";
 import "./startnow.scss";
 import CButton from "../CButton/CButton";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 const StartNow = () => {
   const navigate = useNavigate();
   return (
@@ -13,7 +14,9 @@ const StartNow = () => {
       <span className="startnow_title">Let's Begin</span>
       <span className="startnow_subtitle">4 easy steps to start earning.</span>
       <div className="steps">
-        <div className="step">
+        <motion.div initial={{ opacity: 0 }}
+        viewport={{ once: true }}
+        whileInView={{ y: [-100, 0], opacity: 1 }} className="step">
           <img src={CREATE} alt="steps" className="step_icon" />
           <div className="step_info">
             <div className="step_title">Create an Account</div>
@@ -22,8 +25,10 @@ const StartNow = () => {
               registration form and get one step closer to earning.
             </div>
           </div>
-        </div>
-        <div className="step">
+        </motion.div>
+        <motion.div initial={{ opacity: 0 }}
+        viewport={{ once: true }}
+        whileInView={{ y: [-100, 0], opacity: 1 }} className="step">
           <img src={VERIFY} alt="steps" className="step_icon" />
           <div className="step_info">
             <div className="step_title">Get Verified</div>
@@ -33,8 +38,10 @@ const StartNow = () => {
               for trading.
             </div>
           </div>
-        </div>
-        <div className="step">
+        </motion.div>
+        <motion.div initial={{ opacity: 0 }}
+        viewport={{ once: true }}
+        whileInView={{ y: [-100, 0], opacity: 1 }} className="step">
           <img src={DEPOSIT} alt="steps" className="step_icon" />
           <div className="step_info">
             <div className="step_title">Create New Deposit</div>
@@ -43,8 +50,10 @@ const StartNow = () => {
               account - as provided by the platform.
             </div>
           </div>
-        </div>
-        <div className="step">
+        </motion.div>
+        <motion.div initial={{ opacity: 0 }}
+        viewport={{ once: true }}
+        whileInView={{ y: [-100, 0], opacity: 1 }} className="step">
           <img src={EARN} alt="steps" className="step_icon" />
           <div className="step_info">
             <div className="step_title">Start Earning</div>
@@ -54,7 +63,7 @@ const StartNow = () => {
               commissions.
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <CButton handleClick={() => navigate("/signup")} text="START NOW" />

@@ -1,27 +1,28 @@
 import React from "react";
 import { MdMailOutline } from "react-icons/md";
+import LOGO from '../../Images/logobig.png'
+import { useNavigate } from "react-router-dom";
 import "./footer.scss";
 const Footer = () => {
+  const navigate = useNavigate()
   return (
     <div className="footer">
       <div className="top">
         <div className="first">
-          <div className="title_con">
-            <span className="title">CRYPTOWEBSITE</span>
+          <div className="title_con"><img src={LOGO} alt="FOOTER LOGO" className="footer_logo"/>
+            <span className="title"> ARDOR</span>
           </div>
           <span className="address">
-            NY 12028 Wayne, <br />
-            Pennsylvania, USA.
+          Redmond, <br />
+            Utah, USA.
           </span>
-          <span className="call">
-            Call us: <span className="no">+1(929)563-5281</span>
-          </span>
+         
         </div>
         <div className="second">
           <span className="footer_title">Account</span>
           <div className="links">
-            <span className="footer_link">My Account</span>
-            <span className="footer_link">Watchlist</span>
+            <span onClick={()=> navigate('/login')} className="footer_link">My Account</span>
+            <span onClick={()=> navigate('/signup')} className="footer_link">Get started</span>
           </div>
         </div>
         <div className="second">
@@ -44,7 +45,7 @@ const Footer = () => {
       </div>
       <div className="bottom">
         <span className="copyright">
-          © 2023 CryptoWebsite. All Rights Reserved.
+          ©2023 Ardor Finances co. All Rights Reserved.
         </span>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Count from "./Count";
 import "./platformstats.scss";
+import { motion } from "framer-motion";
 const PlatformStats = () => {
   const counts = [
     {
@@ -33,7 +34,11 @@ const PlatformStats = () => {
     },
   ];
   return (
-    <div className="platformstats">
+    <motion.div
+    initial={{ opacity: 0 }}
+        viewport={{ once: true }}
+        whileInView={{ y: [-70, 0], opacity: 1 }}
+    className="platformstats">
       <span className="stat_title">Platform Statistics</span>
       <span className="stat_subtitle">
         Live heat statistics on the platform.
@@ -44,7 +49,7 @@ const PlatformStats = () => {
           <Count key={count.id} {...count} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

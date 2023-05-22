@@ -1,11 +1,16 @@
 import React from "react";
 import "./testimonial.scss";
+import { motion } from "framer-motion";
 const Testimonials = () => {
   return (
     <div className="testimonial_main_container">
       <span className="testimonial_title">What Our Clients Think About Us</span>
       <div className="testimonial_container container_testimonials">
-        <div className="testimonial">
+        <motion.div
+        initial={{ opacity: 0 }}
+        viewport={{ once: true }}
+        whileInView={{ y: [-100, 0], opacity: 1 }}
+        className="testimonial">
           <p className="testimonial__text mb-25">
             I started investing in crypto and forex through this website, and
             I've seen tremendous growth in my portfolio. It's easy to use and
@@ -25,9 +30,13 @@ const Testimonials = () => {
               <h5 className="testimonial__job">Railroad Engineer</h5>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="testimonial">
+        <motion.div
+        initial={{ opacity: 0 }}
+        viewport={{ once: true }}
+        whileInView={{ y: [-100, 0], opacity: 1 }}
+        className="testimonial">
           <p className="testimonial__text mb-25">
             If you're serious about crypto and forex investment, look no
             further. This website offers a seamless trading experience and a
@@ -50,8 +59,12 @@ const Testimonials = () => {
               </h5>
             </div>
           </div>
-        </div>
-        <div className="testimonial">
+        </motion.div>
+        <motion.div
+        initial={{ opacity: 0 }}
+        viewport={{ once: true }}
+        whileInView={{ y: [-100, 0], opacity: 1 }}
+        className="testimonial">
           <p className="testimonial__text mb-25">
             I'm impressed with the professionalism and expertise of this crypto
             and forex investment website. The platform is secure, and their
@@ -72,7 +85,7 @@ const Testimonials = () => {
               <h5 className="testimonial__job">Marketing Professional</h5>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -10,20 +10,21 @@ import PlatformStats from "../../components/platform stats/PlatformStats";
 import Testimonials from "../../components/Testimonial/Testimonials";
 import Contact from "../../components/contact/Contact";
 import StartNow from "../../components/start/StartNow";
+import WhatWeDo from "../../components/what we do/WhatWeDo";
 
 const Homepage = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div>
+    <div className="homepage">
       <Banner />
       <TickerTape
-        colorTheme="light"
-        isTransparent="true"
+        colorTheme="dark"
         displayMode="adaptive"
       ></TickerTape>
       <CSFTab />
+      <WhatWeDo/>
       <WhyUs />
       <StartNow />
       <Plans />
@@ -32,11 +33,12 @@ const Homepage = () => {
       <Ticker colorTheme="dark"></Ticker>
       <Testimonials />
       <Timeline
-        colorTheme="dark"
+        colorTheme="light"
         feedMode="market"
-        market="crypto"
+        market="stock"
         height={400}
         width="100%"
+        displayMode="adaptive"
       ></Timeline>
       <Contact />
     </div>

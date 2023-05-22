@@ -25,6 +25,9 @@
         align-items: center;
         justify-content: baseline;
         margin-bottom: 3rem;
+        .footer_logo{
+          width: 70px;
+        }
         .title {
           font-size: 2rem;
           font-weight: bold;
@@ -142,6 +145,9 @@
           align-items: center;
           justify-content: baseline;
           margin-bottom: 5px;
+          .footer_logo{
+            width: 50px;
+          }
 
           .title {
             font-size: 1.3rem;

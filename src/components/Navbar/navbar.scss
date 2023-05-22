@@ -4,16 +4,28 @@
   width: 100vw;
   padding: 10px 20px;
   align-items: center;
+  background-image: linear-gradient(to bottom, rgba(17, 30, 102, 0.52), rgba(17, 30, 102, 0.52)),url('../../Images/pexels-suzy-hazelwood-1629236.webp');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .logo_con {
     width: 25%;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 1.5rem;
     text-decoration: none;
-    color: black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    .nav_logo{
+      width: 50px;
+    }
 
     @media screen and (max-width: 800px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
       width: 50%;
     }
   }
@@ -31,12 +43,14 @@
     }
     .link {
       text-decoration: none;
-      color: black;
+      color: #c7aa05;
       font-weight: bold;
       font-size: 1rem;
+      transition: .2s ease-in-out;
 
       &:hover {
-        border-bottom: 2px solid rgb(100, 138, 255);
+        // border-bottom: 2px solid rgb(100, 138, 255);
+        color: #ffd700;
       }
     }
   }

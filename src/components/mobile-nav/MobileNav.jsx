@@ -1,5 +1,4 @@
 import React from 'react'
-import { FiSettings } from 'react-icons/fi'
 import { RiExchangeDollarFill } from 'react-icons/ri'
 import { TfiWallet } from 'react-icons/tfi'
 import { NavLink } from 'react-router-dom'
@@ -25,16 +24,7 @@ const MobileNav = () => {
           to="/dashboard/Transactions"
         >
           <RiExchangeDollarFill className="icon" />
-          <span className="link_name">Transactions</span>
-        </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "Link-active link" : "Link-inactive link"
-          }
-          to="/dashboard/settings"
-        >
-          <FiSettings className="icon" />
-          <span className="link_name">Settings</span>
+          <span className="link_name">Analysis</span>
         </NavLink>
         <NavLink
           className={({ isActive }) =>

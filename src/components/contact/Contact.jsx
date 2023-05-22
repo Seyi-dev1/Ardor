@@ -6,45 +6,28 @@ import emailjs from "@emailjs/browser";
 import {
   FaPhoneAlt,
   FaMapMarkerAlt,
-  FaPaperPlane,
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter,
-  FaWhatsapp,
+  FaPaperPlane
 } from "react-icons/fa";
 
 const Contact = () => {
   const contacts = [
     {
       id: 1,
-      icon: <FaMapMarkerAlt />,
-      infoText: "Wayne, Pennsylvania, USA.",
+      icon: <FaMapMarkerAlt style={{color: "black"}} />,
+      infoText: "Redmond, Utah, USA.",
     },
     {
       id: 2,
-      icon: <FaPaperPlane />,
-      infoText: "info@cryptosite.com",
+      icon: <FaPaperPlane style={{color: "black"}}/>,
+      infoText: "info@ardorfinances.com",
     },
     {
       id: 3,
-      icon: <FaPhoneAlt />,
-      infoText: " +1(929)563-5281",
+      icon: <FaPhoneAlt style={{color: "black"}}/>,
+      infoText: " +1(702)721-9475",
     },
   ];
-  const socialIcons = [
-    <a title="Follow me on Instagram" href="#contact">
-      <FaInstagram />
-    </a>,
-    <a title="Connect with me on LinkedIn" href="#contact">
-      <FaLinkedin />
-    </a>,
-    <a title="Follow me on Twitter" href="#contact">
-      <FaTwitter />
-    </a>,
-    <a title="Let's discuss on whatsapp" href="#contact">
-      <FaWhatsapp />
-    </a>,
-  ];
+ 
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -52,10 +35,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_24396yc",
-        "template_2a4h8rb",
+        "service_cptzedq",
+        "template_e4lvztp",
         form.current,
-        "356UkPy_EJedwTy_rr"
+        "WsRZ5KdR5fEW_WcxF"
       )
       .then(
         (result) => {
@@ -99,11 +82,7 @@ const Contact = () => {
               </div>
             );
           })}
-          <div className="social_icons">
-            {socialIcons.map((socialIcon, index) => {
-              return <div key={index}>{socialIcon}</div>;
-            })}
-          </div>
+          
         </motion.div>
         <motion.div
           initial={{ x: 0, opacity: 0 }}
