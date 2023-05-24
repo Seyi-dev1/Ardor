@@ -7,6 +7,7 @@ import {
   auth,
   createUserProfileDocument,
   getCurrentUser,
+  confirmEmail
 } from "../firebase/firebase.utils";
 import { getDoc } from "firebase/firestore/lite";
 import {
@@ -59,7 +60,8 @@ export function* signUp({ payload }) {
     lastName,
     address,
     occupation,
-    balance,
+    profitBalance,
+    investmentBalance
   } = payload;
   try {
     const { user } = yield createUserWithEmailAndPassword(
@@ -76,10 +78,13 @@ export function* signUp({ payload }) {
           lastName,
           address,
           occupation,
-          balance,
+          profitBalance,
+          investmentBalance
         },
       })
     );
+    
+    yield confirmEmail()
   } catch (error) {
     yield put(signUpFailure(error.message));
   }

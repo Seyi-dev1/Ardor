@@ -11,8 +11,12 @@ import Testimonials from "../../components/Testimonial/Testimonials";
 import Contact from "../../components/contact/Contact";
 import StartNow from "../../components/start/StartNow";
 import WhatWeDo from "../../components/what we do/WhatWeDo";
+import CButton from "../../components/CButton/CButton";
+import { useNavigate } from "react-router-dom";
 
 const Homepage = () => {
+
+  const navigate = useNavigate()
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -24,12 +28,14 @@ const Homepage = () => {
         displayMode="adaptive"
       ></TickerTape>
       <CSFTab />
+      <div style={{display: "flex", justifyContent: "center"}}><CButton text="Get Started" background="black" handleClick={() => navigate("/signup")}/></div>
+      <PlatformStats />
       <WhatWeDo/>
       <WhyUs />
       <StartNow />
       <Plans />
       <Coins />
-      <PlatformStats />
+      
       <Ticker colorTheme="dark"></Ticker>
       <Testimonials />
       <Timeline

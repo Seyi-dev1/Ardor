@@ -19,6 +19,9 @@ const Navbar = () => {
         <a href="#getstarted" className="link">
           GET STARTED
         </a>
+        <Link to="/about" className="link">
+          ABOUT US
+        </Link>
         <a href="#contact" className="link">
           CONTACT US
         </a>

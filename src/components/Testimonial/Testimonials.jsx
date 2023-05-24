@@ -3,7 +3,7 @@ import "./testimonial.scss";
 import { motion } from "framer-motion";
 const Testimonials = () => {
   return (
-    <div className="testimonial_main_container">
+    <div id="testimonials" className="testimonial_main_container">
       <span className="testimonial_title">What Our Clients Think About Us</span>
       <div className="testimonial_container container_testimonials">
         <motion.div

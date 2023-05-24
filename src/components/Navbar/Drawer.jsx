@@ -8,7 +8,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { FaBars } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CButton from "../CButton/CButton";
 
 export default function TemporaryDrawer({ anchor }) {
@@ -79,6 +79,25 @@ export default function TemporaryDrawer({ anchor }) {
       </ListItem>
 
       <Divider />
+      <ListItem key="0" disablePadding>
+          <a href="#getstarted">
+            <ListItemButton>
+              <ListItemText
+                primary={
+                  <span
+                    style={{
+                      fontSize: "13px",
+                      color: "black",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    GET STARTED
+                  </span>
+                }
+              />
+            </ListItemButton>
+          </a>
+        </ListItem>
       <List>
         <ListItem key="5" disablePadding>
           <a href="#plans">
@@ -100,8 +119,9 @@ export default function TemporaryDrawer({ anchor }) {
           </a>
         </ListItem>
         <Divider />
-        <ListItem key="0" disablePadding>
-          <a href="#getstarted">
+        
+        <ListItem key="1" disablePadding>
+          <a href="#testimonials">
             <ListItemButton>
               <ListItemText
                 primary={
@@ -112,15 +132,15 @@ export default function TemporaryDrawer({ anchor }) {
                       fontWeight: "bold",
                     }}
                   >
-                    GET STARTED
+                    TESTIMONIALS
                   </span>
                 }
               />
             </ListItemButton>
           </a>
         </ListItem>
-        <ListItem key="1" disablePadding>
-          <a href="#faq">
+        <ListItem key="0" disablePadding>
+          <Link  to="/about">
             <ListItemButton>
               <ListItemText
                 primary={
@@ -131,12 +151,12 @@ export default function TemporaryDrawer({ anchor }) {
                       fontWeight: "bold",
                     }}
                   >
-                    FAQ
+                    ABOUT US
                   </span>
                 }
               />
             </ListItemButton>
-          </a>
+          </Link>
         </ListItem>
         <ListItem key="2" disablePadding>
           <a href="#contact">

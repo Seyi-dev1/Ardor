@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import Loader from "../../components/loader/Loader";
+import AboutUs from "../../components/about/AboutUs";
 
 const LoginForm = lazy(()=> import("../../components/LoginForm/LoginForm"))
 const SignUp = lazy(()=> import("../../components/sign-up-form/SignUpForm"))
@@ -18,6 +19,7 @@ const Home = () => {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/account-recovery" element={<PasswordReset />} />
+        <Route path="/about" element={<AboutUs/>}/>
       </Routes>
       </Suspense>
       <Footer />

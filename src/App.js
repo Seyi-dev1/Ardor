@@ -6,9 +6,9 @@ import Profile from "./components/dashboard/dashboard pages/profile/Profile";
 import Settings from "./components/dashboard/dashboard pages/Settings/Settings";
 import Transactions from "./components/dashboard/dashboard pages/transactions/Transactions";
 import Loader from "./components/loader/Loader";
+import Dashboard from "./components/dashboard/dashboard";
 
 const Home = lazy(()=>import("./pages/Home/Home"))
-const Dashboard = lazy(()=> import("./components/dashboard/dashboard"))
 function App() {
   return (
     <div className="App">

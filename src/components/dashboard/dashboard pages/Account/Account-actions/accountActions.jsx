@@ -1,47 +1,50 @@
 import React from "react";
 import "./accountActions.scss";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import Coins from "../../../../coins/Coins";
-import { FaBitcoin } from "react-icons/fa";
+import { FaChartLine, FaChartPie } from "react-icons/fa";
+import {FiPieChart} from 'react-icons/fi'
 
 const AccountActions = () => {
-  const [balanceShown, setBalanceShown] = React.useState(false);
+  
   const user = window.localStorage.getItem("user");
 
-  const { firstName, balance } = JSON.parse(user);
+  const { firstName, investmentBalance, profitBalance } = JSON.parse(user);
   return (
     <div>
       <div className="account_controls">
         <span className="greeting">Welcome {firstName}!</span>
         <div className="cash_container">
           <div className="total_balance">
-            <FaBitcoin className="icon" />
+            <FaChartPie className="icon" />
             <div className="balance">
-              <h3 className="title">Balance</h3>
+              <h3 className="title">Total portfolio</h3>
               <h3 className="cash">
-                BTC: {balanceShown ? balance : "***********"}
+                ${investmentBalance + profitBalance}
               </h3>
-              {balanceShown ? (
-                <div
-                  className="show"
-                  onClick={() => setBalanceShown(!balanceShown)}
-                >
-                  <span>hide</span>
-                  <AiOutlineEyeInvisible />
-                </div>
-              ) : (
-                <div
-                  className="show"
-                  onClick={() => setBalanceShown(!balanceShown)}
-                >
-                  <span>show</span>
-                  <AiOutlineEye />
-                </div>
-              )}
+              
+            </div>
+          </div>
+          <div className="total_balance">
+            <FiPieChart className="icon" />
+            <div className="balance">
+              <h3 className="title">Investment portfolio</h3>
+              <h3 className="cash">
+                ${investmentBalance}
+              </h3>
+              
+            </div>
+          </div>
+          <div className="total_balance">
+            <FaChartLine className="icon" />
+            <div className="balance">
+              <h3 className="title">Profits</h3>
+              <h3 className="cash">
+                ${profitBalance}
+              </h3>
+              
             </div>
           </div>
         </div>
-
         <Coins />
       </div>
     </div>
