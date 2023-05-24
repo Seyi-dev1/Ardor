@@ -1,3 +1,23 @@
 .homepage{
     overflow-x: hidden;
+    
+
+    .whatsapp_con{
+        position: fixed;
+        bottom: 2rem;
+        left: 2rem;
+        z-index: 99;
+        background-color: #ececec;
+        padding: 15px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2.5rem;
+        width: 2.5rem;
+        .whatsapp{
+            color: #25D366;
+            font-size: 2rem;
+        }
+    }
 }
