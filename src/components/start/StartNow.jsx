@@ -21,8 +21,7 @@ const StartNow = () => {
           <div className="step_info">
             <div className="step_title">Create an Account</div>
             <div className="step_text">
-              Creating an account is a free and painless process. Complete the
-              registration form and get one step closer to earning.
+              Creating an account is a relatively easy process. sign up on the registration form and get one step closer to earning.
             </div>
           </div>
         </motion.div>
@@ -33,9 +32,7 @@ const StartNow = () => {
           <div className="step_info">
             <div className="step_title">Get Verified</div>
             <div className="step_text">
-              Once we have verified your details and you have passed our
-              screening process, your account will be activated and provisioned
-              for trading.
+              Your account is verified once all registration details/requirements are met, your account is thereby activated and provisioned for earning.
             </div>
           </div>
         </motion.div>
@@ -47,7 +44,7 @@ const StartNow = () => {
             <div className="step_title">Create New Deposit</div>
             <div className="step_text">
               Continue to make deposits on a range of plans available on your
-              account - as provided by the platform.
+              account - as provided by the platform, you will be enrolled in the plan that reflects your deposits.
             </div>
           </div>
         </motion.div>
