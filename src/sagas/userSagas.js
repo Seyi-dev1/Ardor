@@ -61,7 +61,8 @@ export function* signUp({ payload }) {
     address,
     occupation,
     profitBalance,
-    investmentBalance
+    investmentBalance, 
+    plan
   } = payload;
   try {
     const { user } = yield createUserWithEmailAndPassword(
@@ -79,7 +80,8 @@ export function* signUp({ payload }) {
           address,
           occupation,
           profitBalance,
-          investmentBalance
+          investmentBalance,
+          plan
         },
       })
     );

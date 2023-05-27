@@ -8,7 +8,17 @@ const AccountActions = () => {
   
   const user = window.localStorage.getItem("user");
 
-  const { firstName, investmentBalance, profitBalance } = JSON.parse(user);
+  const { firstName, investmentBalance,  createdAt, plan } = JSON.parse(user);
+
+  const date1 = createdAt
+  const date2 = new Date().getTime()
+
+  const difference = date2-date1;
+  const days = difference / 86400000;
+
+  const profitBalance = (plan/100)*investmentBalance*days
+
+
   return (
     <div>
       <div className="account_controls">
@@ -19,7 +29,7 @@ const AccountActions = () => {
             <div className="balance">
               <h3 className="title">Total portfolio</h3>
               <h3 className="cash">
-                ${investmentBalance + profitBalance}
+                ${(Number(investmentBalance)+profitBalance).toFixed(2)}
               </h3>
               
             </div>
@@ -39,7 +49,7 @@ const AccountActions = () => {
             <div className="balance">
               <h3 className="title">Profits</h3>
               <h3 className="cash">
-                ${profitBalance}
+                ${profitBalance.toFixed(2)}
               </h3>
               
             </div>

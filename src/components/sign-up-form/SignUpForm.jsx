@@ -23,8 +23,11 @@ const SignUp = () => {
     confirmPassword: "",
     profitBalance: 0,
     investmentBalance: 0,
+    plan: 0
 
   });
+
+  console.log(inputs)
   const [passwordShown, setPasswordShown] = React.useState(false);
 
   const userSelector = createSelector(
@@ -62,6 +65,12 @@ const SignUp = () => {
     window.scrollTo(0, 0);
   }, [user, navigate]);
 
+  const options = [
+    { label: "Tier 1($1,000-9,999, max 2.3% ROI)", value: 2.3 },
+    { label: "Tier 2($10,000-49,999, max 3.3% ROI)", value: 3.3 },
+    { label: "Tier 3($50,000-199,999, max 4.3% ROI)", value: 4.3 },
+    { label: "Tier 4($200,000-1,000,000, max 6.5% ROI)", value: 6.5 },
+  ];
   return (
     <div className="signup_con">
       <motion.div
@@ -136,7 +145,14 @@ const SignUp = () => {
                 label="Occupation"
                 placeholder="your occupation"
               />
-
+              <Dropdown
+              label="Choose a plan"
+              options={options}
+              value={inputs.plan}
+              onChange={handleChange}
+              name="plan"
+              required={true}
+            />
               <div className="password">
                 <CInput
                   type={passwordShown ? "text" : "password"}
@@ -206,5 +222,32 @@ const SignUp = () => {
     </div>
   );
 };
-
+const Dropdown = ({ label, value, options, onChange, name }) => {
+  return (
+    <div className="dropdown">
+    <label className="label">
+      {label}
+    </label>
+      <select
+        value={value}
+        name={name}
+        onChange={onChange}
+        className="select"
+        required={true}
+      >
+        {options.map((option) => (
+          <option
+            style={{ border: "1px solid goldenrod", padding: "2px 10px" }}
+            key={option.label}
+            value={option.value}
+          >
+            {option.label}
+          </option>
+        ))}
+      </select>
+    
+    </div>
+    
+  );
+};
 export default SignUp;

@@ -132,6 +132,29 @@
   }
 }
 
+.dropdown{
+  width: 100%;
+  display: grid;
+  gap: 20px;
+
+  .label{
+    color: #3a3a3a;
+    font-size: 13.333px;
+    line-height: 16px;
+    font-weight: 600;
+  }
+
+  .select{
+    width: 200px;
+    height: 40px;
+    background: #fff;
+    border: 0.833333px solid #afafaf;
+    border-radius: 6.66667px;
+    padding: 10px;
+    color: #000000;
+
+  }
+}
 @media screen and (max-width: 1024px) {
   .signup_con {
     display: flex;
