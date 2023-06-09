@@ -21,10 +21,8 @@ const SignUp = () => {
     address: "",
     occupation: "",
     confirmPassword: "",
-    profitBalance: 0,
     investmentBalance: 0,
-    plan: 0
-
+    plan: 2.3
   });
 
   console.log(inputs)
