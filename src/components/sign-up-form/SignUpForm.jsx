@@ -21,6 +21,7 @@ const SignUp = () => {
     address: "",
     occupation: "",
     confirmPassword: "",
+    profitBalance: 0,
     investmentBalance: 0,
     plan: 2.3
   });
