@@ -13,30 +13,32 @@ import StartNow from "../../components/start/StartNow";
 import WhatWeDo from "../../components/what we do/WhatWeDo";
 import CButton from "../../components/CButton/CButton";
 import { useNavigate } from "react-router-dom";
-import {IoLogoWhatsapp} from 'react-icons/io'
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const Homepage = () => {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <div className="homepage">
       <Banner />
-      <TickerTape
-        colorTheme="dark"
-        displayMode="adaptive"
-      ></TickerTape>
+      <TickerTape colorTheme="dark" displayMode="adaptive"></TickerTape>
       <CSFTab />
-      <div style={{display: "flex", justifyContent: "center"}}><CButton text="Get Started" background="black" handleClick={() => navigate("/signup")}/></div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <CButton
+          text="Get Started"
+          background="black"
+          handleClick={() => navigate("/signup")}
+        />
+      </div>
       <PlatformStats />
-      <WhatWeDo/>
+      <WhatWeDo />
       <WhyUs />
       <StartNow />
       <Plans />
       <Coins />
-      
+
       <Ticker colorTheme="dark"></Ticker>
       <Testimonials />
       <Timeline
@@ -48,10 +50,16 @@ const Homepage = () => {
         displayMode="adaptive"
       ></Timeline>
       <Contact />
-        <div className="whatsapp_con">
-        <a href="https://wa.me/17027219475?text=Hello,%20I%20have%20some%20enquiries,%20my%20name%20is%20____" target="_blank" rel="noreferrer"><IoLogoWhatsapp className="whatsapp"/></a>
-        </div>
+      <div className="whatsapp_con">
+        <a
+          href="https://wa.me/16574272144?text=Hello,%20I%20have%20some%20enquiries,%20my%20name%20is%20____"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <IoLogoWhatsapp className="whatsapp" />
+        </a>
       </div>
+    </div>
   );
 };
 
