@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from "react";
-import "./App.css";
+import "./app.css";
 import { Routes, Route } from "react-router-dom";
 import Account from "./components/dashboard/dashboard pages/Account/Account";
 import Profile from "./components/dashboard/dashboard pages/profile/Profile";
