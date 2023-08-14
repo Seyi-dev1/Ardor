@@ -80,27 +80,27 @@ export default function TemporaryDrawer({ anchor }) {
 
       <Divider />
       <ListItem key="0" disablePadding>
-          <a href="#getstarted">
-            <ListItemButton>
-              <ListItemText
-                primary={
-                  <span
-                    style={{
-                      fontSize: "13px",
-                      color: "black",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    GET STARTED
-                  </span>
-                }
-              />
-            </ListItemButton>
-          </a>
-        </ListItem>
+        <span onClick={() => navigate("/signup")}>
+          <ListItemButton>
+            <ListItemText
+              primary={
+                <span
+                  style={{
+                    fontSize: "13px",
+                    color: "black",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Get Started
+                </span>
+              }
+            />
+          </ListItemButton>
+        </span>
+      </ListItem>
       <List>
         <ListItem key="5" disablePadding>
-          <a href="#plans">
+          <span onClick={() => navigate("/#plans")}>
             <ListItemButton>
               <ListItemText
                 primary={
@@ -111,17 +111,17 @@ export default function TemporaryDrawer({ anchor }) {
                       fontWeight: "bold",
                     }}
                   >
-                    PLANS & PRICING
+                    Plans & pricing
                   </span>
                 }
               />
             </ListItemButton>
-          </a>
+          </span>
         </ListItem>
         <Divider />
-        
+
         <ListItem key="1" disablePadding>
-          <a href="#testimonials">
+          <span onClick={() => navigate("/customers")}>
             <ListItemButton>
               <ListItemText
                 primary={
@@ -132,15 +132,15 @@ export default function TemporaryDrawer({ anchor }) {
                       fontWeight: "bold",
                     }}
                   >
-                    TESTIMONIALS
+                    Our Customers
                   </span>
                 }
               />
             </ListItemButton>
-          </a>
+          </span>
         </ListItem>
         <ListItem key="0" disablePadding>
-          <Link  to="/about">
+          <Link to="/about">
             <ListItemButton>
               <ListItemText
                 primary={
@@ -151,7 +151,7 @@ export default function TemporaryDrawer({ anchor }) {
                       fontWeight: "bold",
                     }}
                   >
-                    ABOUT US
+                    About Us
                   </span>
                 }
               />
@@ -159,7 +159,7 @@ export default function TemporaryDrawer({ anchor }) {
           </Link>
         </ListItem>
         <ListItem key="2" disablePadding>
-          <a href="#contact">
+          <span onClick={() => navigate("/#Contact")}>
             <ListItemButton>
               <ListItemText
                 primary={
@@ -170,12 +170,12 @@ export default function TemporaryDrawer({ anchor }) {
                       fontWeight: "bold",
                     }}
                   >
-                    CONTACT US
+                    Contact us
                   </span>
                 }
               />
             </ListItemButton>
-          </a>
+          </span>
         </ListItem>
       </List>
       <Divider />

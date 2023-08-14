@@ -1,0 +1,27 @@
+.textTemplate {
+  display: flex;
+  gap: 1rem;
+  .icon {
+    .pic {
+      padding: 20px;
+      font-size: 3.7rem;
+      background-color: #ff9f38;
+      color: #fff;
+      border-radius: 18px;
+    }
+  }
+  .text {
+    .header {
+      font-size: 0.9rem;
+      h2 {
+        font-weight: 600;
+      }
+    }
+    .desc {
+      width: 90%;
+      margin-top: 1rem;
+      line-height: 1.6rem;
+      color: #817f7f;
+    }
+  }
+}

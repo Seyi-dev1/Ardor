@@ -8,7 +8,7 @@
           className="banner_info">
         <span className="big">Get Started Today,</span>
         <span className="medium">
-          Harness the power of blockchain technology and tap into the lucrative world of stocks and blockchain mining with Ardor Finances.
+          Harness the power of blockchain technology and tap into the lucrative world of stocks and blockchain mining with Thompson's Central.
         </span>
         <span className="small">
           We are your gateway to profitable investments in digital and financial markets.

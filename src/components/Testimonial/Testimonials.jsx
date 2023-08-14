@@ -1,18 +1,22 @@
 import React from "react";
 import "./testimonial.scss";
 import { motion } from "framer-motion";
+import { MdLeaderboard } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 const Testimonials = () => {
+  const navigate = useNavigate();
   return (
     <div id="testimonials" className="testimonial_main_container">
       <span className="testimonial_title">What Our Clients Think About Us</span>
       <div className="testimonial_container container_testimonials">
         <motion.div
-        initial={{ opacity: 0 }}
-        viewport={{ once: true }}
-        whileInView={{ y: [-100, 0], opacity: 1 }}
-        className="testimonial">
+          initial={{ opacity: 0 }}
+          viewport={{ once: true }}
+          whileInView={{ y: [-100, 0], opacity: 1 }}
+          className="testimonial"
+        >
           <p className="testimonial__text mb-25">
-            I started investing in crypto and forex through this website, and
+            I started investing in stocks and forex through this company, and
             I've seen tremendous growth in my portfolio. It's easy to use and
             provides great investment opportunities. Highly recommended!
           </p>
@@ -33,14 +37,15 @@ const Testimonials = () => {
         </motion.div>
 
         <motion.div
-        initial={{ opacity: 0 }}
-        viewport={{ once: true }}
-        whileInView={{ y: [-100, 0], opacity: 1 }}
-        className="testimonial">
+          initial={{ opacity: 0 }}
+          viewport={{ once: true }}
+          whileInView={{ y: [-100, 0], opacity: 1 }}
+          className="testimonial"
+        >
           <p className="testimonial__text mb-25">
-            If you're serious about crypto and forex investment, look no
-            further. This website offers a seamless trading experience and a
-            wide range of investment options. I've been able to diversify my
+            If you're serious about stocks and forex investment, look no
+            further. This team offers a seamless trading experience and a wide
+            range of investment options. I've been able to diversify my
             portfolio and boost my earnings significantly!
           </p>
 
@@ -61,15 +66,16 @@ const Testimonials = () => {
           </div>
         </motion.div>
         <motion.div
-        initial={{ opacity: 0 }}
-        viewport={{ once: true }}
-        whileInView={{ y: [-100, 0], opacity: 1 }}
-        className="testimonial">
+          initial={{ opacity: 0 }}
+          viewport={{ once: true }}
+          whileInView={{ y: [-100, 0], opacity: 1 }}
+          className="testimonial"
+        >
           <p className="testimonial__text mb-25">
-            I'm impressed with the professionalism and expertise of this crypto
-            and forex investment website. The platform is secure, and their
-            support team is always available to address my queries. It's a
-            reliable platform for both experienced and novice investors!
+            I'm impressed with the professionalism and expertise of this trading
+            team. The platform is secure, and their support team is always
+            available to address my queries. It's a reliable platform for both
+            experienced and novice investors!
           </p>
 
           <div className="testimonial__details">
@@ -87,6 +93,12 @@ const Testimonials = () => {
           </div>
         </motion.div>
       </div>
+      <button
+        onClick={() => navigate("/customers")}
+        className="link_leaderboard"
+      >
+        See the leaderboard <MdLeaderboard />
+      </button>
     </div>
   );
 };

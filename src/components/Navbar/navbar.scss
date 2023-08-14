@@ -1,74 +1,100 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   padding: 10px 20px;
   align-items: center;
-  background-image: linear-gradient(to bottom, rgba(17, 30, 102, 0.52), rgba(17, 30, 102, 0.52)),url('../../Images/pexels-suzy-hazelwood-1629236.webp');
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
+  &.color {
+    background-color: black;
+    transition: all 1.5s ease;
+  }
 
   .logo_con {
-    width: 25%;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-decoration: none;
     color: #fff;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+    width: fit-content;
 
-    .nav_logo{
+    .nav_logo {
       width: 50px;
     }
 
     @media screen and (max-width: 800px) {
       font-size: 1rem;
-      width: 50%;
     }
   }
 
   .links {
-    width: 50%;
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    gap: 40px;
     align-items: center;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1024px) {
       display: none;
       width: 0%;
     }
     .link {
       text-decoration: none;
-      color: #c7aa05;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: .2s ease-in-out;
+      color: #eceaea;
+      font-weight: 300;
+      font-size: 0.9rem;
+      transition: 0.2s ease-in-out;
+      // width: fit-content;
 
       &:hover {
         // border-bottom: 2px solid rgb(100, 138, 255);
         color: #ffd700;
       }
     }
-  }
+    .divider {
+      width: 1px;
+      height: 30px;
+      background-color: #858585;
+    }
+    .auth {
+      // justify-content: flex-end;
+      display: flex;
+      gap: 20px;
 
-  .auth {
-    width: 25%;
-    justify-content: flex-end;
-    display: flex;
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
 
-    @media screen and (max-width: 800px) {
-      display: none;
+      button {
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: #eceaea;
+        font-weight: 500;
+        font-size: 0.9rem;
+        cursor: pointer;
+        .logIn {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          .icon {
+            font-size: 1.3rem;
+          }
+        }
+      }
+      .signUp {
+        background-color: #eceaea31;
+        border-radius: 30px;
+        padding: 7px 15px;
+        border: 1px solid rgb(240, 239, 239);
+      }
     }
   }
 
   .mobile_menu {
     display: none;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1024px) {
       display: block;
+      justify-self: end;
     }
   }
 }

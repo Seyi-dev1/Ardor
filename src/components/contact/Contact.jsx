@@ -3,31 +3,22 @@ import "./contact.scss";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import {
-  FaPhoneAlt,
-  FaMapMarkerAlt,
-  FaPaperPlane
-} from "react-icons/fa";
+import { FaPhoneAlt, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
 
 const Contact = () => {
   const contacts = [
     {
       id: 1,
-      icon: <FaMapMarkerAlt style={{color: "black"}} />,
+      icon: <FaMapMarkerAlt style={{ color: "black" }} />,
       infoText: "Redmond, Utah, USA.",
     },
     {
       id: 2,
-      icon: <FaPaperPlane style={{color: "black"}}/>,
-      infoText: "info@ardorfinances.com",
-    },
-    {
-      id: 3,
-      icon: <FaPhoneAlt style={{color: "black"}}/>,
-      infoText: " +1(702)721-9475",
+      icon: <FaPaperPlane style={{ color: "black" }} />,
+      infoText: "info@thompsonscentral.com",
     },
   ];
- 
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -82,7 +73,6 @@ const Contact = () => {
               </div>
             );
           })}
-          
         </motion.div>
         <motion.div
           initial={{ x: 0, opacity: 0 }}

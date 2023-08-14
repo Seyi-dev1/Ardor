@@ -1,0 +1,29 @@
+.staff {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+  }
+  .image {
+    img {
+      width: 15rem;
+      height: 15rem;
+      object-fit: cover;
+      @media screen and (max-width: 450px) {
+        width: 10rem;
+        height: 10rem;
+      }
+    }
+  }
+  .desc {
+    @media screen and (max-width: 450px) {
+      text-align: center;
+    }
+    .position {
+      color: rgb(118, 117, 117);
+    }
+    .name {
+      margin-top: 10px;
+    }
+  }
+}
