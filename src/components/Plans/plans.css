@@ -20,7 +20,7 @@ b {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  width: 100vw;
+  /* width: 100vw; */
   align-items: center;
 }
 .plans_title {
@@ -60,17 +60,19 @@ b {
   font-weight: normal;
 }
 .con-items {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
   height: fit-content;
   padding: 3rem 0rem;
-  gap: 20px;
+  column-gap: 5rem;
+  row-gap: 2rem;
 }
 .item {
   width: 300px;
   box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.05);
-  border-radius: 40px;
+  border-radius: 15px;
   margin: 0px;
   padding: 20px;
   display: flex;
@@ -79,19 +81,9 @@ b {
   flex-direction: column;
   transition: all 0.25s ease;
   position: relative;
+  border: 1px solid black;
 }
-.item1{
-  background: #CD7F32;
-}
-.item2{
-  background: #C0C0C0;
-}
-.item3{
-  background: #d4af37;
-}
-.item4{
-  background: #B9F2FF;
-}
+
 .item:not(.color):hover {
   transform: scale(1.05);
 }
@@ -125,10 +117,17 @@ b {
   width: 100%;
 }
 .item header h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .item header p {
   font-size: 1.2rem;
+}
+.item span {
+  width: 80%;
+  margin: 0 auto;
+  height: 0.8px;
+  background-color: #989595;
+  margin-top: 10px;
 }
 .badge {
   position: absolute;
@@ -236,9 +235,9 @@ b {
 
   .item {
     width: 300px;
-    background: #ddeeed;
+    background: #ffffff;
     box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.05);
-    border-radius: 40px;
+    border-radius: 15px;
     margin: 0px;
     padding: 30px;
     display: flex;
@@ -248,18 +247,7 @@ b {
     transition: all 0.25s ease;
     position: relative;
   }
-  .item1{
-    background: #CD7F32;
-  }
-  .item2{
-    background: #C0C0C0;
-  }
-  .item3{
-    background: #d4af37;
-  }
-  .item4{
-    background: #B9F2FF;
-  }
+
   .item ul li {
     width: 100%;
     padding: 10px;
@@ -278,5 +266,4 @@ b {
   .item header p {
     font-size: 1rem;
   }
-  
 }

@@ -50,15 +50,6 @@ const Homepage = () => {
         displayMode="adaptive"
       ></Timeline>
       <Contact />
-      <div className="whatsapp_con">
-        <a
-          href="https://wa.me/16574272144?text=Hello,%20I%20have%20some%20enquiries,%20my%20name%20is%20____"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <IoLogoWhatsapp className="whatsapp" />
-        </a>
-      </div>
     </div>
   );
 };

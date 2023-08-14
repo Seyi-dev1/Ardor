@@ -1,0 +1,46 @@
+.testimonialText {
+  .speech {
+    position: relative;
+    .quotes {
+      position: absolute;
+      top: -3rem;
+      left: -2rem;
+      img {
+        z-index: 0;
+      }
+    }
+    p {
+      font-weight: 600;
+      color: rgb(157, 154, 154);
+      max-width: 25rem;
+      line-height: 1.5rem;
+      font-size: 1.1rem;
+      z-index: 5;
+    }
+  }
+
+  .person {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    .details {
+      .name {
+        p {
+          font-weight: 600;
+        }
+      }
+      .title {
+        color: rgb(160, 159, 159);
+        margin-top: 5px;
+      }
+    }
+
+    .image {
+      width: 3rem;
+      height: 3rem;
+
+      border-radius: 50%;
+    }
+  }
+}

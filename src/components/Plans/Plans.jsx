@@ -2,8 +2,7 @@ import React from "react";
 import "./plans.css";
 import { useNavigate } from "react-router-dom";
 const Plans = () => {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className="plans_con" id="plans">
       <span className="plans_title">PLANS & PRICING</span>
@@ -11,9 +10,9 @@ const Plans = () => {
       <div className="con-items ">
         <div className="item item1">
           <header>
-            <h3>Tier 1</h3>
-
+            <h3>Starter plan</h3>
           </header>
+          <span></span>
           <ul>
             <li>
               <i className="bx bx-check"></i>
@@ -39,79 +38,78 @@ const Plans = () => {
               $9,999
             </li>
           </ul>
-          <button onClick={()=>navigate('/login')}>Choose Plan</button>
+          <button onClick={() => navigate("/login")}>Choose Plan</button>
         </div>
         <div className="item item2">
-        <header>
-          <h3>Tier 2</h3>
-         
-        </header>
-        <ul>
-          <li>
-            <i className="bx bx-check"></i>
-            24/7 live <b>support</b>
-          </li>
-          <li>
-            <i className="bx bx-check"></i>
-            Portfolio <b>weekly breifing.</b>
-          </li>
-          <li>
-            <i className="bx bx-check"></i>
-            <b>2.3% - 3.3%</b>
-            ROI
-          </li>
-          <li>
-            <i className="bx bx-check"></i>
-            <b>Min: </b>
-            $10,000
-          </li>
-          <li>
-            <i className="bx bx-check"></i>
-            <b>Max: </b>
-            $49,999
-          </li>
-        </ul>
-        <button onClick={()=>navigate('/login')}>Choose Plan</button>
-      </div>
-      <div className="item item3">
-      <header>
-        <h3>Tier 3</h3>
-        
-      </header>
-      <ul>
-        <li>
-          <i className="bx bx-check"></i>
-          24/7 live <b>support</b>
-        </li>
-        <li>
-          <i className="bx bx-check"></i>
-          Portfolio <b>weekly breifing.</b>
-        </li>
-        <li>
-          <i className="bx bx-check"></i>
-          <b>3.3% - 4.3%</b>
-          ROI
-        </li>
-        <li>
-          <i className="bx bx-check"></i>
-          <b>Min: </b>
-          $50,000
-        </li>
-        <li>
-          <i className="bx bx-check"></i>
-          <b>Max: </b>
-          $199,999
-        </li>
-      </ul>
-      <button onClick={()=>navigate('/login')}>Choose Plan</button>
-    </div>
+          <header>
+            <h3>Premium plan</h3>
+          </header>
+          <span></span>
+          <ul>
+            <li>
+              <i className="bx bx-check"></i>
+              24/7 live <b>support</b>
+            </li>
+            <li>
+              <i className="bx bx-check"></i>
+              Portfolio <b>weekly breifing.</b>
+            </li>
+            <li>
+              <i className="bx bx-check"></i>
+              <b>2.3% - 3.3%</b>
+              ROI
+            </li>
+            <li>
+              <i className="bx bx-check"></i>
+              <b>Min: </b>
+              $10,000
+            </li>
+            <li>
+              <i className="bx bx-check"></i>
+              <b>Max: </b>
+              $49,999
+            </li>
+          </ul>
+          <button onClick={() => navigate("/login")}>Choose Plan</button>
+        </div>
+        <div className="item item3">
+          <header>
+            <h3>Diamond plan</h3>
+          </header>
+          <span></span>
+          <ul>
+            <li>
+              <i className="bx bx-check"></i>
+              24/7 live <b>support</b>
+            </li>
+            <li>
+              <i className="bx bx-check"></i>
+              Portfolio <b>weekly breifing.</b>
+            </li>
+            <li>
+              <i className="bx bx-check"></i>
+              <b>3.3% - 4.3%</b>
+              ROI
+            </li>
+            <li>
+              <i className="bx bx-check"></i>
+              <b>Min: </b>
+              $50,000
+            </li>
+            <li>
+              <i className="bx bx-check"></i>
+              <b>Max: </b>
+              $199,999
+            </li>
+          </ul>
+          <button onClick={() => navigate("/login")}>Choose Plan</button>
+        </div>
         <div className="item item4">
           <header>
-            <h3>Tier 4</h3>
-            
+            <h3>Platinum plan</h3>
           </header>
+          <span></span>
           <ul>
-           
             <li>
               <i className="bx bx-check"></i>
               Partnership <b>portfolio.</b>
@@ -136,7 +134,7 @@ const Plans = () => {
               $1,000,000
             </li>
           </ul>
-          <button onClick={()=>navigate('/login')}>Choose Plan</button>
+          <button onClick={() => navigate("/login")}>Choose Plan</button>
         </div>
       </div>
     </div>

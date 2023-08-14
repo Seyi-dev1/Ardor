@@ -1,110 +1,144 @@
-.swiper {
-  width: 100vw;
-  
-    background-image: linear-gradient(to bottom, rgba(17, 30, 102, 0.52), rgba(24, 5, 19, 0.73)),url('../../Images/pexels-suzy-hazelwood-1629236.webp');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  
-  .swiper_slide {
-    background-color: transparent;
+.hero {
+  .swiper {
+    width: 100%;
+    height: 100vh;
+    // background-color: red;
 
-    .banner {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      width: 100vw;
-      padding: 0px 100px;
-      height: 37rem;
-    
-      .banner_info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 10px;
+    .swiperSlide {
+      font-size: 18px;
+      position: relative;
+      height: 100vh;
+
+      .swiperText {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 115vh;
         color: #fff;
-        .big {
-          font-size: 2.5rem;
-          font-weight: 800;
-          font-family: 'Syne', sans-serif;
-          color: #ffd700;
-        }
-        .medium {
-          font-size: 1.3rem;
-          font-weight: 400;
-          width: 90%;
-        }
-        .small {
-          font-size: 1rem;
-          font-weight: 300;
-          margin-bottom: 2rem;
-        }
-      }
-      .banner_image {
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 60% 40%;
         align-items: center;
-
-        .bitcoin{
-          height: 28rem;
+        justify-content: center;
+        padding: 0 7rem;
+        animation: anim 1s ease-out;
+        animation-delay: 0.1s;
+        @media screen and (max-width: 800px) {
+          min-height: 100vh;
         }
-
-        .blockchain{
-          height: 25rem;
+        @media screen and (max-width: 1000px) {
+          grid-template-columns: 1fr;
+          padding: 0rem 4rem;
+        }
+        @media screen and (max-width: 650px) {
+          grid-template-columns: 1fr;
+          padding: 0rem 2rem;
+        }
+        .text {
+          .intro {
+            animation: anim 1s ease-out;
+            animation-delay: 0.1s;
+            font-size: 1rem;
+            color: rgb(255, 93, 24);
+            @media screen and (max-width: 450px) {
+              font-size: 0.8rem;
+            }
+          }
+          .line {
+            animation: anim 1s ease-out;
+            animation-delay: 0.15s;
+            height: 3px;
+            width: 9rem;
+            background-color: #ffd700;
+            @media screen and (max-width: 1000px) {
+              width: 20rem;
+            }
+            @media screen and (max-width: 450px) {
+              width: 9rem;
+              height: 1px;
+            }
+            // margin-top: 5rem;
+          }
+          .heading {
+            margin-top: 2rem;
+            animation: anim 1s ease-out;
+            animation-delay: 0.2s;
+            h1 {
+              font-weight: 600;
+              font-size: 2.5rem;
+              font-family: "Zilla Slab", serif;
+              @media screen and (max-width: 450px) {
+                font-size: 2.1rem;
+              }
+              // color: rgb(248, 83, 13);
+            }
+          }
+          .desc {
+            animation: anim 1s ease-out;
+            animation-delay: 0.25s;
+            line-height: 2.3rem;
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            color: #c8c8c8;
+            @media screen and (max-width: 450px) {
+              font-size: 0.9rem;
+            }
+            // min-height: 10rem;
+          }
+          .buttons {
+            animation: anim 1s ease-out;
+            animation-delay: 0.3s;
+            margin-top: 4rem;
+            display: flex;
+            gap: 20px;
+            button {
+              color: #fff;
+              background-color: rgb(0, 0, 0);
+              border: none;
+              border-radius: 5px;
+              // font-family: "Zilla Slab", serif;
+              // font-size: 1.1rem;
+              padding: 1rem 3rem;
+              letter-spacing: 1px;
+              cursor: pointer;
+              &:hover {
+                background-color: rgb(37, 110, 219);
+              }
+              @media screen and (max-width: 450px) {
+                padding: 1rem;
+              }
+              @media screen and (max-width: 376px) {
+                padding: 0.8rem 0.9rem;
+                font-size: 0.7rem;
+              }
+            }
+          }
         }
       }
-    
-      @media screen and (max-width: 800px) {
-        display: flex;
-        flex-direction: column-reverse;
-        width: 100vw;
-        gap: 0.5rem;
-        justify-items: center;
-        padding: 0px 20px;
-        height: 33rem;
-    
-        .banner_info {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 5px;
-          text-align: center;
-          margin-bottom: 1rem;
-          .big {
-            font-size: 1.8rem;
-            font-weight: 700;
-            font-family: 'Syne', sans-serif;
-          }
-          .medium {
-            font-size: 1rem;
-            font-weight: 400;
-            width: 90%;
-          }
-          .small {
-            font-size: 0.8rem;
-            font-weight: 300;
-            margin-bottom: 0.5rem;
-          }
-        }
-        .banner_image {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          
-          .bitcoin{
-            height: 250px;
-          }
-          .blockchain {
-            height: 200px;
-          }
 
-        }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(20%);
+      }
+    }
+    .swiper-pagination {
+      position: absolute;
+      bottom: 1rem;
+      right: 50%;
+      width: 100%;
+      .swiper-pagination-bullet {
+        // padding: 5px 10px;
+        border-radius: 50%;
+        width: 0.7rem;
+        height: 0.7rem;
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.507);
+      }
+      .swiper-pagination-bullet-active {
+        background: #fff;
       }
     }
   }
 }
-
-
-
-
-
