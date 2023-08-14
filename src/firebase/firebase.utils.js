@@ -3,12 +3,12 @@ import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore/lite";
 import { getAuth, sendEmailVerification } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDAxT-zlN0u7CGIX4cwIATAKF-x4NzREvQ",
-  authDomain: "ardor-finances.firebaseapp.com",
+  // apiKey: "AIzaSyDAxT-zlN0u7CGIX4cwIATAKF-x4NzREvQ",
+  // authDomain: "ardor-finances.firebaseapp.com",
   projectId: "ardor-finances",
   storageBucket: "ardor-finances.appspot.com",
   messagingSenderId: "635239525184",
-  appId: "1:635239525184:web:23dbd8662678c36535e8a"
+  // appId: "1:635239525184:web:23dbd8662678c36535e8a"
 };
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
@@ -34,8 +34,6 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef;
 };
 
-
-
 export const getCurrentUser = async () => {
   return new Promise((resolve, reject) => {
     const unsubcribe = auth.onAuthStateChanged((userAuth) => {
@@ -51,12 +49,11 @@ const app = initializeApp(firebaseConfig);
 export const database = getFirestore(app);
 export const auth = getAuth();
 
-export const confirmEmail = async ()=>{
-try {
-  await sendEmailVerification(auth.currentUser)
-  console.log("Email sent!")
-} catch (error) {
-  console.log("email not sent!")
-}
-
-}
+export const confirmEmail = async () => {
+  try {
+    await sendEmailVerification(auth.currentUser);
+    console.log("Email sent!");
+  } catch (error) {
+    console.log("email not sent!");
+  }
+};
