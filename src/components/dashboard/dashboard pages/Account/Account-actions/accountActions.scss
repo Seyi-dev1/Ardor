@@ -12,7 +12,8 @@
   }
 
   .cash_container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     justify-content: left;
     margin: 0 auto;
@@ -124,7 +125,6 @@
         width: 270px;
         height: 100px;
         display: grid;
-       
 
         .balance {
           display: flex;
