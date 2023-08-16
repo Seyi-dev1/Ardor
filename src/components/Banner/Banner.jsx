@@ -9,7 +9,6 @@ import "swiper/css/pagination";
 import image1 from "../../Images/carousel1.jpg";
 import image2 from "../../Images/carousel2.jpg";
 import image3 from "../../Images/carousel3.jpg";
-import { FaScroll } from "react-icons/fa";
 
 const Banner = () => {
   const navigate = useNavigate();

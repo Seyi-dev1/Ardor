@@ -6,7 +6,7 @@ import { FiPieChart } from "react-icons/fi";
 const AccountActions = () => {
   const user = window.localStorage.getItem("user");
 
-  const { firstName, investmentBalance, createdAt, plan } = JSON.parse(user);
+  const { investmentBalance, createdAt, plan } = JSON.parse(user);
 
   const date1 = createdAt;
   const date2 = new Date().getTime();

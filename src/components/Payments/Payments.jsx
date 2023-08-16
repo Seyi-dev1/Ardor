@@ -1,111 +1,101 @@
 import React from "react";
-import "./payment.scss";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import Deposit from "../dashboard/dashboard pages/Account/Account pages/Deposit/Deposit";
-import Withdrawal from "../dashboard/dashboard pages/Account/Account pages/Withdraw/Withdraw";
+import styles from "./payment.module.scss";
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography component={"div"}>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
-
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
-
-function BasicTabs() {
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-  const tabstyle = {
-    color: "black",
-    fontSize: "1rem",
-    fontWeight: "bold",
-
-    "@media (maxWidth: 800px)": {
-      fontSize: "0.5rem",
-    },
-  };
-  return (
-    <Box sx={{ width: "100%" }}>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="basic tabs example"
-        >
-          <Tab
-            label={
-              <span style={tabstyle} className="tab_title">
-                DEPOSIT
-              </span>
-            }
-            {...a11yProps(0)}
-          />
-          <Tab
-            label={
-              <span style={tabstyle} className="tab_title">
-                WITHDRAW
-              </span>
-            }
-            {...a11yProps(1)}
-          />
-          <Tab
-            label={
-              <span style={tabstyle} className="tab_title">
-                EXCHANGE
-              </span>
-            }
-            {...a11yProps(2)}
-          />
-        </Tabs>
-      </Box>
-      <TabPanel value={value} index={0}>
-        <Deposit />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <Withdrawal />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Coming soon, be on the lookout!
-      </TabPanel>
-    </Box>
-  );
-}
 const Payments = () => {
+  const options = [
+    { label: "BITCOIN", value: "BITCOIN" },
+
+    { label: "ETHEREUM", value: "ETHEREUM" },
+  ];
+
+  const [info, setInfo] = React.useState({
+    amount: "",
+    address: "",
+    currency: "",
+  });
+  const [display, setDisplay] = React.useState({
+    page: "wallet",
+  });
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setInfo((prevValue) => ({
+      ...prevValue,
+      [name]: value,
+    }));
+  };
+  const handleDisplay = (event) => {
+    const { name, value } = event.target;
+    setDisplay((prevValue) => ({
+      ...prevValue,
+      [name]: value,
+    }));
+  };
+  console.log(display);
+
   return (
-    <div className="payments_tabs">
-      <BasicTabs />
+    <div className={styles.main}>
+      {display.page === "wallet" && (
+        <div className={styles.wallet}>
+          <span className={styles.text}>Select Wallet</span>
+          <select
+            value={info.currency}
+            name="currency"
+            onChange={handleChange}
+            className={styles.dropdown}
+          >
+            {options.map((option) => (
+              <option
+                className={styles.option}
+                key={option.label}
+                value={option.value}
+              >
+                {option.label}
+              </option>
+            ))}
+          </select>
+          <button
+            value="amount"
+            name="page"
+            onClick={handleDisplay}
+            className={styles.btn}
+          >
+            Deposit Amount
+          </button>
+        </div>
+      )}
+      {display.page === "amount" && (
+        <div className={styles.amount}>
+          <span className={styles.text}>Select Amount</span>
+          <input
+            value={info.amount}
+            name="amount"
+            onChange={handleChange}
+            className={styles.input}
+            placeholder="amount in $"
+          />
+          <button
+            value="details"
+            name="page"
+            onClick={handleDisplay}
+            className={styles.btn}
+          >
+            Deposit Amount
+          </button>
+        </div>
+      )}
+      {display.page === "details" && (
+        <div className={styles.details}>
+          <div className={styles.title_con}>
+            <span className={styles.text}>Trading Account Details</span>
+          </div>
+          <div className={styles.companyDetails}></div>
+          <div className={styles.items}></div>
+          <div className={styles.item}></div>
+          <div className={styles.total_con}></div>
+          <div className={styles.btn_con}></div>
+          <div className={styles.footer}></div>
+        </div>
+      )}
     </div>
   );
 };

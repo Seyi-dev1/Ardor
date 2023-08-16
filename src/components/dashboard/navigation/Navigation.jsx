@@ -3,6 +3,7 @@ import "./Navigation.scss";
 import { NavLink } from "react-router-dom";
 import { TfiWallet } from "react-icons/tfi";
 import { RiExchangeDollarFill } from "react-icons/ri";
+import { BsDatabaseFill } from "react-icons/bs";
 import { FiSettings } from "react-icons/fi";
 import Pic from "../../../Images/icons8-person-100.png";
 import { FaTimes } from "react-icons/fa";
@@ -47,10 +48,19 @@ const Navigation = () => {
           className={({ isActive }) =>
             isActive ? "Link-active link" : "Link-inactive link"
           }
+          to="/dashboard/overview"
+        >
+          <BsDatabaseFill className="icon" />
+          Accounts
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "Link-active link" : "Link-inactive link"
+          }
           to="/dashboard/Transactions"
         >
           <RiExchangeDollarFill className="icon" />
-          Analysis
+          History
         </NavLink>
         <NavLink
           className={({ isActive }) =>
