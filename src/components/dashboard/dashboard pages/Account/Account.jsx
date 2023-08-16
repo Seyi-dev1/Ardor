@@ -3,21 +3,16 @@ import "./Account.scss";
 import AccountActions from "./Account-actions/accountActions";
 import CSFTab from "../../../CSF tab/CSFTab";
 import Payments from "../../../Payments/Payments";
-import { SymbolInfo } from "react-ts-tradingview-widgets";
+import { TickerTape } from "react-ts-tradingview-widgets";
+import Charts from "../../../charts/Charts";
 const Account = () => {
   return (
     <div className="Account_page">
       <div className="pages_actions">
+        <TickerTape colorTheme="light" displayMode="adaptive"></TickerTape>
         <AccountActions />
+        <Charts />
         <Payments />
-        <SymbolInfo
-          colorTheme="light"
-          isTransparent="true"
-          autosize
-        ></SymbolInfo>
-        <div className="summary_container">
-          <CSFTab />
-        </div>
       </div>
     </div>
   );
