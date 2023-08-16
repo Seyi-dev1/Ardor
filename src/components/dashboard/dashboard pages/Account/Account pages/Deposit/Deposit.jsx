@@ -2,9 +2,6 @@ import React from "react";
 import "./Deposit.scss";
 import BTC from "./bitcoin-3089728_640.jpg";
 import ETH from "./ethereum-6874608_640.jpg";
-import USDTTRC20 from "./usdttrc20.png";
-import USDTERC20 from "./USDTERC20.jpg";
-import USDTBEP20 from "./usdtbep20.jpg";
 import DepositModal from "./Deposit poppup/DepositModal";
 const Deposit = () => {
   return (
@@ -30,34 +27,6 @@ const Deposit = () => {
           </div>
           <div className="deposit_control">
             <span className="deposit_title">Ethereum</span>
-            <DepositModal address="0x2ac6560c177F66871c05AdB8b1055e99E29b52fB" />
-          </div>
-        </div>
-
-        <div className="deposit_option">
-          <div className="deposit_img_con">
-            <img src={USDTTRC20} alt="btc" className="deposit_img" />
-          </div>
-          <div className="deposit_control">
-            <span className="deposit_title">USDT TRC-20</span>
-            <DepositModal address="TAHpxTkTAfMPgnKKdD9L9pnP2tPERtakPq" />
-          </div>
-        </div>
-        <div className="deposit_option">
-          <div className="deposit_img_con">
-            <img src={USDTERC20} alt="btc" className="deposit_img" />
-          </div>
-          <div className="deposit_control">
-            <span className="deposit_title">USDT ERC-20</span>
-            <DepositModal address="0x2ac6560c177F66871c05AdB8b1055e99E29b52fB" />
-          </div>
-        </div>
-        <div className="deposit_option">
-          <div className="deposit_img_con">
-            <img src={USDTBEP20} alt="btc" className="deposit_img" />
-          </div>
-          <div className="deposit_control">
-            <span className="deposit_title">USDT BEP-20</span>
             <DepositModal address="0x2ac6560c177F66871c05AdB8b1055e99E29b52fB" />
           </div>
         </div>

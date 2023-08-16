@@ -7,6 +7,7 @@ import Settings from "./components/dashboard/dashboard pages/Settings/Settings";
 import Transactions from "./components/dashboard/dashboard pages/transactions/Transactions";
 import Loader from "./components/loader/Loader";
 import Dashboard from "./components/dashboard/dashboard";
+import Overview from "./components/dashboard/dashboard pages/Overview/Overview";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="Transactions" element={<Transactions />} />
             <Route path="Settings" element={<Settings />} />
             <Route path="Profile" element={<Profile />} />
+            <Route path="Overview" element={<Overview />} />
           </Route>
         </Routes>
       </Suspense>
