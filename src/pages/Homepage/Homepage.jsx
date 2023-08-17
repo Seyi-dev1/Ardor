@@ -13,7 +13,6 @@ import StartNow from "../../components/start/StartNow";
 import WhatWeDo from "../../components/what we do/WhatWeDo";
 import CButton from "../../components/CButton/CButton";
 import { useNavigate } from "react-router-dom";
-import { IoLogoWhatsapp } from "react-icons/io";
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -23,8 +22,10 @@ const Homepage = () => {
   return (
     <div className="homepage">
       <Banner />
-      <TickerTape colorTheme="dark" displayMode="adaptive"></TickerTape>
-      <CSFTab />
+      <TickerTape colorTheme="light" displayMode="adaptive"></TickerTape>
+      <WhatWeDo />
+      <WhyUs />
+
       <div style={{ display: "flex", justifyContent: "center" }}>
         <CButton
           text="Get Started"
@@ -33,13 +34,11 @@ const Homepage = () => {
         />
       </div>
       <PlatformStats />
-      <WhatWeDo />
-      <WhyUs />
       <StartNow />
       <Plans />
+      <CSFTab />
       <Coins />
-
-      <Ticker colorTheme="dark"></Ticker>
+      <Ticker colorTheme="light"></Ticker>
       <Testimonials />
       <Timeline
         colorTheme="light"
