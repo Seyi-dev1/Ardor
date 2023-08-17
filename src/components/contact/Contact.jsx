@@ -3,14 +3,14 @@ import "./contact.scss";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { FaPhoneAlt, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
 
 const Contact = () => {
   const contacts = [
     {
       id: 1,
       icon: <FaMapMarkerAlt style={{ color: "black" }} />,
-      infoText: "Redmond, Utah, USA.",
+      infoText: "San Francisco, CA.",
     },
     {
       id: 2,

@@ -14,8 +14,8 @@ const Footer = () => {
             <span className="title">THOMPSONS</span>
           </div>
           <span className="address">
-            Redmond, <br />
-            Utah, USA.
+            San Francisco <br />
+            CA, USA.
           </span>
         </div>
         <div className="second">
