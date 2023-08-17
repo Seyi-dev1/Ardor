@@ -21,12 +21,15 @@ const SignUp = () => {
     address: "",
     occupation: "",
     confirmPassword: "",
+    accountCharge: 0,
+    bonus: 0,
+    totalDeposit: 0,
     profitBalance: 0,
     investmentBalance: 0,
-    plan: 2.3
+    plan: 2.3,
   });
 
-  console.log(inputs)
+  console.log(inputs);
   const [passwordShown, setPasswordShown] = React.useState(false);
 
   const userSelector = createSelector(
@@ -145,13 +148,13 @@ const SignUp = () => {
                 placeholder="your occupation"
               />
               <Dropdown
-              label="Choose a plan"
-              options={options}
-              value={inputs.plan}
-              onChange={handleChange}
-              name="plan"
-              required={true}
-            />
+                label="Choose a plan"
+                options={options}
+                value={inputs.plan}
+                onChange={handleChange}
+                name="plan"
+                required={true}
+              />
               <div className="password">
                 <CInput
                   type={passwordShown ? "text" : "password"}
@@ -224,9 +227,7 @@ const SignUp = () => {
 const Dropdown = ({ label, value, options, onChange, name }) => {
   return (
     <div className="dropdown">
-    <label className="label">
-      {label}
-    </label>
+      <label className="label">{label}</label>
       <select
         value={value}
         name={name}
@@ -244,9 +245,7 @@ const Dropdown = ({ label, value, options, onChange, name }) => {
           </option>
         ))}
       </select>
-    
     </div>
-    
   );
 };
 export default SignUp;

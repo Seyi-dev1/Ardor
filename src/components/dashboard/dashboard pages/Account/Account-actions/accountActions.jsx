@@ -2,11 +2,17 @@ import React from "react";
 import "./accountActions.scss";
 import { FaChartLine, FaChartPie } from "react-icons/fa";
 import { FiPieChart } from "react-icons/fi";
-
+import { BiTrendingDown } from "react-icons/bi";
 const AccountActions = () => {
   const user = window.localStorage.getItem("user");
-
-  const { investmentBalance, createdAt, plan } = JSON.parse(user);
+  const {
+    investmentBalance,
+    createdAt,
+    plan,
+    accountCharge,
+    bonus,
+    totalDeposit,
+  } = JSON.parse(user);
 
   const date1 = createdAt;
   const date2 = new Date().getTime();
@@ -47,28 +53,35 @@ const AccountActions = () => {
             <FaChartLine className="icon" />
             <div className="balance">
               <h3 className="title">Total Bonus</h3>
-              <h3 className="cash">$0.00</h3>
+              <h3 className="cash">${bonus}</h3>
             </div>
           </div>
           <div className="total_balance">
-            <FaChartLine className="icon" />
+            <BiTrendingDown className="icon" />
             <div className="balance">
               <h3 className="title">Account Charge</h3>
-              <h3 className="cash">$0.00</h3>
+              <h3 className="cash">${accountCharge}</h3>
             </div>
           </div>
           <div className="total_balance">
-            <FaChartLine className="icon" />
+            <BiTrendingDown className="icon" />
             <div className="balance">
               <h3 className="title">Total Withdrawal</h3>
               <h3 className="cash">$0.00</h3>
             </div>
           </div>
           <div className="total_balance">
-            <FaChartLine className="icon" />
+            <BiTrendingDown className="icon" />
             <div className="balance">
-              <h3 className="title">Pending Withdrawal</h3>
+              <h3 className="title">Pending Deposit</h3>
               <h3 className="cash">$0.00</h3>
+            </div>
+          </div>
+          <div className="total_balance">
+            <BiTrendingDown className="icon" />
+            <div className="balance">
+              <h3 className="title">Total Deposits</h3>
+              <h3 className="cash">${totalDeposit}</h3>
             </div>
           </div>
         </div>

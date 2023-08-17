@@ -1,6 +1,6 @@
 .profile-container {
   width: 100%;
-  background: #e7f0f3;
+  background: #f8f9fa;
   display: grid;
   justify-content: center;
   min-height: 100vh;
@@ -130,7 +130,7 @@
 @media screen and (max-width: 1024px) {
   .profile-container {
     width: 100%;
-    background: #e7f0f3;
+
     display: grid;
     justify-content: center;
     overflow-y: scroll;
@@ -142,13 +142,13 @@
       margin: 2rem;
       .intro {
         h3 {
-          font-family: "Syne";
+          font-family: "Poppins";
           font-style: normal;
           font-weight: 600;
           font-size: 14px;
         }
         p {
-          font-family: "Syne";
+          font-family: "Poppins";
           font-style: normal;
           font-weight: 400;
           font-size: 12.8px;

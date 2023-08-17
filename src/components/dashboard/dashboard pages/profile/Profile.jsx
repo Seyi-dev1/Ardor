@@ -1,7 +1,6 @@
 import React from "react";
 import CInput from "../../../CInput/CInput";
 import "./profile.scss";
-import Copyright from "../../../copyright/Copyright";
 import { FaCloudUploadAlt } from "react-icons/fa";
 
 const Profile = () => {
@@ -111,7 +110,6 @@ const Profile = () => {
           </form>
         </div>
       </div>
-      <Copyright />
     </div>
   );
 };

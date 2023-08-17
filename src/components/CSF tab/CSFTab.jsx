@@ -5,11 +5,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import {
-  CryptoCurrencyMarket,
-  StockMarket,
-  ForexCrossRates,
-} from "react-ts-tradingview-widgets";
+import { StockMarket, ForexCrossRates } from "react-ts-tradingview-widgets";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -70,7 +66,7 @@ function BasicTabs() {
           <Tab
             label={
               <span style={tabstyle} className="tab_title">
-                CRYPTO
+                STOCKS & EFTs
               </span>
             }
             {...a11yProps(0)}
@@ -78,32 +74,17 @@ function BasicTabs() {
           <Tab
             label={
               <span style={tabstyle} className="tab_title">
-                STOCKS & EFTs
+                FOREX
               </span>
             }
             {...a11yProps(1)}
           />
-          <Tab
-            label={
-              <span style={tabstyle} className="tab_title">
-                FOREX
-              </span>
-            }
-            {...a11yProps(2)}
-          />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <CryptoCurrencyMarket
-          colorTheme="dark"
-          width="100%"
-          height={400}
-        ></CryptoCurrencyMarket>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
         <StockMarket colorTheme="dark" height={400} width="100%"></StockMarket>
       </TabPanel>
-      <TabPanel value={value} index={2}>
+      <TabPanel value={value} index={1}>
         <ForexCrossRates
           colorTheme="dark"
           height={400}

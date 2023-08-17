@@ -24,7 +24,7 @@ const Dashboard = () => {
         <div className="dashboard">
           <div className="header">
             {/* <FaBars className="nav_icon" onClick={toggleNav} /> */}
-            <span className="logo">My Dashboard</span>
+            <span className="logo">Thompsons Central</span>
             <span
               className="out"
               onClick={() => {
