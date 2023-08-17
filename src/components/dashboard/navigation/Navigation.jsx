@@ -50,7 +50,7 @@ const Navigation = () => {
           }
           to="/dashboard/overview"
         >
-          <BsDatabaseFill className="icon" />
+          <RiExchangeDollarFill className="icon" />
           Accounts
         </NavLink>
         <NavLink
@@ -59,7 +59,7 @@ const Navigation = () => {
           }
           to="/dashboard/Transactions"
         >
-          <RiExchangeDollarFill className="icon" />
+          <BsDatabaseFill className="icon" />
           History
         </NavLink>
         <NavLink

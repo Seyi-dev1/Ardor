@@ -9,11 +9,10 @@ import Box from "@mui/material/Box";
 import { TbTarget } from "react-icons/tb";
 import { FaDollarSign } from "react-icons/fa";
 import { BiDollarCircle } from "react-icons/bi";
-import {
-  CryptoCurrencyMarket,
-  ForexCrossRates,
-} from "react-ts-tradingview-widgets";
+import { ForexCrossRates } from "react-ts-tradingview-widgets";
 import Payments from "../../../../Payments/Payments";
+import Withdrawal from "../../Account/Account pages/Withdraw/Withdraw";
+import AccountSummary from "./account summary/AccountSummary";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -57,7 +56,7 @@ function BasicTabs() {
   const tabstyle = {
     color: "grey",
     fontSize: "1rem",
-    fontWeight: "bold",
+    // fontWeight: "bold",
 
     "@media (maxWidth: 800px)": {
       fontSize: "0.5rem",
@@ -82,7 +81,7 @@ function BasicTabs() {
           <Tab
             label={
               <span style={tabstyle} className="tab_title">
-                <FaDollarSign /> Payments
+                <FaDollarSign /> Deposit
               </span>
             }
             {...a11yProps(1)}
@@ -90,24 +89,31 @@ function BasicTabs() {
           <Tab
             label={
               <span style={tabstyle} className="tab_title">
-                <BiDollarCircle /> Exchange
+                <BiDollarCircle /> Withdrawal
               </span>
             }
             {...a11yProps(2)}
           />
+          <Tab
+            label={
+              <span style={tabstyle} className="tab_title">
+                <BiDollarCircle /> Exchange
+              </span>
+            }
+            {...a11yProps(3)}
+          />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <CryptoCurrencyMarket
-          colorTheme="dark"
-          width="100%"
-          height={400}
-        ></CryptoCurrencyMarket>
+        <AccountSummary />
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Payments />
       </TabPanel>
       <TabPanel value={value} index={2}>
+        <Withdrawal />
+      </TabPanel>
+      <TabPanel value={value} index={3}>
         <ForexCrossRates
           colorTheme="dark"
           height={400}

@@ -8,6 +8,9 @@ import Transactions from "./components/dashboard/dashboard pages/transactions/Tr
 import Loader from "./components/loader/Loader";
 import Dashboard from "./components/dashboard/dashboard";
 import Overview from "./components/dashboard/dashboard pages/Overview/Overview";
+import AllTransactions from "./components/dashboard/dashboard pages/transactions/all transactions/AllTransactions.jsx";
+import Deposits from "./components/dashboard/dashboard pages/transactions/deposits/Deposits.jsx";
+import Withdrawals from "./components/dashboard/dashboard pages/transactions/withdrawals/Withdrawals.jsx";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 function App() {
@@ -18,7 +21,11 @@ function App() {
           <Route path="*" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />}>
             <Route path="Account" element={<Account />}></Route>
-            <Route path="Transactions" element={<Transactions />} />
+            <Route path="transactions" element={<Transactions />}>
+              <Route path="*" index element={<AllTransactions />} />
+              <Route path="deposits" element={<Deposits />} />
+              <Route path="withdrawals" element={<Withdrawals />} />
+            </Route>
             <Route path="Settings" element={<Settings />} />
             <Route path="Profile" element={<Profile />} />
             <Route path="Overview" element={<Overview />} />
