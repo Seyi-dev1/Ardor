@@ -1,6 +1,5 @@
 import "./staff.scss";
 import React from "react";
-import ceo from "../images/in-team-1.png";
 
 const Staff = ({ image, position, name }) => {
   return (
