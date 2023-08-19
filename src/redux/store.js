@@ -4,9 +4,11 @@ import userReducer from "./user/userReducer";
 import createSagaMiddleware from "@redux-saga/core";
 import rootSaga from "../sagas/rootSaga";
 import modalReducer from "./modal/modalReducer";
+import paymentReducer from "./payment/paymentReducer";
 const combinedReducers = combineReducers({
   user: userReducer,
   modal: modalReducer,
+  payment: paymentReducer,
 });
 
 const logger = createLogger();

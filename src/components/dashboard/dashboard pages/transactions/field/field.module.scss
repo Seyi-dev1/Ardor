@@ -1,0 +1,39 @@
+.main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  color: rgb(163, 161, 161);
+  background: #f8f9fa;
+  padding: 0.7rem;
+  border-radius: 5px;
+  @media screen and (max-width: 850px) {
+    width: 100%;
+  }
+  .field {
+    font-size: 0.85rem;
+    font-weight: normal;
+
+    @media screen and (max-width: 850px) {
+      font-size: 0.75rem;
+    }
+  }
+
+  .accepted,
+  .pending {
+    background-color: rgb(19, 223, 19);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    width: fit-content;
+    padding: 0.3rem;
+    border-radius: 3px;
+
+    @media screen and (max-width: 850px) {
+      font-size: 0.75rem;
+    }
+  }
+  .pending {
+    background-color: rgb(255, 78, 3);
+  }
+}

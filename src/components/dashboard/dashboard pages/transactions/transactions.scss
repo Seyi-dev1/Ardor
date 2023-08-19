@@ -14,6 +14,7 @@
     background-color: #fff;
     padding: 1.5rem;
     border-radius: 8px;
+    margin-bottom: 1rem;
 
     @media screen and (max-width: 850px) {
       gap: 1rem;
@@ -49,9 +50,7 @@
     }
   }
   .outlet {
-    display: grid;
-    justify-content: center;
-    align-items: center;
     height: 80vh;
+    background-color: #fff;
   }
 }
