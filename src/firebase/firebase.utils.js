@@ -11,6 +11,22 @@ const firebaseConfig = {
   appId: "1:388238992464:web:d3abd309cceb1c7eb39d55",
 };
 
+export const handleDeposit = async (userAuth, data) => {
+  const userRef = doc(database, `/users/${userAuth}`);
+  const snapShot = await getDoc(userRef);
+  const prevData = snapShot.data();
+  console.log(prevData);
+  // const deposits = prevData.deposits;
+  try {
+    setDoc(userRef, {
+      ...prevData,
+      deposits: [...prevData.deposits, data],
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
 

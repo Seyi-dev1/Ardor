@@ -1,8 +1,16 @@
 import React from "react";
 import styles from "./payment.module.scss";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { paymentStart } from "../../redux/payment/paymentReducer";
+
 const Payments = () => {
+  const User = window.localStorage.getItem("user");
+
+  const { id } = JSON.parse(User);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  // console.log(id);
   const options = [
     { label: "BITCOIN", value: "BITCOIN" },
 
@@ -10,8 +18,10 @@ const Payments = () => {
   ];
 
   const [info, setInfo] = React.useState({
-    amount: 0,
-    address: "",
+    amount: "",
+    user: id,
+    id: "",
+    isPending: true,
     currency: "BITCOIN",
   });
 
@@ -52,6 +62,14 @@ const Payments = () => {
   const thisYear = d.getFullYear();
   const day = d.getDate();
   const milliseconds = d.getMilliseconds();
+  // setInfo((prev) => {
+  //   return {
+  //     ...prev,
+  //     id: milliseconds,
+  //   };
+  // });
+  info.id = milliseconds;
+  console.log(info.id);
 
   const user = window.localStorage.getItem("user");
 
@@ -94,7 +112,7 @@ const Payments = () => {
       )}
       {display.page === "amount" && (
         <div className={styles.amount}>
-          <span className={styles.text}>Select Amount</span>
+          <span className={styles.text}>Amount(USD)</span>
           <input
             value={info.amount}
             name="amount"
@@ -219,7 +237,10 @@ const Payments = () => {
             )}
             <button
               className={styles.confirm}
-              onClick={() => navigate("/dashboard/account")}
+              // onClick={() => navigate("/dashboard/account")}
+              onClick={() =>
+                dispatch(paymentStart(info)) && navigate("/dashboard/account")
+              }
             >
               Confirm Payment
             </button>

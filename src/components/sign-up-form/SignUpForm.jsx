@@ -27,6 +27,7 @@ const SignUp = () => {
     profitBalance: 0,
     investmentBalance: 0,
     plan: 2.3,
+    deposits: [],
   });
 
   console.log(inputs);
