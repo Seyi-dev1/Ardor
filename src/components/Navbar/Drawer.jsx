@@ -8,7 +8,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { FaBars } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import CButton from "../CButton/CButton";
 
 export default function TemporaryDrawer({ anchor }) {
@@ -139,24 +139,22 @@ export default function TemporaryDrawer({ anchor }) {
             </ListItemButton>
           </span>
         </ListItem>
-        <ListItem key="0" disablePadding>
-          <Link to="/about">
-            <ListItemButton>
-              <ListItemText
-                primary={
-                  <span
-                    style={{
-                      fontSize: "13px",
-                      color: "black",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    About Us
-                  </span>
-                }
-              />
-            </ListItemButton>
-          </Link>
+        <ListItem key="0" disablePadding onClick={() => navigate("/about")}>
+          <ListItemButton>
+            <ListItemText
+              primary={
+                <span
+                  style={{
+                    fontSize: "13px",
+                    color: "black",
+                    fontWeight: "bold",
+                  }}
+                >
+                  About Us
+                </span>
+              }
+            />
+          </ListItemButton>
         </ListItem>
         <ListItem key="2" disablePadding>
           <span onClick={() => navigate("/#Contact")}>

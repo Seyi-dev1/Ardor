@@ -4,7 +4,6 @@ import Field from "../field/Field";
 const AllTransactions = () => {
   const user = window.localStorage.getItem("user");
   const { deposits } = JSON.parse(user);
-
   return (
     <div className={styles.main}>
       <span className={styles.title}>Transactions history</span>

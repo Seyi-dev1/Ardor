@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import CButton from "../CButton/CButton";
 import TemporaryDrawer from "./Drawer";
 import LOGO from "../../Images/logobig.png";
 import "./navbar.scss";
@@ -8,7 +7,7 @@ import { FaUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
   const [scroll, setScroll] = React.useState(0);
-  console.log(scroll);
+  // console.log(scroll);
   React.useEffect(() => {
     const handleScroll = () => {
       setScroll(window.scrollY);
