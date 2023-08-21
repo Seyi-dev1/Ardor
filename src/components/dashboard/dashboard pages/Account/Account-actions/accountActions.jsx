@@ -38,7 +38,7 @@ const AccountActions = () => {
           <div className="total_balance">
             <FiPieChart className="icon" />
             <div className="balance">
-              <h3 className="title">Investment portfolio</h3>
+              <h3 className="title">Trading Balance</h3>
               <h3 className="cash">${investmentBalance}</h3>
             </div>
           </div>
