@@ -17,7 +17,7 @@ import { RiLock2Fill } from "react-icons/ri";
 import ZELLE from "../../Images/Zelle.png";
 import GOLDMAN from "../../Images/Goldman.png";
 import FDIC from "../../Images/Member-FDIC.png";
-import GEICO from "../../Images/geico.png";
+import ROCKIES from "../../Images/rockies.png";
 import SyncLoader from "react-spinners/SyncLoader";
 const LoginForm = () => {
   const [info, setInfo] = useState({
@@ -74,10 +74,7 @@ const LoginForm = () => {
             <h1 className="title">
               <RiLock2Fill /> Secure Login
             </h1>
-            <p className="subtitle">
-
-              Please enter your email and password
-            </p>
+            <p className="subtitle">Please enter your email and password</p>
             <form onSubmit={handleSubmit} className="form">
               <CInput
                 type="email"
@@ -139,7 +136,7 @@ const LoginForm = () => {
               <img src={FDIC} alt="partner" className="partner_logos" />
               <img src={ZELLE} alt="partner" className="partner_logos" />
               <img src={GOLDMAN} alt="partner" className="partner_logos" />
-              <img src={GEICO} alt="partner" className="partner_logos" />
+              <img src={ROCKIES} alt="partner" className="partner_logos" />
             </div>
           </div>
         </div>

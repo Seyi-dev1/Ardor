@@ -5,7 +5,7 @@ import { FaFlag, FaBook, FaLeaf } from "react-icons/fa";
 import angle from "./images/icons8-triangle-100.png";
 import Staff from "./staff/Staff";
 import image1 from "../../Images/founder.png";
-import image2 from "../../Images/ceo1.png";
+import image2 from "../../Images/kroshkad.png";
 import image3 from "../../Images/assistant.png";
 import image4 from "../../Images/hr.png";
 
