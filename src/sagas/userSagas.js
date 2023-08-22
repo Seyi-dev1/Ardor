@@ -66,6 +66,7 @@ export function* signUp({ payload }) {
     accountCharge,
     bonus,
     deposits,
+    totalDeposit,
   } = payload;
   try {
     const { user } = yield createUserWithEmailAndPassword(
@@ -88,6 +89,7 @@ export function* signUp({ payload }) {
           accountCharge,
           bonus,
           deposits,
+          totalDeposit,
         },
       })
     );

@@ -26,7 +26,7 @@ const SignUp = () => {
     totalDeposit: 0,
     profitBalance: 0,
     investmentBalance: 0,
-    plan: 2.3,
+    plan: 5.3,
     deposits: [],
   });
 
@@ -69,10 +69,10 @@ const SignUp = () => {
   }, [user, navigate]);
 
   const options = [
-    { label: "Tier 1($1,000-9,999, max 2.3% ROI)", value: 2.3 },
-    { label: "Tier 2($10,000-49,999, max 3.3% ROI)", value: 3.3 },
-    { label: "Tier 3($50,000-199,999, max 4.3% ROI)", value: 4.3 },
-    { label: "Tier 4($200,000-1,000,000, max 6.5% ROI)", value: 6.5 },
+    { label: "Tier 1($50,000-199,000, min 2.3% ROI)", value: 2.3 },
+    { label: "Tier 2($200,000-399,000, min 3.3% ROI)", value: 3.3 },
+    { label: "Tier 3($400,000-1,800,000, min 4.3% ROI)", value: 4.3 },
+    { label: "Tier 4($1,900,000-5,000,000, min 6.5% ROI)", value: 6.5 },
   ];
   return (
     <div className="signup_con">
@@ -236,7 +236,7 @@ const Dropdown = ({ label, value, options, onChange, name }) => {
         className="select"
         required={true}
       >
-        {options.map((option) => (
+        {/* {options.map((option) => (
           <option
             style={{ border: "1px solid goldenrod", padding: "2px 10px" }}
             key={option.label}
@@ -244,7 +244,33 @@ const Dropdown = ({ label, value, options, onChange, name }) => {
           >
             {option.label}
           </option>
-        ))}
+        ))} */}
+        <option
+          style={{ border: "1px solid goldenrod", padding: "2px 10px" }}
+          value="2.3"
+          disabled
+        >
+          Tier 1($50,000-199,000, min 2.3% ROI)
+        </option>
+        <option
+          style={{ border: "1px solid goldenrod", padding: "2px 10px" }}
+          value="3.3"
+          disabled
+        >
+          Tier 2($200,000-399,000, min 3.3% ROI)
+        </option>
+        <option
+          style={{ border: "1px solid goldenrod", padding: "2px 10px" }}
+          value="5.3"
+        >
+          Tier 3($400,000-1,800,000, min 4.3% ROI)
+        </option>
+        <option
+          style={{ border: "1px solid goldenrod", padding: "2px 10px" }}
+          value="6.3"
+        >
+          Tier 4($1,900,000-5,000,000, min 6.5% ROI)
+        </option>
       </select>
     </div>
   );
