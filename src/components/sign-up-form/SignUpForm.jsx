@@ -11,6 +11,7 @@ import { selectCurrentUser, selectError } from "../../redux/user/userSelector";
 import { motion } from "framer-motion";
 import { SyncLoader } from "react-spinners";
 import { selectIsLoading } from "../../redux/user/userSelector";
+
 const SignUp = () => {
   const [inputs, setInputs] = React.useState({
     firstName: "",
@@ -212,6 +213,7 @@ const SignUp = () => {
                   Check your internet connection and try agin!
                 </h1>
               )}
+
               <Link to="/login" className="login_here">
                 ← Already have an account?
               </Link>

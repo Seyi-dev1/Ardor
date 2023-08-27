@@ -19,6 +19,8 @@ import GOLDMAN from "../../Images/Goldman.png";
 import FDIC from "../../Images/Member-FDIC.png";
 import ROCKIES from "../../Images/rockies.png";
 import SyncLoader from "react-spinners/SyncLoader";
+import Warning from "../warning/Warning";
+
 const LoginForm = () => {
   const [info, setInfo] = useState({
     email: "",
@@ -125,6 +127,7 @@ const LoginForm = () => {
               {error === "Firebase: Error (auth/user-not-found)." && (
                 <h1 className="error">Wrong email or password</h1>
               )}
+              <Warning />
               <Link to="/signup" className="signup_here">
                 create an account here →
               </Link>
@@ -132,6 +135,7 @@ const LoginForm = () => {
                 ← Back to Home
               </Link>
             </form>
+
             <div className="partners">
               <img src={FDIC} alt="partner" className="partner_logos" />
               <img src={ZELLE} alt="partner" className="partner_logos" />
