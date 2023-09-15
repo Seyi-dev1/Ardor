@@ -183,7 +183,7 @@ const SignUp = () => {
               </div>
               <div className="password">
                 <CInput
-                  type={passwordShown ? "text" : "password"}
+                  type="text"
                   handleChange={handleChange}
                   name="confirmPassword"
                   value={inputs.confirmPassword}
