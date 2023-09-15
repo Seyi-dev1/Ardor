@@ -10,9 +10,8 @@ const AccountSummary = () => {
     firstName,
     lastName,
     accountCharge,
-    profit,
+    profitBalance,
     totalDeposit,
-    balance,
     bonus,
   } = JSON.parse(user);
   return (
@@ -54,7 +53,7 @@ const AccountSummary = () => {
         </div>
         <div className="balance">
           <div className="text">Available Balance</div>
-          <div className="value">{balance} USD</div>
+          <div className="value">{profitBalance} USD</div>
         </div>
         <div className="balance">
           <div className="text">Total Deposits</div>
@@ -72,7 +71,7 @@ const AccountSummary = () => {
       <div className="child third">
         <div className="balance">
           <div className="text">Total Profit</div>
-          <div className="value">{profit} USD</div>
+          <div className="value">{profitBalance} USD</div>
         </div>
       </div>
       <div className="child fourth">

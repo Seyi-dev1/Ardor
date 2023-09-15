@@ -7,20 +7,21 @@ const AccountActions = () => {
   const user = window.localStorage.getItem("user");
   const {
     investmentBalance,
-    createdAt,
-    plan,
+    // createdAt,
+    // plan,
     accountCharge,
     bonus,
     totalDeposit,
+    profitBalance,
   } = JSON.parse(user);
 
-  const date1 = createdAt;
-  const date2 = new Date().getTime();
+  // const date1 = createdAt;
+  // const date2 = new Date().getTime();
 
-  const difference = date2 - date1;
-  const days = difference / 86400000;
+  // const difference = date2 - date1;
+  // const days = difference / 86400000;
 
-  const profitBalance = (plan / 100) * investmentBalance * days;
+  // const profitBalance = (plan / 100) * investmentBalance * days;
 
   return (
     <div>
@@ -46,7 +47,7 @@ const AccountActions = () => {
             <FaChartLine className="icon" />
             <div className="balance">
               <h3 className="title">Profits</h3>
-              <h3 className="cash">${profitBalance.toFixed(2)}</h3>
+              <h3 className="cash">${profitBalance}</h3>
             </div>
           </div>
           <div className="total_balance">
