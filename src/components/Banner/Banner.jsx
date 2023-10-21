@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import image1 from "../../Images/carousel1.jpg";
 import image2 from "../../Images/carousel2.jpg";
 import image3 from "../../Images/carousel3.jpg";
+import image4 from "../../Images/pexels-anna-nekrashevich-7552568.jpg";
 
 const Banner = () => {
   const navigate = useNavigate();
@@ -31,6 +32,28 @@ const Banner = () => {
         className="swiper"
       >
         <SwiperSlide className="swiperSlide">
+          <img src={image4} alt="carousel" />
+          <div className="swiperText">
+            <div className="text">
+              <div className="line"></div>
+              <div className="heading">
+                <h1>Rebranded Website for Improved Performance</h1>
+              </div>
+              <div className="desc">
+                <p>
+                  We are excited to introduce you to our newly rebranded
+                  website, designed with you in mind. We have meticulously
+                  revamped our online presence to offer an even better
+                  experience.
+                </p>
+              </div>
+              <div className="buttons">
+                <button onClick={() => navigate("/signup")}>Get Started</button>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="swiperSlide">
           <img src={image1} alt="carousel" />
           <div className="swiperText">
             <div className="text">
@@ -41,8 +64,8 @@ const Banner = () => {
               <div className="desc">
                 <p>
                   Harness the power of analytic technology and tap into the
-                  lucrative world of stocks and analytic trading with Thompson's
-                  Central.
+                  lucrative world of stocks and analytic trading with Ardor
+                  Finances.
                 </p>
               </div>
               <div className="buttons">

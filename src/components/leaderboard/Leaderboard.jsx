@@ -34,7 +34,7 @@ const Leaderboard = () => {
           />
           <TestimonialText
             image={customer2}
-            text="Being a top client of Thompson's, Trading has been a remarkable journey of financial growth and success. Their unparalleled market expertise and personalized strategies have consistently delivered exceptional results. In just under three years, my portfolio has experienced an impressive 40% increase in profits worth over $1m. The team's dedication to my financial goals and their ability to seize lucrative opportunities sets them apart in the trading and stocks industry. Partnering with Thompson's Team has not only maximized my gains but also deepened my trust in their capabilities."
+            text="Being a top client of Ardor Finances, Trading has been a remarkable journey of financial growth and success. Their unparalleled market expertise and personalized strategies have consistently delivered exceptional results. In just under three years, my portfolio has experienced an impressive 40% increase in profits worth over $1m. The team's dedication to my financial goals and their ability to seize lucrative opportunities sets them apart in the trading and stocks industry. Partnering with Ardor finances Team has not only maximized my gains but also deepened my trust in their capabilities."
             name="John Forster"
             work="Hedge fund manager"
           />

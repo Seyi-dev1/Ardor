@@ -30,15 +30,15 @@ const Plans = () => {
             <li>
               <i className="bx bx-check"></i>
               <b>Min: </b>
-              $50,000
+              $1,000
             </li>
             <li>
               <i className="bx bx-check"></i>
               <b>Max: </b>
-              $199,000
+              $9,999
             </li>
           </ul>
-          <button onClick={() => navigate("/#plans")}>Not available</button>
+          <button onClick={() => navigate("/login")}>Choose Plan</button>
         </div>
         <div className="item item2">
           <header>
@@ -62,19 +62,19 @@ const Plans = () => {
             <li>
               <i className="bx bx-check"></i>
               <b>Min: </b>
-              $200,000
+              $10,000
             </li>
             <li>
               <i className="bx bx-check"></i>
               <b>Max: </b>
-              $399,000
+              $49,999
             </li>
           </ul>
-          <button onClick={() => navigate("/#plans")}>Not available</button>
+          <button onClick={() => navigate("/login")}>Choose Plan</button>
         </div>
         <div className="item item3">
           <header>
-            <h3>Diamond plan</h3>
+            <h3>Platinum plan</h3>
           </header>
           <span></span>
           <ul>
@@ -94,19 +94,19 @@ const Plans = () => {
             <li>
               <i className="bx bx-check"></i>
               <b>Min: </b>
-              $400,000
+              $50,000
             </li>
             <li>
               <i className="bx bx-check"></i>
               <b>Max: </b>
-              $1,800,000
+              $199,999
             </li>
           </ul>
           <button onClick={() => navigate("/login")}>Choose Plan</button>
         </div>
         <div className="item item4">
           <header>
-            <h3>Platinum plan</h3>
+            <h3>Diamond plan</h3>
           </header>
           <span></span>
           <ul>
@@ -126,12 +126,12 @@ const Plans = () => {
             <li>
               <i className="bx bx-check"></i>
               <b>Min: </b>
-              $1,900,000
+              $200,000
             </li>
             <li>
               <i className="bx bx-check"></i>
               <b>Max: </b>
-              $5,000,000
+              $1,000,000
             </li>
           </ul>
           <button onClick={() => navigate("/login")}>Choose Plan</button>

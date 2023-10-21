@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="first">
           <div className="title_con">
             <img src={LOGO} alt="FOOTER LOGO" className="footer_logo" />
-            <span className="title">THOMPSONS</span>
+            <span className="title">ARDOR FINANCE</span>
           </div>
           <span className="address">
             San Francisco <br />
@@ -49,7 +49,7 @@ const Footer = () => {
       </div>
       <div className="bottom">
         <span className="copyright">
-          ©2023 Thompson's Central co. All Rights Reserved.
+          ©2023 Ardor Finances co. All Rights Reserved.
         </span>
       </div>
     </div>

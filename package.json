@@ -1,6 +1,6 @@
 {
-  "name": "thompsonscentral",
-  "homepage": "http://thompsonscentral.com",
+  "name": "ardor-finance",
+  "homepage": "http://ardorfinance.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

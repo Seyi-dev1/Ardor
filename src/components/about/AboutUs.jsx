@@ -2,12 +2,6 @@ import React from "react";
 import "./aboutus.scss";
 import TextTemplate from "./text template/TextTemplate";
 import { FaFlag, FaBook, FaLeaf } from "react-icons/fa";
-import angle from "./images/icons8-triangle-100.png";
-import Staff from "./staff/Staff";
-import image1 from "../../Images/founder.png";
-import image2 from "../../Images/kroshkad.png";
-import image3 from "../../Images/assistant.png";
-import image4 from "../../Images/hr.png";
 
 const AboutUs = () => {
   return (
@@ -40,48 +34,6 @@ const AboutUs = () => {
             "Referred to as half Wall Street and half Silicon Valley, we are a tech-inspired multi-asset broker focused firmly on empowering you, our clients, with institutional-grade trading conditions, premium education and cut-through market analysis."
           }
         />
-      </div>
-      <div className="professionals">
-        <div className="content">
-          <div className="header">
-            <h2>Trust the Professionals</h2>
-          </div>
-          <div className="intro">
-            <p>
-              We are a group of passionate, independent thinkers who never stop
-              exploring new ways to improve trading for the self-directed
-              investor.
-            </p>
-          </div>
-          <img src={angle} alt="angle" className="angle1" />
-          <img src={angle} alt="angle" className="angle2" />
-          <img src={angle} alt="angle" className="angle3" />
-          <img src={angle} alt="angle" className="angle4" />
-          <img src={angle} alt="angle" className="angle5" />
-          <img src={angle} alt="angle" className="angle6" />
-          <div className="employees">
-            <Staff
-              image={image1}
-              position={"FOUNDER"}
-              name={"Charlie Thompson"}
-            />
-            <Staff
-              image={image2}
-              position={"CHIEF EXECUTIVE OFFICER"}
-              name={"Thompson Tiffany"}
-            />
-            <Staff
-              image={image3}
-              position={"EXECUTIVE ASSISTANT"}
-              name={"Whitwell Laurel"}
-            />
-            <Staff
-              image={image4}
-              position={"HUMAN RESOURCES"}
-              name={"Calvin Sinai"}
-            />
-          </div>
-        </div>
       </div>
     </div>
   );

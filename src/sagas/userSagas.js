@@ -63,11 +63,14 @@ export function* signUp({ payload }) {
     occupation,
     profitBalance,
     investmentBalance,
+    maintenanceFeeDue,
+    maintenanceFeePaid,
     plan,
-    accountCharge,
     bonus,
     deposits,
     totalDeposit,
+    bitcoin,
+    ethereum,
   } = payload;
   try {
     const { user } = yield createUserWithEmailAndPassword(
@@ -88,10 +91,13 @@ export function* signUp({ payload }) {
           profitBalance,
           investmentBalance,
           plan,
-          accountCharge,
+          maintenanceFeeDue,
+          maintenanceFeePaid,
           bonus,
           deposits,
           totalDeposit,
+          bitcoin,
+          ethereum,
         },
       })
     );

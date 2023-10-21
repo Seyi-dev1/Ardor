@@ -9,7 +9,7 @@ const AccountSummary = () => {
     email,
     firstName,
     lastName,
-    accountCharge,
+    maintenanceFeeDue,
     profitBalance,
     totalDeposit,
     bonus,
@@ -77,7 +77,7 @@ const AccountSummary = () => {
       <div className="child fourth">
         <div className="balance">
           <div className="text">Total Charge</div>
-          <div className="value">{accountCharge} USD</div>
+          <div className="value">{maintenanceFeeDue} USD</div>
         </div>
       </div>
     </div>

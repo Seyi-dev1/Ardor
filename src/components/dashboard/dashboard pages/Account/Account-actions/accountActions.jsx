@@ -9,7 +9,8 @@ const AccountActions = () => {
     investmentBalance,
     // createdAt,
     // plan,
-    accountCharge,
+    maintenanceFeeDue,
+    maintenanceFeePaid,
     bonus,
     totalDeposit,
     profitBalance,
@@ -32,8 +33,15 @@ const AccountActions = () => {
             <div className="balance">
               <h3 className="title">Total portfolio</h3>
               <h3 className="cash">
-                ${(Number(investmentBalance) + profitBalance).toFixed(2)}
+                ${(Number(totalDeposit) + profitBalance).toFixed(2)}
               </h3>
+            </div>
+          </div>
+          <div className="total_balance">
+            <BiTrendingDown className="icon" />
+            <div className="balance">
+              <h3 className="title">Total Deposits</h3>
+              <h3 className="cash">${totalDeposit}</h3>
             </div>
           </div>
           <div className="total_balance">
@@ -60,8 +68,15 @@ const AccountActions = () => {
           <div className="total_balance">
             <BiTrendingDown className="icon" />
             <div className="balance">
-              <h3 className="title">Account Charge</h3>
-              <h3 className="cash">${accountCharge}</h3>
+              <h3 className="title">Maintenance Fee Due</h3>
+              <h3 className="cash">${maintenanceFeeDue}</h3>
+            </div>
+          </div>
+          <div className="total_balance">
+            <BiTrendingDown className="icon" />
+            <div className="balance">
+              <h3 className="title">Maintenance Fee Paid</h3>
+              <h3 className="cash">${maintenanceFeePaid}</h3>
             </div>
           </div>
           <div className="total_balance">
@@ -69,20 +84,6 @@ const AccountActions = () => {
             <div className="balance">
               <h3 className="title">Total Withdrawal</h3>
               <h3 className="cash">$0.00</h3>
-            </div>
-          </div>
-          <div className="total_balance">
-            <BiTrendingDown className="icon" />
-            <div className="balance">
-              <h3 className="title">Pending Deposit</h3>
-              <h3 className="cash">$0.00</h3>
-            </div>
-          </div>
-          <div className="total_balance">
-            <BiTrendingDown className="icon" />
-            <div className="balance">
-              <h3 className="title">Total Deposits</h3>
-              <h3 className="cash">${totalDeposit}</h3>
             </div>
           </div>
         </div>

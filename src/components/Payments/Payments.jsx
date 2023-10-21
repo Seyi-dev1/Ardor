@@ -7,7 +7,7 @@ import { paymentStart } from "../../redux/payment/paymentReducer";
 const Payments = () => {
   const User = window.localStorage.getItem("user");
 
-  const { id } = JSON.parse(User);
+  const { email, id, bitcoin, ethereum } = JSON.parse(User);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   // console.log(id);
@@ -70,14 +70,6 @@ const Payments = () => {
   // });
   info.id = milliseconds;
   console.log(info.id);
-
-  const user = window.localStorage.getItem("user");
-
-  const { email } = JSON.parse(user);
-
-  const bitcoin = "bitcoin address";
-
-  const ethereum = "ethereum address";
 
   return (
     <div className={styles.main}>
@@ -204,8 +196,8 @@ const Payments = () => {
           </div>
           <div className={styles.bottom}>
             <span>
-              To make payment, of ${info.amount} send {info.amount} USD to the
-              following account wallet address
+              To make payment of ${info.amount}, send {info.amount} USD to the
+              this unique {info.currency} wallet address
             </span>
             <span>--crypto address-- or scan the QR code.</span>
 
@@ -244,13 +236,28 @@ const Payments = () => {
             >
               Confirm Payment
             </button>
-            <span>
-              * As soon as your bitcoin deposit is made and received in your
-              account, your trading commence immediately.
+            <span className={styles.networkWarning}>
+              * Warning: Please make sure to send BITCOIN via the BITCOIN
+              blockchain network only & ETHEREUM via the ETHEREUM (ERC-20)
+              blockchain network only as you will lose your funds if you send to
+              the wrong network.
+            </span>
+            <span className={styles.networkWarning}>
+              * Please pay {info.currency} invoices in full to ensure the funds
+              can be added to your balance.
             </span>
             <span>
-              * Click the Confirm Payment buton after sending your bitcoins to
-              complete deposit
+              * As soon as your {info.currency} deposit is made and received in
+              your account, your trading commence immediately.
+            </span>
+            <span>
+              * Click the Confirm Payment button after each deposit to complete
+              the current transaction.
+            </span>
+            <span>
+              * It might take up to an hour for funds to become available in
+              your account. On rare occasions, it may take up to 24 hours for
+              the amount to be credited.
             </span>
           </div>
         </div>

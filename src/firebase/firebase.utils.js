@@ -3,12 +3,12 @@ import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore/lite";
 import { getAuth, sendEmailVerification } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBUG8umNIzW3V_CWHcPm0FdiaZgrzEF2p8",
-  authDomain: "thompsons-central.firebaseapp.com",
-  projectId: "thompsons-central",
-  storageBucket: "thompsons-central.appspot.com",
-  messagingSenderId: "388238992464",
-  appId: "1:388238992464:web:d3abd309cceb1c7eb39d55",
+  apiKey: "AIzaSyDAxT-zlN0u7CGIX4cwIATAKF-x4NzREvQ",
+  authDomain: "ardor-finances.firebaseapp.com",
+  projectId: "ardor-finances",
+  storageBucket: "ardor-finances.appspot.com",
+  messagingSenderId: "635239525184",
+  appId: "1:635239525184:web:23dbd8662678c36535e8a5",
 };
 
 export const handleDeposit = async (userAuth, data) => {
