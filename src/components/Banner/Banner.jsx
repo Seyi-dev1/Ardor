@@ -17,7 +17,7 @@ const Banner = () => {
     <div className="hero">
       <Swiper
         modules={[Pagination, Autoplay, EffectFade]}
-        spaceBetween={30}
+        spaceBetween={0}
         pagination={{
           clickable: true,
           el: ".swiper-pagination",
@@ -27,8 +27,8 @@ const Banner = () => {
           delay: 8000,
           disableOnInteraction: false,
         }}
-        speed={400}
-        effect="fade"
+        speed={2000}
+        effect="slide"
         className="swiper"
       >
         <SwiperSlide className="swiperSlide">

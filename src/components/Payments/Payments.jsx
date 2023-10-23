@@ -129,7 +129,7 @@ const Payments = () => {
           </div>
           <div className={styles.companyDetails}>
             <div className={styles.one}>
-              <span>Thompson Central</span>
+              <span>Ardor Finance</span>
               <span>1020 Forest Avenue,</span>
               <span>San Francisco, CA.</span>
               <span>USA.</span>
@@ -176,13 +176,12 @@ const Payments = () => {
           </div>
           <div className={styles.footer}>
             <span>
-              * Make all {info.currency.toLowerCase()} payable to Thompsons
-              Central.
+              * Make all {info.currency.toLowerCase()} payable to Ardor Finance.
             </span>
             <span>* Payment System: {info.currency.toLowerCase()} Only</span>
             <span>
               * If you have any questions concerning your account, contact
-              info@thompsonscentral.com
+              info@ardorfinance.com
             </span>
           </div>
         </div>
@@ -191,7 +190,7 @@ const Payments = () => {
         <div className={styles.payment}>
           <div className={styles.top}>
             <span>
-              Make Deposit to your unique Thompsons Central Wallet Address below
+              Make Deposit to your unique Ardor Finance Wallet Address below
             </span>
           </div>
           <div className={styles.bottom}>

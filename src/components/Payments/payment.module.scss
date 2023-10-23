@@ -227,6 +227,10 @@
     font-size: 1rem;
     color: #616161;
 
+    @media screen and (max-width: 850px) {
+      background-color: transparent;
+    }
+
     .top {
       border-bottom: 1px solid grey;
       padding-bottom: 1rem;
@@ -247,7 +251,6 @@
         justify-content: center;
         @media screen and (max-width: 850px) {
           font-size: 0.6rem;
-          width: 100%;
         }
 
         .copy_text {
@@ -256,6 +259,10 @@
           font-weight: 400;
           background-color: rgb(176, 176, 176);
           color: #464646;
+
+          @media screen and (max-width: 850px) {
+            font-size: 0.6rem;
+          }
         }
 
         .copy {
@@ -287,6 +294,10 @@
           font-size: 0.8rem;
         }
       }
+    }
+
+    .networkWarning {
+      color: rgb(255, 0, 0);
     }
 
     @media screen and (max-width: 850px) {
