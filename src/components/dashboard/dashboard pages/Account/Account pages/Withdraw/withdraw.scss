@@ -26,6 +26,16 @@
     justify-content: center;
   }
 }
+.dropdown {
+  border: 1px solid rgb(7, 103, 247);
+  padding: 10px 20px;
+  width: 300px;
+  font-size: 1.1rem;
+
+  .option {
+    font-size: 1rem;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .withdraw {

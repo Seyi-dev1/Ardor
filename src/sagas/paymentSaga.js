@@ -1,10 +1,5 @@
-import { takeLatest, put, call, all } from "redux-saga/effects";
+import { takeLatest, call, all } from "redux-saga/effects";
 import { handleDeposit } from "../firebase/firebase.utils";
-import {
-  paymentFailure,
-  paymentStart,
-  paymentSuccess,
-} from "../redux/payment/paymentReducer";
 
 export function* depositHandler({ payload }) {
   const { user } = payload;
