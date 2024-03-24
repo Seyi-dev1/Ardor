@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
+  position: relative;
 
   @media screen and (max-width: 850px) {
     grid-template-columns: 1fr;
@@ -136,6 +137,60 @@
           font-weight: 600;
           color: rgb(114, 113, 113);
         }
+      }
+    }
+  }
+
+  .modal {
+    position: absolute;
+    top: 2rem;
+    width: 500px;
+    height: 500px;
+    background: #ebebeb;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+
+    .text {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    .dropdown {
+      border: 1px solid rgb(7, 103, 247);
+      padding: 10px 20px;
+      width: 300px;
+      font-size: 1.1rem;
+
+      .option {
+        font-size: 1rem;
+      }
+    }
+    .btn {
+      background-color: rgb(7, 103, 247);
+      color: black;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      transition: 200ms ease-in-out;
+
+      &:hover {
+        background-color: rgba(7, 103, 247, 0.678);
+      }
+    }
+
+    @media screen and (max-width: 850px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      align-content: center;
+      width: 100%;
+
+      .dropdown {
+        width: 200px;
       }
     }
   }

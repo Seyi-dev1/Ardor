@@ -10,7 +10,6 @@ const Payments = () => {
   const { email, id, bitcoin, ethereum } = JSON.parse(User);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // console.log(id);
   const options = [
     { label: "BITCOIN", value: "BITCOIN" },
 
@@ -23,6 +22,7 @@ const Payments = () => {
     id: "",
     isPending: true,
     currency: "BITCOIN",
+    type: "Deposit",
   });
 
   const [display, setDisplay] = React.useState({
@@ -69,7 +69,6 @@ const Payments = () => {
   //   };
   // });
   info.id = milliseconds;
-  console.log(info.id);
 
   return (
     <div className={styles.main}>

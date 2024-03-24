@@ -1,7 +1,7 @@
 .main {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   align-items: center;
   color: rgb(163, 161, 161);
   background: #f8f9fa;
@@ -15,7 +15,7 @@
     font-weight: normal;
 
     @media screen and (max-width: 850px) {
-      font-size: 0.75rem;
+      font-size: 0.5rem;
     }
   }
 

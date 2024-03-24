@@ -26,7 +26,20 @@ export const handleDeposit = async (userAuth, data) => {
     console.log(error);
   }
 };
-
+export const handleWithdrawals = async (userAuth, data) => {
+  const userRef = doc(database, `/users/${userAuth}`);
+  const snapShot = await getDoc(userRef);
+  const prevData = snapShot.data();
+  console.log(prevData);
+  try {
+    setDoc(userRef, {
+      ...prevData,
+      withdrawals: [...prevData.withdrawals, data],
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
 

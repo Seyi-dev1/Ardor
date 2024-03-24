@@ -3,14 +3,16 @@ import React from "react";
 import Field from "../field/Field";
 const AllTransactions = () => {
   const user = window.localStorage.getItem("user");
-  const { deposits } = JSON.parse(user);
+  const { deposits, withdrawals } = JSON.parse(user);
+
+  const allTransactions = deposits.concat(withdrawals);
   return (
     <div className={styles.main}>
       <span className={styles.title}>Transactions history</span>
-      {deposits ? (
+      {allTransactions ? (
         <div className={styles.list}>
-          {deposits.map((deposit) => (
-            <Field key={deposit.id} {...deposit} />
+          {allTransactions.map((transaction) => (
+            <Field key={transaction.id} {...transaction} />
           ))}
         </div>
       ) : (
