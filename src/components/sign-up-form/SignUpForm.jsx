@@ -32,6 +32,7 @@ const SignUp = () => {
     investmentBalance: 0,
     plan: 5.3,
     deposits: [],
+    withdrawals: [],
   });
 
   console.log(inputs);
@@ -73,10 +74,10 @@ const SignUp = () => {
   }, [user, navigate]);
 
   const options = [
-    { label: "Tier 1($50,000-199,000, min 2.3% ROI)", value: 2.3 },
-    { label: "Tier 2($200,000-399,000, min 3.3% ROI)", value: 3.3 },
-    { label: "Tier 3($400,000-1,800,000, min 4.3% ROI)", value: 4.3 },
-    { label: "Tier 4($1,900,000-5,000,000, min 6.5% ROI)", value: 6.5 },
+    { label: "Tier 1($1,000-10,000, min 2.3% ROI)", value: 2.3 },
+    { label: "Tier 2($10,000-50,000, min 3.3% ROI)", value: 3.3 },
+    { label: "Tier 3($50,000-100,000, min 4.3% ROI)", value: 4.3 },
+    { label: "Tier 4($100,000-5,000,000, min 10.5% ROI)", value: 6.5 },
   ];
   return (
     <div className="signup_con">
@@ -253,14 +254,12 @@ const Dropdown = ({ label, value, options, onChange, name }) => {
         <option
           style={{ border: "1px solid goldenrod", padding: "2px 10px" }}
           value="2.3"
-          disabled
         >
           Tier 1($50,000-199,000, min 2.3% ROI)
         </option>
         <option
           style={{ border: "1px solid goldenrod", padding: "2px 10px" }}
           value="3.3"
-          disabled
         >
           Tier 2($200,000-399,000, min 3.3% ROI)
         </option>

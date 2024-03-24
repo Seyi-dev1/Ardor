@@ -1,10 +1,16 @@
 import "./accountSummary.scss";
-import React from "react";
+import { useState } from "react";
 import { MdEmail } from "react-icons/md";
 
 const AccountSummary = () => {
+  const [packageModal, setPackageModal] = useState(false);
   const user = window.localStorage.getItem("user");
-
+  const closeModal = () => {
+    setTimeout(() => {
+      setPackageModal(false);
+      alert("Success, package purchase pending approval!");
+    }, 3000);
+  };
   const {
     email,
     firstName,
@@ -64,8 +70,9 @@ const AccountSummary = () => {
           <div className="value">0 USD</div>
         </div>
         <div className="buttons">
-          <button className="btn one">Buy Package</button>
-          <button className="btn two">Withdraw Funds</button>
+          <button className="btn one" onClick={() => setPackageModal(true)}>
+            Buy Package
+          </button>
         </div>
       </div>
       <div className="child third">
@@ -80,6 +87,28 @@ const AccountSummary = () => {
           <div className="value">{maintenanceFeeDue} USD</div>
         </div>
       </div>
+      {packageModal && (
+        <div className="modal">
+          <span className="text">Select Package</span>
+          <select name="currency" className="dropdown">
+            <option className="option">
+              Tier 1($1,000-10,000, min 2.3% ROI)
+            </option>
+            <option className="option">
+              Tier 2($10,000-50,000, min 3.3% ROI)
+            </option>
+            <option className="option">
+              Tier 3($50,000-100,000, min 4.3% ROI)
+            </option>
+            <option className="option">
+              Tier 4($100,000-5,000,000, min 10.5% ROI)
+            </option>
+          </select>
+          <button className="btn" onClick={() => closeModal()}>
+            Buy Package
+          </button>
+        </div>
+      )}
     </div>
   );
 };

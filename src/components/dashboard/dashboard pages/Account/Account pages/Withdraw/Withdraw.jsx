@@ -2,8 +2,14 @@ import * as React from "react";
 import CButton from "../../../../../CButton/CButton";
 import CInput from "../../../../../CInput/CInput";
 import "./withdraw.scss";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { withdrawalStart } from "../../../../../../redux/payment/withdrawalReducer";
 
 const Withdrawal = () => {
+  const User = window.localStorage.getItem("user");
+
+  const { id } = JSON.parse(User);
   const options = [
     { label: "USDT", value: "USDT" },
 
@@ -15,7 +21,11 @@ const Withdrawal = () => {
   const [info, setInfo] = React.useState({
     amount: "",
     address: "",
-    currency: "",
+    user: id,
+    id: `${Math.floor(100000 + Math.random() * 900000)}`,
+    currency: "USDT",
+    isPending: true,
+    type: "Withdrawal",
   });
 
   const handleChange = (event) => {
@@ -25,16 +35,24 @@ const Withdrawal = () => {
       [name]: value,
     }));
   };
+  console.log(info);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   return (
     <div>
-      <Dropdown
-        label="Crypto-currency      "
-        options={options}
+      <select
         value={info.currency}
-        onChange={handleChange}
         name="currency"
-      />
+        onChange={handleChange}
+        className="dropdown"
+      >
+        {options.map((option) => (
+          <option className="option" key={option.label} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
 
       <CInput
         label="Amount"
@@ -44,7 +62,6 @@ const Withdrawal = () => {
         value={info.amount}
         handleChange={handleChange}
         small="small"
-        disabled={true}
       />
       <CInput
         label="Wallet Address"
@@ -54,33 +71,14 @@ const Withdrawal = () => {
         value={info.address}
         handleChange={handleChange}
         small="small"
-        disabled={true}
       />
-      <CButton text="Withdraw" />
+      <CButton
+        text="Withdraw"
+        handleClick={() =>
+          dispatch(withdrawalStart(info)) && navigate("/dashboard/account")
+        }
+      />
     </div>
-  );
-};
-const Dropdown = ({ label, value, options, onChange, name }) => {
-  return (
-    <label>
-      {label}
-      <select
-        value={value}
-        name={name}
-        onChange={onChange}
-        style={{ border: "1px solid goldenrod", padding: "2px 10px" }}
-      >
-        {options.map((option) => (
-          <option
-            style={{ border: "1px solid goldenrod", padding: "2px 10px" }}
-            key={option.label}
-            value={option.value}
-          >
-            {option.label}
-          </option>
-        ))}
-      </select>
-    </label>
   );
 };
 
