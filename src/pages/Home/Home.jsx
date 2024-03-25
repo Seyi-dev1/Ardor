@@ -25,8 +25,6 @@ const Home = () => {
         >
           <Navbar />
         </div>
-        {/* <Navbar /> */}
-
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/login" element={<LoginForm />} />
