@@ -200,7 +200,7 @@ export default function TemporaryDrawer({ anchor }) {
     <div>
       <React.Fragment key="right">
         <Button onClick={toggleDrawer("right", true)}>
-          <FaBars style={{ color: "#ffd700", fontSize: "30px" }} />
+          <FaBars style={{ color: "#fff", fontSize: "30px" }} />
         </Button>
         <Drawer
           anchor="right"

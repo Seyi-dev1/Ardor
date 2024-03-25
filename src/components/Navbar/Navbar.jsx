@@ -19,7 +19,7 @@ const Navbar = () => {
     <div className={scroll > 0 ? `navbar color` : "navbar"}>
       <Link to="/" className="logo_con">
         <img src={LOGO} alt="logo" className="nav_logo" />
-        Ardor Finance
+        Fervor Finance
       </Link>
       <div className="links">
         <a href="#plans" className="link">
