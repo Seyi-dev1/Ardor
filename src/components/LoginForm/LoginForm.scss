@@ -1,10 +1,11 @@
 .container {
   display: flex;
-  width: 100vw;
   justify-content: center;
   overflow: hidden;
   height: fit-content;
-  background-color: #fff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../Images/carousel2.jpg");
+  background-size: cover;
   .login-page {
     height: fit-content;
     padding: 100px 0px;
