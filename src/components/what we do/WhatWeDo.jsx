@@ -37,10 +37,10 @@ const WhatWeDo = () => {
           <RiStockFill className="whatwedo_icon" />
           <div className="whatwedo_info">
             <span className="whatwedosmall_title">
-              Stocks and Forex Trading
+              Mining and Forex Trading
             </span>
             <span className="whatwedo_subtitle">
-              Explore the exciting realm of stocks and forex trading with our
+              Explore the exciting realm of mining and forex trading with our
               expert guidance and comprehensive tools. Take advantage of our
               advanced trading platform to access a wide range of financial
               instruments and seize profitable opportunities in global markets.
