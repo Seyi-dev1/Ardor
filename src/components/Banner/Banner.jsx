@@ -64,8 +64,8 @@ const Banner = () => {
               <div className="desc">
                 <p>
                   Harness the power of analytic technology and tap into the
-                  lucrative world of stocks and analytic trading with Ardor
-                  Finances.
+                  lucrative world of stocks and analytic trading with Fervor
+                  Finance.
                 </p>
               </div>
               <div className="buttons">

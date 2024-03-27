@@ -136,7 +136,7 @@ b {
   background: #fff;
   padding: 5px 10px;
   border-radius: 12px;
-  color: rgb(61, 203, 171);
+  color: #474cec;
   font-weight: bold;
   font-size: 0.85rem;
 }
@@ -171,7 +171,7 @@ b {
 .item button {
   padding: 14px 20px;
   width: 100%;
-  background: rgb(61, 203, 171);
+  background: #474cec;
   border: 3px solid transparent;
   border-radius: 20px;
   color: #fff;
@@ -190,7 +190,7 @@ b {
 }
 .item button.border:hover {
   background: #fff;
-  color: rgb(61, 203, 171);
+  color: #474cec;
 }
 
 @media screen and (max-width: 800px) {

@@ -15,7 +15,7 @@ const Contact = () => {
     {
       id: 2,
       icon: <FaPaperPlane style={{ color: "black" }} />,
-      infoText: "support@ardorfinance.com",
+      infoText: "support@fervorfinance.com",
     },
   ];
 

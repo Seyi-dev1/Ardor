@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "../../components/Banner/Banner";
 import "./homepage.scss";
-import { TickerTape, Timeline, Ticker } from "react-ts-tradingview-widgets";
+import { TickerTape } from "react-ts-tradingview-widgets";
 import CSFTab from "../../components/CSF tab/CSFTab";
 import WhyUs from "../../components/why choose us/WhyUs";
 import Coins from "../../components/coins/Coins";
@@ -13,6 +13,7 @@ import StartNow from "../../components/start/StartNow";
 import WhatWeDo from "../../components/what we do/WhatWeDo";
 import CButton from "../../components/CButton/CButton";
 import { useNavigate } from "react-router-dom";
+import AboutUs from "../../components/about/AboutUs";
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -25,29 +26,16 @@ const Homepage = () => {
       <TickerTape colorTheme="light" displayMode="adaptive"></TickerTape>
       <WhatWeDo />
       <WhyUs />
-
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <CButton
-          text="Get Started"
-          background="black"
-          handleClick={() => navigate("/signup")}
-        />
+        <CButton text="Get Started" handleClick={() => navigate("/signup")} />
       </div>
+      <CSFTab />
       <PlatformStats />
       <StartNow />
       <Plans />
-      <CSFTab />
       <Coins />
-      <Ticker colorTheme="light"></Ticker>
       <Testimonials />
-      <Timeline
-        colorTheme="light"
-        feedMode="market"
-        market="stock"
-        height={400}
-        width="100%"
-        displayMode="adaptive"
-      ></Timeline>
+      <AboutUs />
       <Contact />
     </div>
   );
