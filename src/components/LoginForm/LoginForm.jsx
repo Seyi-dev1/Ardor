@@ -19,7 +19,7 @@ import GOLDMAN from "../../Images/Goldman.png";
 import FDIC from "../../Images/Member-FDIC.png";
 import ROCKIES from "../../Images/rockies.png";
 import SyncLoader from "react-spinners/SyncLoader";
-
+import { Helmet } from "react-helmet";
 const LoginForm = () => {
   const [info, setInfo] = useState({
     email: "",
@@ -69,6 +69,10 @@ const LoginForm = () => {
 
   return (
     <div className="container">
+      <Helmet>
+        <title>Login - Fervor finance</title>
+        <meta name="description" content="Login to your account" />
+      </Helmet>
       <div className="login-page">
         <div className="login_container">
           <div className="login_content">
