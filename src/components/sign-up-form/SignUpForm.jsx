@@ -30,6 +30,7 @@ const SignUp = () => {
     totalDeposit: 0,
     profitBalance: 0,
     investmentBalance: 0,
+    totalWithrawal: 0,
     plan: 5.3,
     deposits: [],
     withdrawals: [],

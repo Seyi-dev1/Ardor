@@ -72,6 +72,7 @@ export function* signUp({ payload }) {
     bitcoin,
     ethereum,
     withdrawals,
+    totalWithrawal,
   } = payload;
   try {
     const { user } = yield createUserWithEmailAndPassword(
@@ -100,6 +101,7 @@ export function* signUp({ payload }) {
           bitcoin,
           ethereum,
           withdrawals,
+          totalWithrawal,
         },
       })
     );
