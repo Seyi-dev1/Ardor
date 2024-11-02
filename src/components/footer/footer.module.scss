@@ -6,7 +6,7 @@
     display: flex;
     // gap: 7rem;
     justify-content: space-between;
-    background-color: #000000;
+    background-color: black;
     padding: 3rem 10rem;
 
     @media screen and (max-width: 450px) {
@@ -29,7 +29,6 @@
         align-items: center;
         h5 {
           font-size: 1rem;
-          font-family: "avirnirBlack";
           @media screen and (max-width: 450px) {
             font-size: 0.8rem;
           }
@@ -55,21 +54,21 @@
           margin-top: 0.5rem;
         }
         p {
-          color: rgb(161, 161, 161);
+          color: rgb(255, 255, 255);
           &:hover {
             color: #fff;
             cursor: pointer;
           }
         }
         a {
-          color: rgb(161, 161, 161);
+          color: rgb(255, 255, 255);
           &:hover {
             color: #fff;
             cursor: pointer;
           }
         }
         .link {
-          color: rgb(161, 161, 161);
+          color: rgb(255, 255, 255);
           text-decoration: none;
           &:hover {
             color: #fff;
@@ -86,14 +85,14 @@
         gap: 0.5rem;
         margin-top: 1rem;
         p {
-          color: rgb(161, 161, 161);
+          color: rgb(255, 255, 255);
           &:hover {
             color: #fff;
             cursor: pointer;
           }
         }
         a {
-          color: rgb(161, 161, 161);
+          color: rgb(255, 255, 255);
           &:hover {
             color: #fff;
             cursor: pointer;
@@ -104,7 +103,7 @@
         }
 
         .link {
-          color: rgb(161, 161, 161);
+          color: rgb(255, 255, 255);
           text-decoration: none;
           &:hover {
             color: #fff;
@@ -118,7 +117,7 @@
   .copyRight {
     padding: 0.7rem 0;
     @media screen and (max-width: 450px) {
-      padding: 0rem 0;
+      padding: 1rem 0;
     }
     .logo {
       display: flex;
@@ -127,7 +126,7 @@
         text-decoration: none;
 
         .logomain {
-          width: 100px;
+          width: 70px;
         }
       }
     }

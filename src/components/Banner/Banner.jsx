@@ -32,6 +32,27 @@ const Banner = () => {
         className="swiper"
       >
         <SwiperSlide className="swiperSlide">
+          <img src={image2} alt="carousel" />
+          <div className="swiperText">
+            <div className="text">
+              <div className="line"></div>
+              <div className="heading">
+                <h1>Award-winning Analytical Mining and Trading platform</h1>
+              </div>
+              <div className="desc">
+                <p>
+                  Tap into the world's best mining technology and explore
+                  endless trading opportunities with tight spreads and no
+                  commission.
+                </p>
+              </div>
+              <div className="buttons">
+                <button onClick={() => navigate("/signup")}>Get Started</button>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="swiperSlide">
           <img src={image4} alt="carousel" />
           <div className="swiperText">
             <div className="text">
@@ -64,28 +85,8 @@ const Banner = () => {
               <div className="desc">
                 <p>
                   Harness the power of analytic technology and tap into the
-                  lucrative world of stocks and analytic trading with Ardor
-                  Finances.
-                </p>
-              </div>
-              <div className="buttons">
-                <button onClick={() => navigate("/signup")}>Get Started</button>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="swiperSlide">
-          <img src={image2} alt="carousel" />
-          <div className="swiperText">
-            <div className="text">
-              <div className="line"></div>
-              <div className="heading">
-                <h1>Award-winning Products and Trading platforms</h1>
-              </div>
-              <div className="desc">
-                <p>
-                  Tap into the world's best markets and explore endless trading
-                  opportunities with tight spreads and no commission.
+                  lucrative world of mining and analytic trading with Fervor
+                  Finance.
                 </p>
               </div>
               <div className="buttons">

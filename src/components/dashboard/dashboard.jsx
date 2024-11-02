@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Modal from "./modal/Modal";
 import MobileNav from "../mobile-nav/MobileNav";
 import { startSignOut } from "../../redux/user/userReducer";
+import { Helmet } from "react-helmet";
 const Dashboard = () => {
   // const navRef = useRef();
   // const toggleNav = () => {
@@ -18,13 +19,17 @@ const Dashboard = () => {
   const dispatch = useDispatch();
   return (
     <div className="con">
+      <Helmet>
+        <title>Dashboard - Fervor finance</title>
+        <meta name="description" content="Navigate your assets" />
+      </Helmet>
       {modal ? (
         <Modal />
       ) : (
         <div className="dashboard">
           <div className="header">
             {/* <FaBars className="nav_icon" onClick={toggleNav} /> */}
-            <span className="logo">Ardor Finances</span>
+            <span className="logo">Fervor Finances</span>
             <span
               className="out"
               onClick={() => {

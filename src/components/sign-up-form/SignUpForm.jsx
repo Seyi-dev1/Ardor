@@ -11,7 +11,7 @@ import { selectCurrentUser, selectError } from "../../redux/user/userSelector";
 import { motion } from "framer-motion";
 import { SyncLoader } from "react-spinners";
 import { selectIsLoading } from "../../redux/user/userSelector";
-
+import { Helmet } from "react-helmet";
 const SignUp = () => {
   const [inputs, setInputs] = React.useState({
     firstName: "",
@@ -30,6 +30,7 @@ const SignUp = () => {
     totalDeposit: 0,
     profitBalance: 0,
     investmentBalance: 0,
+    totalWithrawal: 0,
     plan: 5.3,
     deposits: [],
     withdrawals: [],
@@ -81,6 +82,10 @@ const SignUp = () => {
   ];
   return (
     <div className="signup_con">
+      <Helmet>
+        <title>Sign Up - Fervor finance</title>
+        <meta name="description" content="Sign Up to your account" />
+      </Helmet>
       <motion.div
         className="signup-page"
         initial={{ x: 0, opacity: 0 }}

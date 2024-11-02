@@ -5,7 +5,7 @@ import { FiPieChart } from "react-icons/fi";
 import { BiTrendingDown } from "react-icons/bi";
 const AccountActions = () => {
   const user = window.localStorage.getItem("user");
-  const {
+  let {
     investmentBalance,
     // createdAt,
     // plan,
@@ -14,8 +14,11 @@ const AccountActions = () => {
     bonus,
     totalDeposit,
     profitBalance,
+    totalWithrawal,
   } = JSON.parse(user);
-
+  if (!totalWithrawal) {
+    totalWithrawal = 0;
+  }
   // const date1 = createdAt;
   // const date2 = new Date().getTime();
 
@@ -83,7 +86,7 @@ const AccountActions = () => {
             <BiTrendingDown className="icon" />
             <div className="balance">
               <h3 className="title">Total Withdrawal</h3>
-              <h3 className="cash">$0.00</h3>
+              <h3 className="cash">${totalWithrawal}</h3>
             </div>
           </div>
         </div>
