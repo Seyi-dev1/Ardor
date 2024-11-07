@@ -6,7 +6,7 @@ import { FaCloudUploadAlt } from "react-icons/fa";
 const Profile = () => {
   const user = window.localStorage.getItem("user");
 
-  const { email, firstName, lastName, address } = JSON.parse(user);
+  const { email, firstName, lastName, address, kin } = JSON.parse(user);
 
   const [file, setFile] = React.useState("");
   const [inputs, setInputs] = React.useState({
@@ -92,6 +92,13 @@ const Profile = () => {
                 className="input"
               />
             </div>
+            {kin && (
+              <div className="kinCon">
+                <span className="kinText">Details of Next of Kin:</span>
+                <span className="kinText">{kin}</span>
+              </div>
+            )}
+
             <div className="email">
               <CInput
                 type="email"

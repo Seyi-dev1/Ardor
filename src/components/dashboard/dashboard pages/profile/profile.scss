@@ -64,6 +64,11 @@
           border: 2.2px solid rgb(214, 211, 211);
         }
       }
+      .kinCon {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
 
       .email {
         margin-top: 2rem;
