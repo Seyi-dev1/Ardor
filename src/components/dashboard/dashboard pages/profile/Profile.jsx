@@ -94,7 +94,7 @@ const Profile = () => {
             </div>
             {kin && (
               <div className="kinCon">
-                <span className="kinText">Details of Next of Kin:</span>
+                <span className="kinText">Details of Beneficiary:</span>
                 <span className="kinText">{kin}</span>
               </div>
             )}
